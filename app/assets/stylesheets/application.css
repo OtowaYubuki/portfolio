@@ -52,3 +52,20 @@ footer{
   background-color: pink;
   text-align: center;
 }
+
+.Notification{
+  position: absolute;
+  top:100px;
+}
+
+.notice{
+  background-color: #38AEF0;
+  color: #fff;
+  text-align: center;
+}
+
+.alert {
+  background-color: #F35500;
+  color: #fff;
+  text-align: center;
+}
