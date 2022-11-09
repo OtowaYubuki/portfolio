@@ -9,4 +9,9 @@ class UsersController < ApplicationController
       redirect_to root_path, notice: "アカウントを削除しました"
     end
   end
+
+  private
+  def user_params
+    params.require(:user).permit(:content, :image).merge(user_id: current_user.id)
+  end
 end

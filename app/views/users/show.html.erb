@@ -1,6 +1,11 @@
 <%= render "shared/signin_header" %>
 <div id="current_user">
   <h1>プロフィール編集</h1>
+  <% if @user.image.attached? %>
+    <%= image_tag @user.image.variant(resize:'100x100') %>
+  <% else %>
+    <%= image_tag '/22614794.png', size: '100x100' %>
+  <% end %>
   <p>名前 : <%= @user.name %></p>
   <p>メールアドレス : <%= @user.email %></p>
   <a href="http://localhost:3000/users/edit" style="text-decoration:none;">編集する</a>
