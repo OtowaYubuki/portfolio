@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'favorites/create'
-  get 'favorites/destroy'
-  devise_for :users, controllers: {registrations: 'users/registrations'}
   root 'top#index'
+  devise_for :users, controllers: {registrations: 'users/registrations'}
   resources :users, :only => [:show, :edit, :destroy]
   resources :influencers, :only => [:index, :show]
-  resources :counselings, :only => [:index, :show, :new, :create]
+  resources :counselings do
+    resource :favorites, only: [:create, :destroy]
+  end
 end
