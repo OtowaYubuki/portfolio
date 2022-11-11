@@ -1,13 +1,17 @@
 class CounselingsController < ApplicationController
   def index
+    @counselings = Counseling.all
   end
 
   def show
+    @counseling = Counseling.find(params[id])
   end
 
-  def new
+  # カウンセリング応募画面
+  def new 
   end
 
-  def create
+  # 応募完了画面
+  def create 
   end
 end
