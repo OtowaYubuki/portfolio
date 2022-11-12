@@ -1,1 +1,20 @@
-<h1>カウンセリング詳細画面（仮）</h1>
+<%= render "shared/signin_header" %>
+<%= render "shared/sidebar" %>
+<h2 id="show_counseling_text">カウンセリング詳細</h2>
+<table id="counseling_show">
+  <tr id="counseling_show_title">
+    <td><%= @counseling.name %></td>
+  </tr>
+  <tr id="counseling_show_content">
+    <td><%= @counseling.content %></td>
+  </tr>
+</table>
+<div id="counseling_show_people">
+  <p><%= @counseling.date %>〜</p>
+  <p>残り◯枠/<%= @counseling.people %>枠</p>
+  <a href="#" style="text-decoration:none;">予約する</a>
+</div>
+<div id="counseling_show_influencer">
+  <p>主宰するインフルエンサー情報が入ります</p>
+</div>
+<%= link_to "カウンセリング一覧に戻る", counselings_path, id:"backto_counseling_index" %>

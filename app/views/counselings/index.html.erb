@@ -25,11 +25,9 @@
     <% end %>
   </tr>
   <tr class="tr_button">
-    <td><a href="#" class="cp_btn">予約する</a></td>
-    <td><a href="#" class="cp_btn">予約する</a></td>
-    <td><a href="#" class="cp_btn">予約する</a></td>
-    <td><a href="#" class="cp_btn">予約する</a></td>
-    <td><a href="#" class="cp_btn">予約する</a></td>
+    <% @counselings.first(5).each do |counseling| %>
+      <td><%= link_to "予約する", counseling_path(counseling) %></td>
+    <% end %>
   </tr>
 </table>
 
@@ -58,11 +56,9 @@
     <% end %>
   </tr>
   <tr class="tr_button">
-    <td><a href="#" class="cp_btn">予約する</a></td>
-    <td><a href="#" class="cp_btn">予約する</a></td>
-    <td><a href="#" class="cp_btn">予約する</a></td>
-    <td><a href="#" class="cp_btn">予約する</a></td>
-    <td><a href="#" class="cp_btn">予約する</a></td>
+    <% @counselings.first(5).each do |counseling| %>
+      <td><%= link_to "予約する", "/counselings/#{counseling[:id]}" %></td>
+    <% end %>
   </tr>
 </table>
 

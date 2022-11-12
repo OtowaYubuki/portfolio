@@ -4,7 +4,7 @@ class CounselingsController < ApplicationController
   end
 
   def show
-    @counseling = Counseling.find(params[id])
+    @counseling = Counseling.find(params[:id])
   end
 
   # カウンセリング応募画面
