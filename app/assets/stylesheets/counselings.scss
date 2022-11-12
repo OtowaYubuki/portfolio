@@ -1,21 +1,52 @@
-#new_counselings{
+.new_counselings{
   position: absolute;
   top:120px;
-  right: 50px;
-  width: 60%;
-  height: 20%;
-  font-weight: bold;
-  border: solid 3px #000000;
+  left:450px;
+  width: 65%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-#popular_counselings{
+.tr_image{
+height: 200px;
+}
+
+.tr_title, .tr_date, .tr_people{
+  height: 10px;
+  font-size: 10px;
+}
+
+.new_counselings th{
+  padding: 10px;
+  background: #e9faf9;
+  border: solid 1px #778ca3;
+}
+
+.new_counselings td{
+  padding: 10px;
+  border: solid 1px #778ca3;
+}
+
+.popular_counselings{
   position: absolute;
-  top:320px;
-  right: 50px;
-  width: 60%;
-  height: 20%;
-  font-weight: bold;
-  border: solid 3px #000000;
+  top:500px;
+  left:450px;
+  width: 65%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.popular_counselings th{
+  padding: 10px;
+  background: #e9faf9;
+  border: solid 1px #778ca3;
+}
+
+.popular_counselings td{
+  padding: 10px;
+  border: solid 1px #778ca3;
 }
 
 #counseling_search_window{
