@@ -1,5 +1,9 @@
+<%= render "shared/signin_header" %>
+<%= render "shared/sidebar" %>
 <div id="new_counselings">
-  <p>新着カウンセリングが表示されます</p>
+  <% @counselings.each do |counseling| %>
+    <p>カウンセリング : <%= counseling.name %></p>
+  <% end %>
 </div>
 <div id="popular_counselings">
   <p>人気カウンセリングが表示されます</p>
