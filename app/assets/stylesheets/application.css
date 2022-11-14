@@ -25,6 +25,10 @@
   min-height: 100vh;
 }
 
+.link{
+ text-decoration: none;
+}
+
 header{
   position: absolute;
   top: 0;
