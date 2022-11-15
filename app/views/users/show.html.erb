@@ -1,5 +1,3 @@
-<%= render "shared/signin_header" %>
-<%= render "shared/sidebar" %>
 <div id="current_user">
   <h1>プロフィール編集</h1>
   <% if @user.image.attached? %>
@@ -9,5 +7,5 @@
   <% end %>
   <p>名前 : <%= @user.name %></p>
   <p>メールアドレス : <%= @user.email %></p>
-  <a href="http://localhost:3000/users/edit" style="text-decoration:none;">編集する</a>
+  <%= link_to "編集する", edit_user_registration_path, class:"link" %>
 </div>

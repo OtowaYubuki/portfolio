@@ -1,9 +1,8 @@
-<%= render "shared/header" %>
 <div id="service_explanation">
   <p id="service_explanation_text">WEBサービスの説明テキストが入ります</p>
     <div id="service_explanation_links">
-      <a href="http://localhost:3000/users/sign_up" style="text-decoration:none;">今すぐはじめる</a>
-      <a href="http://localhost:3000/users/sign_in" style="text-decoration:none;">アカウントをお持ちの方</a>
+      <%= link_to "今すぐはじめる", new_user_registration_path, class:"link" %>
+      <%= link_to "アカウントをお持ちの方", new_user_session_path, class:"link" %>
     </div>
 </div>
 <div id="new_counseling_index">
@@ -15,6 +14,6 @@
 <div id="service_explanation_bottom">
   <p id="service_explanation_text_bottom">WEBサービスの説明テキストが入ります</p>
     <div id="service_explanation_links">
-      <a href="http://localhost:3000/users/sign_up" style="text-decoration:none;">さっそくはじめる</a>
+      <%= link_to "さっそくはじめる", new_user_registration_path, class:"link" %>
     </div>
 </div>
