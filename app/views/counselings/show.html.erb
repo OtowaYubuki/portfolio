@@ -8,6 +8,16 @@
   <tr id="counseling_show_content">
     <td><%= @counseling.content %></td>
   </tr>
+  <tr id="favorite">
+    <td>
+      <% if current_user.already_favorited?(@counseling) %>
+        <%= link_to 'お気に入り解除', counseling_favorites_path(@counseling), method: :delete %>
+      <% else %>
+        <%= link_to 'お気に入り登録', counseling_favorites_path(@counseling), method: :post %>
+      <% end %>
+      <%= @counseling.favorites.count %>
+    </td>
+  </tr>
 </table>
 <div id="counseling_show_people">
   <p><%= @counseling.date %>〜</p>

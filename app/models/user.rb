@@ -5,5 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :name, presence: true
   has_one_attached :image
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
+
+  def already_favorited?(counseling)
+    self.favorites.exists?(counseling_id: counseling.id)
+  end
 end

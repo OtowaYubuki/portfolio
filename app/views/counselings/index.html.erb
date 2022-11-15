@@ -9,11 +9,11 @@
     <th>画像</th>
     <th>画像</th>
   </tr>
-    <tr class="tr_title">
-      <% @counselings.first(5).each do |counseling| %>
-        <td><%= counseling.name %></td>
-      <% end %>
-    </tr>
+  <tr class="tr_title">
+    <% @counselings.first(5).each do |counseling| %>
+      <td><%= counseling.name %></td>
+    <% end %>
+  </tr>
   <tr class="tr_date">
     <% @counselings.first(5).each do |counseling| %>
       <td><%= counseling.date %></td>

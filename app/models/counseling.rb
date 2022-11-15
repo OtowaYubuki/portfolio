@@ -1,7 +1,3 @@
 class Counseling < ApplicationRecord
-  has_many :favorites
-
-  def favorited_by?(user)
-    favorites.where(user_id: user.id).exists?
-  end
+  has_many :favorites, dependent: :destroy
 end
