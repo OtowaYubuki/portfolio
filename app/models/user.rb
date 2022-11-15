@@ -6,6 +6,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   has_one_attached :image
   has_many :favorites, dependent: :destroy
+  has_many :counselings, through: :favorites
 
   def already_favorited?(counseling)
     self.favorites.exists?(counseling_id: counseling.id)

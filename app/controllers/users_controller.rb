@@ -10,6 +10,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def favorites
+    @user = User.find(params[:id])
+    @favorites = Favorite.where("user_id = ?", @user)
+  end
+
   private
   def user_params
     params.require(:user).permit(:content, :image).merge(user_id: current_user.id)
