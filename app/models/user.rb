@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :favorites, dependent: :destroy
   has_many :counselings, through: :favorites
+  has_many :reservations, dependent: :destroy
 
   def already_favorited?(counseling)
     self.favorites.exists?(counseling_id: counseling.id)
