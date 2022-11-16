@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     end
   end
   resources :influencers, :only => [:index, :show]
-  resources :counselings do
+  resources :counselings, :only => [:index, :show] do
     resource :favorites, only: [:create, :destroy]
   end
 end
