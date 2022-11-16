@@ -24,7 +24,7 @@
   </tr>
   <tr class="tr_button">
     <% @counselings.first(5).each do |counseling| %>
-      <td><%= link_to "予約する", counseling_path(counseling) %></td>
+      <td><%= link_to "予約する", new_counseling_reservations_path(counseling) %></td>
     <% end %>
   </tr>
 </table>
@@ -55,7 +55,7 @@
   </tr>
   <tr class="tr_button">
     <% @counselings.first(5).each do |counseling| %>
-      <td><%= link_to "予約する", "/counselings/#{counseling[:id]}" %></td>
+      <td><%= link_to "予約する", new_counseling_reservations_path(counseling) %></td>
     <% end %>
   </tr>
 </table>
