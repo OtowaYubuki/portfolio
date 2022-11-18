@@ -3,8 +3,11 @@
     <tr id="counseling_show_title">
       <td><%= @counseling.name %></td>
     </tr>
+    <tr id="counseling_show_title">
+      <td><%= @counseling.date %></td>
+    </tr>
     <tr id="counseling_show_content">
-      <td><%= @counseling.date %>〜</td>
+      <td><%= f.text_area :question, autofocus: true, :placeholder =>"カウンセリング時に聞きたいことがあれば事前に入力してください", size: "50x30" %></td>
     </tr>
     <td><%= f.submit '予約する' %></td>
   <% end %>
