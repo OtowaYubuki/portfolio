@@ -20,7 +20,7 @@
 <div id="counseling_show_people">
   <p><%= @counseling.date %>〜</p>
   <p>残り◯枠/<%= @counseling.people %>枠</p>
-  <a href="#" style="text-decoration:none;">予約する</a>
+  <%= link_to "予約する", new_counseling_reservation_path(@counseling) %>
 </div>
 <div id="counseling_show_influencer">
   <p>主宰するインフルエンサー情報が入ります</p>

@@ -1,1 +1,11 @@
-<h2 id="yoyaku">予約</h2>
+<table id="counseling_show">
+  <%= form_with model: [@counseling, @reservation], local: true do |f| %>
+    <tr id="counseling_show_title">
+      <td><%= @counseling.name %></td>
+    </tr>
+    <tr id="counseling_show_content">
+      <td><%= @counseling.date %>〜</td>
+    </tr>
+    <td><%= f.submit '予約する' %></td>
+  <% end %>
+</table>
