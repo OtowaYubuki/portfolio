@@ -4,5 +4,5 @@
   <%= link_to "カウンセリングを探す", counselings_path, class:"link" %>
   <a href="#" style="text-decoration:none;">インフルエンサーを探す</a><br>
   <%= link_to "予約一覧", user_reservations_path(current_user.id), class:"link" %>
-  <%= link_to "お気に入り一覧", favorites_user_path(:user_id), class:"link" %>
+  <%= link_to "お気に入り一覧", user_favorites_path(current_user.id), class:"link" %>
 </div>
