@@ -13,4 +13,8 @@ class User < ApplicationRecord
   def already_favorited?(counseling)
     self.favorites.exists?(counseling_id: counseling.id)
   end
+
+  def already_reserved?(counseling)
+    self.reservations.exists?(counseling_id: counseling.id)
+  end
 end
