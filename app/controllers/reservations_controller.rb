@@ -25,7 +25,7 @@ class ReservationsController < ApplicationController
     @counseling = Counseling.find(params[:counseling_id])
     @reservation = current_user.reservations.find_by(counseling_id: @counseling.id)
     @reservation.destroy
-    redirect_back(fallback_location: root_path)
+    redirect_to counseling_path, notice: "予約を取り消しました"
   end
 
   private
