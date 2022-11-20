@@ -1,5 +1,7 @@
 class FavoritesController < ApplicationController
   def index
+    @user = User.find(params[:user_id])
+    @counselings = @user.counselings
   end
   
   def create
