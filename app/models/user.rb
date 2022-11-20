@@ -8,7 +8,8 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :counselings, through: :favorites
   has_many :reservations, dependent: :destroy
-  
+  has_many :reservation_counselings, through: :reservations, source: :counseling
+
   def already_favorited?(counseling)
     self.favorites.exists?(counseling_id: counseling.id)
   end

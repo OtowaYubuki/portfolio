@@ -3,6 +3,6 @@
   <%= link_to "プロフィール", user_path(current_user.id), class:"link" %>
   <%= link_to "カウンセリングを探す", counselings_path, class:"link" %>
   <a href="#" style="text-decoration:none;">インフルエンサーを探す</a><br>
-  <a href="#" style="text-decoration:none;">予約一覧</a><br>
+  <%= link_to "予約一覧", user_reservations_path(current_user.id), class:"link" %>
   <%= link_to "お気に入り一覧", favorites_user_path(:user_id), class:"link" %>
 </div>

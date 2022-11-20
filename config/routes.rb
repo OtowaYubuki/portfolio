@@ -5,10 +5,12 @@ Rails.application.routes.draw do
     member do
       get :favorites
     end
+    resources :reservations, only: [:index]
   end
   resources :influencers, :only => [:index, :show]
   resources :counselings, :only => [:index, :show] do
     resource :favorites, only: [:create, :destroy]
-    resources :reservations, only: [:index, :new, :create, :destroy]
+    resources :reservations, only: [:new, :create, :destroy]
   end
 end
+

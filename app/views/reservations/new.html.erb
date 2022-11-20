@@ -1,5 +1,5 @@
 <table id="counseling_show">
-  <%= form_with model: [@counseling, @reservation], local: true do |f| %>
+  <%= form_with model: [@counseling, @reservation], url: confirm_counseling_reservations_path(@reservation), local: true do |f| %>
     <tr id="counseling_show_title">
       <td><%= @counseling.name %></td>
     </tr>
@@ -9,6 +9,6 @@
     <tr id="counseling_show_content">
       <td><%= f.text_area :question, autofocus: true, :placeholder =>"カウンセリング時に聞きたいことがあれば事前に入力してください", size: "50x30" %></td>
     </tr>
-    <td><%= f.submit '予約する' %></td>
+    <td><%= f.submit '確認画面へ' %></td>
   <% end %>
 </table>
