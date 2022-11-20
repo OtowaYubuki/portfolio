@@ -1,8 +1,8 @@
 class ReservationsController < ApplicationController
   def index
-    # @user = User.find(params[:id])
-    # @reservations = @user.reservations
-    # @reservation_counselings = @user.reservation_counselings
+    @user = User.find(params[:user_id])
+    @reservations = @user.reservations
+    @reservation_counselings = @user.reservation_counselings
   end
   
   def new

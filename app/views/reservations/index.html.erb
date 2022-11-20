@@ -1,1 +1,24 @@
-<h2 id="yoyaku">予約履歴</h2>
+<table class="new_counselings">
+  <tr class="tr_image">
+    <th>画像</th>
+    <th>画像</th>
+    <th>画像</th>
+    <th>画像</th>
+    <th>画像</th>
+  </tr>
+  <tr class="tr_title">
+    <% @reservation_counselings.each do |counseling| %>
+      <td><%= counseling.name %></td>
+    <% end %>
+  </tr>
+  <tr class="tr_date">
+    <% @reservation_counselings.each do |counseling| %>
+      <td><%= counseling.date %></td>
+    <% end %>
+  </tr>
+  <tr class="tr_button">
+    <% @reservation_counselings.each do |counseling| %>
+      <td><%= link_to "詳細", counseling_path(counseling) %></td>
+    <% end %>
+  </tr>
+</table>
