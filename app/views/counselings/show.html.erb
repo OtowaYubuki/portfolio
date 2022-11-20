@@ -20,7 +20,11 @@
 <div id="counseling_show_people">
   <p><%= @counseling.date %>〜</p>
   <p>残り◯枠/<%= @counseling.people %>枠</p>
-  <%= link_to "予約する", new_counseling_reservation_path(@counseling) %>
+  <% if current_user.already_reserved?(@counseling) %>
+    <%= link_to '予約を取り消す', counseling_reservation_path(@counseling), method: :delete %>
+  <% else %>
+    <%= link_to "予約する", new_counseling_reservation_path(@counseling) %>
+  <% end %>
 </div>
 <div id="counseling_show_influencer">
   <p>主宰するインフルエンサー情報が入ります</p>
