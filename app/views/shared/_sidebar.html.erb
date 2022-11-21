@@ -5,4 +5,5 @@
   <%= link_to "インフルエンサーを探す", influencers_path, class:"link" %>
   <%= link_to "予約一覧", user_reservations_path(current_user.id), class:"link" %>
   <%= link_to "お気に入り一覧", user_favorites_path(current_user.id), class:"link" %>
+  <%= link_to "フォロー中のインフルエンサー", user_relationships_path(current_user.id), class:"link" %>
 </div>

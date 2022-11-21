@@ -1,5 +1,7 @@
 class RelationshipsController < ApplicationController
   def index
+    @user = User.find(params[:user_id])
+    @follow_influencers = @user.follow_influencers
   end
 
   def create

@@ -1,2 +1,24 @@
-<h1>Relationships#index</h1>
-<p>Find me in app/views/relationships/index.html.erb</p>
+<table class="new_counselings">
+  <tr class="tr_image">
+    <th>画像</th>
+    <th>画像</th>
+    <th>画像</th>
+    <th>画像</th>
+    <th>画像</th>
+  </tr>
+  <tr class="tr_title">
+    <% @follow_influencers.each do |influencer| %>
+      <td><%= influencer.name %></td>
+    <% end %>
+  </tr>
+  <tr class="tr_date">
+    <% @follow_influencers.each do |influencer| %>
+      <td><%= influencer.profile %></td>
+    <% end %>
+  </tr>
+  <tr class="tr_button">
+    <% @follow_influencers.each do |influencer| %>
+      <td><%= link_to "確認", influencer_path(influencer) %></td>
+    <% end %>
+  </tr>
+</table>
