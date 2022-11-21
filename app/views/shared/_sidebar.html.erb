@@ -2,7 +2,7 @@
   <a href="#" style="text-decoration:none;">Home</a><br>
   <%= link_to "プロフィール", user_path(current_user.id), class:"link" %>
   <%= link_to "カウンセリングを探す", counselings_path, class:"link" %>
-  <a href="#" style="text-decoration:none;">インフルエンサーを探す</a><br>
+  <%= link_to "インフルエンサーを探す", influencers_path, class:"link" %>
   <%= link_to "予約一覧", user_reservations_path(current_user.id), class:"link" %>
   <%= link_to "お気に入り一覧", user_favorites_path(current_user.id), class:"link" %>
 </div>
