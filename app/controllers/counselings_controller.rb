@@ -5,5 +5,6 @@ class CounselingsController < ApplicationController
 
   def show
     @counseling = Counseling.find(params[:id])
+    @influencer = @counseling.influencer
   end
 end
