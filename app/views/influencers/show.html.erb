@@ -5,6 +5,16 @@
   <tr id="counseling_show_content">
     <td><%= @influencer.profile %></td>
   </tr>
+  <tr id="favorite">
+    <td>
+      <% if current_user.already_followed?(@influencer) %>
+        <%= link_to 'フォローを外す', influencer_relationships_path(@influencer), method: :delete %>
+      <% else %>
+        <%= link_to 'フォローする', influencer_relationships_path(@influencer), method: :post %>
+      <% end %>
+      <%= @influencer.relationships.count %>
+    </td>
+  </tr>
 </table>
 <h2 id="influenser_counseling">現在開催中のカウンセリング</h2>
 <table class="new_counselings">
