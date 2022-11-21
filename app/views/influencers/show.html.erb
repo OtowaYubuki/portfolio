@@ -6,3 +6,29 @@
     <td><%= @influencer.profile %></td>
   </tr>
 </table>
+<h2 id="influenser_counseling">現在開催中のカウンセリング</h2>
+<table class="new_counselings">
+  <tr class="tr_image">
+    <th>画像</th>
+  </tr>
+  <tr class="tr_title">
+    <% @counselings.each do |counseling| %>
+      <td><%= counseling.name %></td>
+    <% end %>
+  </tr>
+  <tr class="tr_date">
+    <% @counselings.each do |counseling| %>
+      <td><%= counseling.date %></td>
+    <% end %>
+  </tr>
+  <tr class="tr_people">
+    <% @counselings.each do |counseling| %>
+      <td><%= counseling.people %></td>
+    <% end %>
+  </tr>
+  <tr class="tr_button">
+    <% @counselings.each do |counseling| %>
+      <td><%= link_to "詳細", counseling_path(counseling) %></td>
+    <% end %>
+  </tr>
+</table>
