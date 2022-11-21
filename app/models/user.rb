@@ -18,4 +18,8 @@ class User < ApplicationRecord
   def already_reserved?(counseling)
     self.reservations.exists?(counseling_id: counseling.id)
   end
+
+  def already_followed?(influencer)
+    self.relationships.exists?(influencer_id: influencer.id)
+  end
 end
