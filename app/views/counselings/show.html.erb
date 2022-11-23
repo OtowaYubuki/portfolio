@@ -27,7 +27,7 @@
   <% end %>
 </div>
 <div id="counseling_show_influencer">
-  <p><%= @influencer.name %></p>
+  <p><%= @counseling.influencer.name %></p>
   <%= link_to "詳しく見る", influencer_path(@influencer) %>
 </div>
 <%= link_to "カウンセリング一覧に戻る", counselings_path, id:"backto_counseling_index" %>
