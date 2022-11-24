@@ -1,11 +1,9 @@
 <div id="influencer_ranking">
   <table class="new_counselings">
   <tr class="tr_image">
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
+    <% @influencers.first(5).each do |influencer| %>
+      <td><%= influencer.influencer_image %></td>
+    <% end %>
   </tr>
   <tr class="tr_title">
     <% @influencers.first(5).each do |influencer| %>
@@ -15,11 +13,6 @@
   <tr class="tr_date">
     <% @influencers.first(5).each do |influencer| %>
       <td><%= influencer.profile %></td>
-    <% end %>
-  </tr>
-  <tr class="tr_people">
-    <% @influencers.first(5).each do |influencer| %>
-      <td><%= influencer.genre %></td>
     <% end %>
   </tr>
   <tr class="tr_button">
@@ -32,11 +25,9 @@
 <div id="recomend_influencer"> 
   <table class="new_counselings">
     <tr class="tr_image">
-      <th>画像</th>
-      <th>画像</th>
-      <th>画像</th>
-      <th>画像</th>
-      <th>画像</th>
+    <% @influencers.last(5).each do |influencer| %>
+      <td><%= influencer.influencer_image %></td>
+    <% end %>
     </tr>
     <tr class="tr_title">
       <% @influencers.last(5).each do |influencer| %>
@@ -46,11 +37,6 @@
     <tr class="tr_date">
       <% @influencers.last(5).each do |influencer| %>
         <td><%= influencer.profile %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_people">
-      <% @influencers.last(5).each do |influencer| %>
-        <td><%= influencer.genre %></td>
       <% end %>
     </tr>
     <tr class="tr_button">
