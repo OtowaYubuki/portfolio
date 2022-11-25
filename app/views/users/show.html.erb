@@ -156,13 +156,3 @@
 #     },
 #   ]
 # )
-
-# require "csv"
-
-# CSV.foreach('db/new_user_credentials/influencer-表1.csv', headers: true) do |row|
-#   Influencer.create(
-#     name: row['name'],
-#     influencer_image: File.open("#{Rails.root}/db/pictures/#{row["influencer_image"]}"),
-#     profile: row['profile'],
-#   )
-# end
