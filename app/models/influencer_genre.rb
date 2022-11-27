@@ -1,0 +1,2 @@
+class InfluencerGenre < ApplicationRecord
+end
