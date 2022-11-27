@@ -292,7 +292,8 @@ Influencer.create!(
   ]
 )
 
-Genre.create([
+Genre.create(
+  [
     { name: 'モテメイク' },
     { name: 'トレンドメイク' },
     { name: 'プチプラ'},
@@ -307,5 +308,7 @@ Genre.create([
     { name: '韓国メイク'},
     { name: '時短メイク'},
     { name: '詐欺メイク'},
-    { name: 'オフィスメイク'},
-    ])
+    { name: 'オフィスメイク'}
+  ]
+)
+   
