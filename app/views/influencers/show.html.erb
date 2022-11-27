@@ -1,5 +1,8 @@
 <table id="counseling_show">
   <tr id="counseling_show_title">
+    <td><%= image_tag @influencer.influencer_image.variant(resize:'100x100') %></td>
+   </tr>
+  <tr id="counseling_show_title">
     <td><%= @influencer.name %></td>
   </tr>
   <tr id="counseling_show_content">

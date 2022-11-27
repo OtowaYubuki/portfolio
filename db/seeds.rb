@@ -92,7 +92,7 @@ Influencer.create!(
                 ◻16タイプパーソナルカラー診断
                 ◻自分に似合うを知ってstylishになりたい
                 ◻︎大人カワイイ◻︎似合うコスメがわからない',
-      influencer_image: ActiveStorage::Blob.create_and_upload!(io: File.open(Rails.root.join("app/assets/images/influencer_images/23349411_a.jpg")), filename: "23349411_a.jpg")
+      influencer_image: ActiveStorage::Blob.create_and_upload!(io: File.open(Rails.root.join("app/assets/images/influencer_images/23349411_s.jpg")), filename: "23349411_s.jpg")
     },
     {
       name: 'ねおねお',
