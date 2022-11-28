@@ -1,11 +1,9 @@
 # 新着カウンセリング
 <table class="new_counselings">
   <tr class="tr_image">
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
+    <% @counselings.first(5).each do |counseling| %>
+      <td><%= image_tag counseling.counseling_image.variant(resize:'200x400') %></td>
+    <% end %>
   </tr>
   <tr class="tr_title">
     <% @counselings.first(5).each do |counseling| %>
@@ -32,29 +30,27 @@
 #人気カウンセリング
 <table class="popular_counselings">
   <tr class="tr_image">
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
+    <% @counselings.last(5).each do |counseling| %>
+      <td><%= image_tag counseling.counseling_image.variant(resize:'200x400') %></td>
+    <% end %>
   </tr>
   <tr class="tr_title">
-    <% @counselings.first(5).each do |counseling| %>
+    <% @counselings.last(5).each do |counseling| %>
       <td><%= counseling.name %></td>
     <% end %>
   </tr>
   <tr class="tr_date">
-    <% @counselings.first(5).each do |counseling| %>
+    <% @counselings.last(5).each do |counseling| %>
       <td><%= l counseling.date, format: :long %></td>
     <% end %>
   </tr>
   <tr class="tr_people">
-    <% @counselings.first(5).each do |counseling| %>
+    <% @counselings.last(5).each do |counseling| %>
       <td><%= counseling.people %></td>
     <% end %>
   </tr>
   <tr class="tr_button">
-    <% @counselings.first(5).each do |counseling| %>
+    <% @counselings.last(5).each do |counseling| %>
       <td><%= link_to "詳細", counseling_path(counseling) %></td>
     <% end %>
   </tr>
