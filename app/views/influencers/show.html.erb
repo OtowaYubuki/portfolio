@@ -36,7 +36,7 @@
   </tr>
   <tr class="tr_date">
     <% @counselings.each do |counseling| %>
-      <td><%= counseling.date %></td>
+      <td><%= l counseling.date, format: :long %>〜</td>
     <% end %>
   </tr>
   <tr class="tr_people">

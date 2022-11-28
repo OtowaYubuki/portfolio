@@ -18,7 +18,7 @@
   </tr>
 </table>
 <div id="counseling_show_people">
-  <p><%= @counseling.date %>〜</p>
+  <p><%= l @counseling.date, format: :long %>〜</p>
   <p>残り◯枠/<%= @counseling.people %>枠</p>
   <% if current_user.already_reserved?(@counseling) %>
     <%= link_to '予約を取り消す', counseling_reservation_path(@counseling), method: :delete, data: {confirm: "予約を取り消しますか？"} %>

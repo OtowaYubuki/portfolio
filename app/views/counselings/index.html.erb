@@ -14,7 +14,7 @@
   </tr>
   <tr class="tr_date">
     <% @counselings.first(5).each do |counseling| %>
-      <td><%= l counseling.date, format: :long %></td>
+      <td><%= l counseling.date, format: :long %>〜</td>
     <% end %>
   </tr>
   <tr class="tr_people">
@@ -45,7 +45,7 @@
   </tr>
   <tr class="tr_date">
     <% @counselings.last(5).each do |counseling| %>
-      <td><%= l counseling.date, format: :long %></td>
+      <td><%= l counseling.date, format: :long %>〜</td>
     <% end %>
   </tr>
   <tr class="tr_people">
