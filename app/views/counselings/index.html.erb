@@ -1,9 +1,11 @@
 # 新着カウンセリング
 <table class="new_counselings">
   <tr class="tr_image">
-    <% @counselings.first(5).each do |counseling| %>
-      <td><%= image_tag counseling.counseling_image.variant(resize:'200x400') %></td>
-    <% end %>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
   </tr>
   <tr class="tr_title">
     <% @counselings.first(5).each do |counseling| %>
@@ -30,9 +32,11 @@
 #人気カウンセリング
 <table class="popular_counselings">
   <tr class="tr_image">
-    <% @counselings.last(5).each do |counseling| %>
-      <td><%= image_tag counseling.counseling_image.variant(resize:'200x400') %></td>
-    <% end %>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
+    <td><%= image_tag '24902163_s.jpg', size:'200x400' %></td>
   </tr>
   <tr class="tr_title">
     <% @counselings.last(5).each do |counseling| %>
