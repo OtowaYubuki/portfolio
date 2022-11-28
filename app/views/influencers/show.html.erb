@@ -22,7 +22,12 @@
 <h2 id="influenser_counseling">現在開催中のカウンセリング</h2>
 <table class="new_counselings">
   <tr class="tr_image">
-    <th><%= image_tag '25307560_s.jpg', size:'100x100' %></th>
+    <% if @influencer.counselings.count == 2 %>
+      <th><%= image_tag '25307560_s.jpg', size:'100x100' %></th>
+      <th><%= image_tag '25307560_s.jpg', size:'100x100' %></th>
+    <% else %>
+      <th><%= image_tag '25307560_s.jpg', size:'100x100' %></th>
+    <% end %>
   </tr>
   <tr class="tr_title">
     <% @counselings.each do |counseling| %>
