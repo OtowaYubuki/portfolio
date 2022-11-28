@@ -292,6 +292,24 @@ Influencer.create!(
   ]
 )
 
+require "csv"
+
+CSV.foreach('db/new_user_credentials/counseling-表1.csv', headers: true) do |row|
+  Counseling.create(
+    name: row['name'],
+    content: row['content'],
+    date: row['date'],
+    people: row['people'],
+    influencer_id: row['influencer_id']
+  )
+end
+
+48.times do |n|
+  Counseling.create(
+    counseling_image: ActiveStorage::Blob.create_and_upload!(io: File.open(Rails.root.join("app/assets/images/counseling_images/24902163_s.jpg")), filename: "24902163_s.jpg")
+  )
+end
+
 Genre.create(
   [
     { name: 'モテメイク' },
