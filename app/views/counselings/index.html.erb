@@ -61,6 +61,11 @@
 </table>
 
 <div id="counseling_search_window">
-  <p>カウンセリング検索部分です</p>
-  <a href="#" style="text-decoration:none;" id="counseling_search_link">検索する</a>
+  <h3>カウンセリングを探す</h3>
+  <%= search_form_for @q, url: search_counselings_path do |f| %>
+    <%= f.label :name_or_content_gt, 'キーワード' %>
+    <%= f.search_field :name_or_content_gt %>
+    <br>
+    <%= f.submit '検索' %>
+  <% end %>
 </div>
