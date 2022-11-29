@@ -75,6 +75,10 @@
     <%= f.date_field :day_gteq %>
     ~
     <%= f.date_field :day_lteq_end_of_day %>
+    <%= f.label :starttime_gteq, '時間から探す' %>
+    <%= f.time_field :starttime_gteq %>
+    ~
+    <%= f.time_field :starttime_lteq_end_of_day %>
     <br>
     <%= f.submit '検索' %>
   <% end %>
