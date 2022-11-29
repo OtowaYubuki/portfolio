@@ -4,10 +4,10 @@
       <td><%= @counseling.name %></td>
     </tr>
     <tr id="counseling_show_title">
-      <td><%= @counseling.day %></td>
+      <td><%= l @counseling.day, format: :long %></td>
     </tr>
     <tr id="counseling_show_title">
-      <td><%= @counseling.starttime %></td>
+      <td><%= l @counseling.starttime, format: :short %></td>
     </tr>
     <tr id="counseling_show_content">
       <td><%= f.text_area :question, autofocus: true, :placeholder =>"カウンセリング時に聞きたいことがあれば事前に入力してください", size: "50x30" %></td>

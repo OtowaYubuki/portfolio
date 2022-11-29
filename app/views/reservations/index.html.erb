@@ -13,12 +13,12 @@
   </tr>
   <tr class="tr_date">
     <% @reservation_counselings.each do |counseling| %>
-      <td><%= counseling.day %></td>
+      <td><%= l counseling.day, format: :long %></td>
     <% end %>
   </tr>
   <tr class="tr_date">
     <% @reservation_counselings.each do |counseling| %>
-      <td><%= counseling.starttime %></td>
+      <td><%= l counseling.starttime, format: :short %></td>
     <% end %>
   </tr>
   <tr class="tr_button">
