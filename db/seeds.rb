@@ -298,7 +298,8 @@ CSV.foreach('db/new_user_credentials/counseling-表1.csv', headers: true) do |ro
   Counseling.create(
     name: row['name'],
     content: row['content'],
-    date: row['date'],
+    startday: row['startday'],
+    opentime: row['opentime'],
     people: row['people'],
     influencer_id: row['influencer_id']
   )
