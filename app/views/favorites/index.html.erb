@@ -1,10 +1,8 @@
 <table class="new_counselings">
   <tr class="tr_image">
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
+    <% @counselings.each do |counseling| %>
+      <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
+    <% end %>
   </tr>
   <tr class="tr_title">
     <% @counselings.each do |counseling| %>

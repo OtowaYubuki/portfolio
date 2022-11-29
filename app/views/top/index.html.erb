@@ -8,11 +8,9 @@
 <div id="new_counseling_index">
   <table class="new_counselings">
     <tr class="tr_image">
-      <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-      <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-      <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-      <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-      <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
+      <% @counselings.first(5).each do |counseling| %>
+        <td><td><%= image_tag '25307560_s.jpg', size:'100x100' %></td></td>
+      <% end %>    
     </tr>
     <tr class="tr_title">
       <% @counselings.first(5).each do |counseling| %>
