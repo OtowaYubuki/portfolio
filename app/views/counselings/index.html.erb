@@ -65,6 +65,7 @@
   <%= search_form_for @q, url: search_counselings_path do |f| %>
     <%= f.label :name_or_content_cont, 'キーワード' %>
     <%= f.search_field :name_or_content_cont %>
+    <%= f.label :date_gteq, '日付から探す' %>
     <%= f.date_field :date_gteq %>
     ~
     <%= f.date_field :date_lteq_end_of_day %>
