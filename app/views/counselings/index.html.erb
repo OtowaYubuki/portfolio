@@ -1,11 +1,9 @@
 # 新着カウンセリング
 <table class="new_counselings">
   <tr class="tr_image">
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
+    <% @counselings.first(5).each do |counseling| %>
+      <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
+    <% end %>
   </tr>
   <tr class="tr_title">
     <% @counselings.first(5).each do |counseling| %>
@@ -32,11 +30,9 @@
 #人気カウンセリング
 <table class="popular_counselings">
   <tr class="tr_image">
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-    <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
+    <% @counselings.last(5).each do |counseling| %>
+      <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
+    <% end %>
   </tr>
   <tr class="tr_title">
     <% @counselings.last(5).each do |counseling| %>
