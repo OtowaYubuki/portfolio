@@ -75,10 +75,19 @@
     <%= f.date_field :day_gteq %>
     ~
     <%= f.date_field :day_lteq_end_of_day %>
-    <%= f.label :starttime_gteq, '時間から探す' %>
-    <%= f.time_field :starttime_gteq %>
-    ~
-    <%= f.time_field :starttime_lteq_end_of_day %>
+    <%= f.label :starttime_cont, '開始時間から探す' %>
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '' %>指定しない
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '10:00' %>10時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '11:00' %>11時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '12:00' %>12時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '13:00' %>13時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '14:00' %>14時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '15:00' %>15時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '16:00' %>16時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '17:00' %>17時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '18:00' %>18時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '19:00' %>19時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '20:00' %>20時
     <br>
     <%= f.submit '検索' %>
   <% end %>
