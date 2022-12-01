@@ -47,6 +47,24 @@
   </table>
 </div>
 <div id="influencer_search_window">
-  <p id="influencer_search">インフルエンサー検索部分です</p>
-  <a href="#" style="text-decoration:none;" id="influencer_search_link">検索する</a>
+  <h3>インフルエンサー検索</h3>
+  <%= search_form_for @q, url: search_influencers_path do |f| %>
+    <%= f.label :name_or_profile_or_genre_cont, 'キーワード' %>
+    <%= f.search_field :name_or_profile_or_genre_cont %>
+    <%= f.label :genre_cont, '得意ジャンルから探す' %>
+    <%= f.check_box :genre_cont_any, { multiple: true }, '' %>指定しない
+    <%= f.check_box :genre_cont_any, { multiple: true }, 'トレンドメイク' %>トレンドメイク
+    <%= f.check_box :genre_cont_any, { multiple: true }, 'モテメイク' %>モテメイク
+    <%= f.check_box :genre_cont_any, { multiple: true }, 'プチプラメイク' %>プチプラメイク
+    <%= f.check_box :genre_cont_any, { multiple: true }, 'デパコスメイク' %>デパコスメイク
+    <%= f.check_box :genre_cont_any, { multiple: true }, '海外メイク' %>海外メイク
+    <%= f.check_box :genre_cont_any, { multiple: true }, 'ナチュラルメイク' %>ナチュラルメイク
+    <%= f.check_box :genre_cont_any, { multiple: true }, '垢抜けメイク' %>垢抜けメイク
+    <%= f.check_box :genre_cont_any, { multiple: true }, '整形メイク' %>整形メイク
+    <%= f.check_box :genre_cont_any, { multiple: true }, 'イベントメイク' %>イベントメイク
+    <%= f.check_box :genre_cont_any, { multiple: true }, 'パーソナルカラー診断' %>パーソナルカラー診断
+    <%= f.check_box :genre_cont_any, { multiple: true }, '韓国メイク' %>韓国メイク
+    <br>
+    <%= f.submit '検索' %>
+  <% end %>
 </div>
