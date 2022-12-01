@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   end
   resources :influencers, :only => [:index, :show] do
     resource :relationships, only: [:create, :destroy]
+    collection do
+      get 'search'
+    end
   end
   resources :counselings, :only => [:index, :show] do
     resource :favorites, only: [:create, :destroy]
