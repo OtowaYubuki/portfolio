@@ -49,8 +49,8 @@
 <div id="influencer_search_window">
   <h3>インフルエンサー検索</h3>
   <%= search_form_for @q, url: search_influencers_path do |f| %>
-    <%= f.label :name_or_profile_or_genre_cont, 'キーワード' %>
-    <%= f.search_field :name_or_profile_or_genre_cont %>
+    <%= f.label :name_or_profile_cont, 'キーワード' %>
+    <%= f.search_field :name_or_profile_cont %>
     <%= f.label :genre_cont, '得意ジャンルから探す' %>
     <%= f.check_box :genre_cont_any, { multiple: true }, '' %>指定しない
     <%= f.check_box :genre_cont_any, { multiple: true }, 'トレンドメイク' %>トレンドメイク

@@ -1,1 +1,36 @@
-
+<% if @results.blank? %>
+  <h2 id="results">検索結果：<%= @results.count %>件</h2>
+  <p id="not_results">もう一度検索してください</p>
+<% else %>
+  <h2 id="results">検索結果：<%= @results.count %>件</h2>
+  <table class="new_counselings">
+    <tr class="tr_image">
+      <% @results.each do |influencer| %>
+        <td><%= image_tag influencer.influencer_image.variant(resize:'100x100') %></td>
+      <% end %>
+    </tr>
+    <tr class="tr_title">
+      <% @results.each do |influencer| %>
+        <td><%= influencer.name %></td>
+      <% end %>
+    </tr>
+    <tr class="tr_date">
+      <% @results.each do |influencer| %>
+        <td><%= influencer.profile %></td>
+      <% end %>
+    </tr>
+    <tr class="tr_date">
+      <% @results.each do |influencer| %>
+        <td><%= influencer.genre %></td>
+      <% end %>
+    </tr>
+    <tr class="tr_button">
+      <% @results.each do |influencer| %>
+        <td><%= link_to "詳細", influencer_path(influencer) %></td>
+      <% end %>
+    </tr>
+  </table>
+<% end %>
+<div id="back_to_counselings_link">
+  <%= link_to "インフルエンサ一覧へ戻る", influencers_path, class:"link" %>
+</div>

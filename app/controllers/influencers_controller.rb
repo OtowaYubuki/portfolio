@@ -1,5 +1,5 @@
 class InfluencersController < ApplicationController
-  before_action :search_q, only: [:index, :search]
+  before_action :set_q, only: [:index, :search]
 
   def index
     @influencers = Influencer.all
@@ -11,11 +11,11 @@ class InfluencersController < ApplicationController
   end
 
   def search
-    @answers = @s.result
+    @results = @q.result
   end
 
   private
-  def search_q
-    @s = Influencer.ransack(params[:q])
+  def set_q
+    @q = Influencer.ransack(params[:q])
   end
 end
