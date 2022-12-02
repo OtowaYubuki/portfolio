@@ -51,19 +51,18 @@
   <%= search_form_for @q, url: search_influencers_path do |f| %>
     <%= f.label :name_or_profile_cont, 'キーワード' %>
     <%= f.search_field :name_or_profile_cont %>
-    <%= f.label :genre_cont, '得意ジャンルから探す' %>
-    <%= f.check_box :genre_cont_any, { multiple: true }, '' %>指定しない
-    <%= f.check_box :genre_cont_any, { multiple: true }, 'トレンドメイク' %>トレンドメイク
-    <%= f.check_box :genre_cont_any, { multiple: true }, 'モテメイク' %>モテメイク
-    <%= f.check_box :genre_cont_any, { multiple: true }, 'プチプラメイク' %>プチプラメイク
-    <%= f.check_box :genre_cont_any, { multiple: true }, 'デパコスメイク' %>デパコスメイク
-    <%= f.check_box :genre_cont_any, { multiple: true }, '海外メイク' %>海外メイク
-    <%= f.check_box :genre_cont_any, { multiple: true }, 'ナチュラルメイク' %>ナチュラルメイク
-    <%= f.check_box :genre_cont_any, { multiple: true }, '垢抜けメイク' %>垢抜けメイク
-    <%= f.check_box :genre_cont_any, { multiple: true }, '整形メイク' %>整形メイク
-    <%= f.check_box :genre_cont_any, { multiple: true }, 'イベントメイク' %>イベントメイク
-    <%= f.check_box :genre_cont_any, { multiple: true }, 'パーソナルカラー診断' %>パーソナルカラー診断
-    <%= f.check_box :genre_cont_any, { multiple: true }, '韓国メイク' %>韓国メイク
+    <p>インフルエンサーの得意ジャンルから探す</p>
+    <%= link_to "トレンドメイク", search_influencers_path(q: { genre_eq: 'トレンドメイク' }), class:"link" %>
+    <%= link_to "モテメイク", search_influencers_path(q: { genre_cont: 'モテメイク' }), class:"link" %>
+    <%= link_to "プチプラメイク", search_influencers_path(q: { genre_cont: 'プチプラメイク' }), class:"link" %>
+    <%= link_to "デパコスメイク", search_influencers_path(q: { genre_cont: 'デパコスメイク' }), class:"link" %>
+    <%= link_to "海外メイク", search_influencers_path(q: { genre_cont: '海外メイク' }), class:"link" %>
+    <%= link_to "ナチュラルメイク", search_influencers_path(q: { genre_cont: 'ナチュラルメイク' }), class:"link" %>
+    <%= link_to "垢抜けメイク", search_influencers_path(q: { genre_cont: '垢抜けメイク' }), class:"link" %>
+    <%= link_to "整形メイク", search_influencers_path(q: { genre_cont: '整形メイク' }), class:"link" %>
+    <%= link_to "イベントメイク", search_influencers_path(q: { genre_cont: 'イベントメイク' }), class:"link" %>
+    <%= link_to "パーソナルカラー診断", search_influencers_path(q: { genre_cont: 'パーソナルカラー診断' }), class:"link" %>
+    <%= link_to "韓国メイク", search_influencers_path(q: { genre_cont: '韓国メイク' }), class:"link" %>
     <br>
     <%= f.submit '検索' %>
   <% end %>
