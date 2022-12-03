@@ -8,6 +8,7 @@ class InfluencersController < ApplicationController
   def show
     @influencer = Influencer.find(params[:id])
     @counselings = @influencer.counselings
+    @review = Review.new
   end
 
   def search
