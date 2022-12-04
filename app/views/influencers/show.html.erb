@@ -16,6 +16,7 @@
         <%= link_to 'フォローする', influencer_relationships_path(@influencer), method: :post %>
       <% end %>
       <%= @influencer.relationships.count %>
+      <%= link_to 'レビューを投稿する', new_influencer_reviews_path(@influencer) %>
     </td>
   </tr>
 </table>
