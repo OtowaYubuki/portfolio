@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'reviews/create'
   root 'top#index'
   devise_for :users, controllers: {registrations: 'users/registrations'}
   resources :users, :only => [:show, :edit, :destroy] do
