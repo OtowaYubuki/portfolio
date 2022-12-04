@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'top#index'
+
   devise_for :users, controllers: {registrations: 'users/registrations'}
   resources :users, :only => [:show, :edit, :destroy] do
     resources :favorites, only: [:index]
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   end
   resources :influencers, :only => [:index, :show] do
     resource :relationships, only: [:create, :destroy]
+    resource :reviews, only: [:new, :create]
     collection do
       get 'search'
     end

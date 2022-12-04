@@ -1,5 +1,5 @@
 <table id="counseling_show">
-  <%= form_with model: [@counseling, @reservation], url: confirm_counseling_reservations_path(@reservation), local: true do |f| %>
+  <%= form_with model: [@counseling, @reservation], url: counseling_reservations_path(@reservation, counseling_id: @counseling.id), local: true do |f| %>
     <tr id="counseling_show_title">
       <td><%= @counseling.name %></td>
     </tr>
