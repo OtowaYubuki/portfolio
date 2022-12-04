@@ -11,7 +11,6 @@ class User < ApplicationRecord
   has_many :reservation_counselings, through: :reservations, source: :counseling
   has_many :relationships, dependent: :destroy
   has_many :follow_influencers, through: :relationships, source: :influencer
-  has_many :review, dependent: :destroy
   
   def already_favorited?(counseling)
     self.favorites.exists?(counseling_id: counseling.id)
