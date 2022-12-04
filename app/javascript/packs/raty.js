@@ -8,6 +8,7 @@
  * version: 4.1.0
  *
  */
+document.addEventListener('turbolinks:load', () => {
 class Raty {
   /**
    *
@@ -800,5 +801,6 @@ class Raty {
     }
   }
 }
-
+})
 export default Raty;
+
