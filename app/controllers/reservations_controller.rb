@@ -10,6 +10,9 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new
   end
 
+  def confirm
+  end
+
   def create
     @counseling = Counseling.find(params[:counseling_id])
     @reservation = Reservation.new(reservation_params)

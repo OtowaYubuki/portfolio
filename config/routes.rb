@@ -15,10 +15,13 @@ Rails.application.routes.draw do
     end
   end
   resources :counselings, :only => [:index, :show] do
+    collection do
+      get 'search'
+    end
     resource :favorites, only: [:create, :destroy]
     resources :reservations, only: [:new, :create, :destroy]
     collection do
-      get 'search'
+      post :confirm
     end
   end
 end
