@@ -1,0 +1,18 @@
+<div id="reservation_confirm">
+  <h3>以下の内容を確認してください</h3>
+  <tr id="counseling_show_title">
+    <td>予約するカウンセリング：<%= @counseling.name %></td>
+  </tr>
+  <tr id="counseling_show_title">
+    <td>開始日：<%= l @counseling.day, format: :long %></td>
+  </tr>
+  <tr id="counseling_show_title">
+    <td>開始時間：<%= l @counseling.starttime, format: :short %></td>
+  </tr>
+  <%= form_with model: [@counseling, @reservation], local: true do |f| %>
+    <tr id="counseling_show_content">
+      <td><%= f.hidden_field :question %></td>
+    </tr>
+    <td><%= f.submit '予約を確定する' %></td>
+  <% end %>
+</div>

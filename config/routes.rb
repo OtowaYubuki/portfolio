@@ -19,9 +19,10 @@ Rails.application.routes.draw do
       get 'search'
     end
     resource :favorites, only: [:create, :destroy]
-    resources :reservations, only: [:new, :create, :destroy]
-    collection do
-      post :confirm
+    resources :reservations, only: [:new, :create, :destroy] do
+      collection do
+        post :confirm
+      end
     end
   end
 end

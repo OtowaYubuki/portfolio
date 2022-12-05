@@ -11,6 +11,8 @@ class ReservationsController < ApplicationController
   end
 
   def confirm
+    @counseling = Counseling.find(params[:counseling_id])
+    @reservation = Reservation.new(reservation_params)
   end
 
   def create
@@ -18,7 +20,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation = current_user.reservations.build(counseling_id: params[:counseling_id])
     if @reservation.save
-      redirect_to counseling_reservations_path, notice: "予約が完了しました"
+      redirect_to user_reservations_path(user_id: current_user.id), notice: "予約が完了しました"
     else
       render :new
     end
