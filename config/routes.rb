@@ -9,9 +9,13 @@ Rails.application.routes.draw do
   end
   resources :influencers, :only => [:index, :show] do
     resource :relationships, only: [:create, :destroy]
-    resource :reviews, only: [:new, :create]
     collection do
       get 'search'
+    end
+    resource :reviews, only: [:new, :create] do
+      collection do
+        post :confirm
+      end
     end
   end
   resources :counselings, :only => [:index, :show] do

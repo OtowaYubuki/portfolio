@@ -4,6 +4,9 @@ class ReviewsController < ApplicationController
     @review = Review.new
   end
 
+  def confirm
+  end
+
   def create
     @influencer = Influencer.find(params[:influencer_id])
     @review = current_user.reviews.build(influencer_id: params[:influencer_id])
