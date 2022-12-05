@@ -1,23 +1,19 @@
 <div id="score_new">
   <h5>総合評価</h5>
     <div class="post_form">
-    <%= form_with model: [@influencer, @review], local: true do |f| %>
-      <%= f.radio_button :score, 5 ,id: 'star1'%>
-      <label for="star1"><span class="text">最高</span>★</label>
-
-      <%= f.radio_button :score, 4 ,id: 'star2'%>
-      <label for="star2"><span class="text">良い</span>★</label>
-
-      <%= f.radio_button :score, 3 ,id: 'star3'%>
-      <label for="star3"><span class="text">普通</span>★</label>
-
-      <%= f.radio_button :score, 2 ,id: 'star4'%>
-      <label for="star4"><span class="text">悪い</span>★</label>
-
-      <%= f.radio_button :score, 1 ,id: 'star5'%>
-      <label for="star5"><span class="text">最悪</span>★</label>
-      <td><%= f.text_area :comment, autofocus: true, :placeholder =>"レビューを入力してください", size: "40x10" %></td>
-      <%= f.submit '投稿する' %>
-    <% end %>
+      <%= form_with model: [@influencer, @review], url: confirm_influencer_reviews_path(@influencer, @review), local: true do |f| %>
+        <%= f.radio_button :score, 5 ,id: 'star1'%>
+        <label for="star1"><span class="text">最高</span>★</label>
+        <%= f.radio_button :score, 4 ,id: 'star2'%>
+        <label for="star2"><span class="text">良い</span>★</label>
+        <%= f.radio_button :score, 3 ,id: 'star3'%>
+        <label for="star3"><span class="text">普通</span>★</label>
+        <%= f.radio_button :score, 2 ,id: 'star4'%>
+        <label for="star4"><span class="text">悪い</span>★</label>
+        <%= f.radio_button :score, 1 ,id: 'star5'%>
+        <label for="star5"><span class="text">最悪</span>★</label>
+        <td><%= f.text_area :comment, autofocus: true, :placeholder =>"レビューを入力してください", size: "40x10" %></td>
+        <%= f.submit '投稿する' %>
+      <% end %>
     </div>
 </div>

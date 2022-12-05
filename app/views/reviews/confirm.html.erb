@@ -1,0 +1,17 @@
+<div id="reservation_confirm">
+  <h3>以下の内容でレビューを送信します</h3>
+  <div>
+    <h2>評価：
+      <span class="star-rating">
+        <span class="star-rating-front" style="width: <%= getPercent(t.score) %>%;">★★★★★</span>
+        <span class="star-rating-back">★★★★★</span>
+      </span> 
+    </h2>
+  </div>
+  <tr id="counseling_show_title">
+    <td><%= @review.comment %></td>
+  </tr>
+  <%= form_with model: [@influencer, @review], local: true do |f| %>
+    <td><%= f.submit '送信する' %></td>
+  <% end %>
+</div>
