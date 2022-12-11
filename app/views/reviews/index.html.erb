@@ -1,5 +1,10 @@
 <table id="influenser_reviews">
   <tr>
+    <% @reviews.each do |review| %>
+      <td><%= review.user.name %>さん</td>
+    <% end %>
+  </tr>
+  <tr>
   <% @reviews.each do |review| %>
     <td>
       <div class="star-rating">
