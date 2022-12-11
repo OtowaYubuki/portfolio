@@ -1,4 +1,8 @@
 class ReviewsController < ApplicationController
+  def index
+    @reviews = Review.all
+  end
+
   def new
     @influencer = Influencer.find(params[:influencer_id])
     @review = Review.new
@@ -13,6 +17,7 @@ class ReviewsController < ApplicationController
     @influencer = Influencer.find(params[:influencer_id])
     @review = Review.new(review_params)
     @review = current_user.reviews.build(influencer_id: params[:influencer_id])
+    binding.pry
     if @review.save
       redirect_to influencer_path(id: @influencer.id), notice: "レビューを投稿しました"
     else

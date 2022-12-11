@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    resource :reviews, only: [:new, :create] do
+    resources :reviews, only: [:index, :new, :create] do
       collection do
         post :confirm
       end

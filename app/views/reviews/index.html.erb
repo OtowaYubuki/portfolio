@@ -1,0 +1,8 @@
+<h2 id="influenser_reviews">新着レビュー</h2>
+<table class="influenser_reviews_table">
+  <tr class="tr_comment">
+    <% @reviews.each do |review| %>
+      <th id="tr_comment"><%= review.comment %></th>
+    <% end %>
+  </tr>
+</table>
