@@ -16,8 +16,8 @@ class ReviewsController < ApplicationController
   def create
     @influencer = Influencer.find(params[:influencer_id])
     @review = Review.new(review_params)
-    @review = current_user.reviews.build(influencer_id: params[:influencer_id])
-    binding.pry
+    @review.user_id = current_user.id
+    @review.influencer_id = @influencer.id
     if @review.save
       redirect_to influencer_path(id: @influencer.id), notice: "レビューを投稿しました"
     else
@@ -27,6 +27,6 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:comment, :score)
+    params.require(:review).permit(:comment, :score, :influencer_id)
   end
 end
