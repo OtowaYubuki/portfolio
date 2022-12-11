@@ -1,8 +1,22 @@
-<h2 id="influenser_reviews">新着レビュー</h2>
-<table class="influenser_reviews_table">
-  <tr class="tr_comment">
+<table id="influenser_reviews">
+  <tr>
+  <% @reviews.each do |review| %>
+    <td>
+      <div class="star-rating">
+      <div class="star-rating-front">
+      <% if review.score? %>
+        <% for i in 1..review.score do %>
+          ★
+        <% end %>
+      <% end %>
+      </div>
+      </div>
+    </td>
+  <% end %>
+  </tr>
+  <tr>
     <% @reviews.each do |review| %>
-      <th id="tr_comment"><%= review.comment %></th>
+      <td><%= review.comment %></td>
     <% end %>
   </tr>
 </table>
