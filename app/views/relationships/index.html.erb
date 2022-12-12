@@ -1,10 +1,8 @@
 <table class="new_counselings">
   <tr class="tr_image">
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
-    <th>画像</th>
+  <% @follow_influencers.each do |influencer| %>
+    <td><%= image_tag influencer.influencer_image.variant(resize:'100x100') %></td>
+  <% end %>
   </tr>
   <tr class="tr_title">
     <% @follow_influencers.each do |influencer| %>
