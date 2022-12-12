@@ -11,7 +11,14 @@
     </tr>
     <tr class="tr_title">
       <% @results.each do |influencer| %>
-        <td><%= influencer.name %></td>
+        <td>
+          <%= influencer.name %>
+          <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+          </span>
+          <%= influencer.reviews.count %>件のレビュー
+        </td>
       <% end %>
     </tr>
     <tr class="tr_date">
