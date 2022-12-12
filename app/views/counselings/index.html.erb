@@ -1,4 +1,3 @@
-# 新着カウンセリング
 <table class="new_counselings">
   <tr>
     <th><%= sort_link(@q, :created_at, "新着順", default_order: :desc, hide_indicator: true) %></th>
@@ -37,7 +36,6 @@
   </tr>
 </table>
 
-#人気カウンセリング
 <table class="popular_counselings">
   <tr class="tr_image">
     <% @counselings.last(5).each do |counseling| %>

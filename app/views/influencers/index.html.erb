@@ -1,5 +1,8 @@
 <div id="influencer_ranking">
   <table class="new_counselings">
+    <tr>
+      <th><%= sort_link(@q, :reviews_comment, "レビュー件数が多い順", default_order: :desc, hide_indicator: true) %></th>
+    </tr>
   <tr class="tr_image">
     <% @influencers.first(5).each do |influencer| %>
       <td><%= image_tag influencer.influencer_image.variant(resize:'100x100') %></td>

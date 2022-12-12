@@ -4,6 +4,7 @@ class InfluencersController < ApplicationController
   def index
     @influencers = Influencer.all
     @reviews = Review.all
+    @influencers = @q.result
   end
 
   def show
