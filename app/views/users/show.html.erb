@@ -3,7 +3,7 @@
   <% if @user.image.attached? %>
     <%= image_tag @user.image.variant(resize:'100x100') %>
   <% else %>
-    <%= image_tag '/22614794.png', size: '100x100' %>
+    <%= image_tag '22614794.png', size: '100x100' %>
   <% end %>
   <p>名前 : <%= @user.name %></p>
   <p>メールアドレス : <%= @user.email %></p>
