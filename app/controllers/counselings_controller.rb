@@ -3,6 +3,7 @@ class CounselingsController < ApplicationController
 
   def index
     @counselings = Counseling.all
+    @counselings = @q.result
   end
 
   def show
