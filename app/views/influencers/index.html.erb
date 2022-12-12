@@ -7,7 +7,14 @@
   </tr>
   <tr class="tr_title">
     <% @influencers.first(5).each do |influencer| %>
-      <td><%= influencer.name %></td>
+      <td>
+        <%= influencer.name %>
+        <span class="star-rating">
+          <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+        </span>
+        <%= influencer.reviews.count %>件
+      </td>
     <% end %>
   </tr>
   <tr class="tr_date">
@@ -31,7 +38,14 @@
     </tr>
     <tr class="tr_title">
       <% @influencers.last(5).each do |influencer| %>
-        <td><%= influencer.name %></td>
+        <td>
+          <%= influencer.name %>
+          <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+          </span>
+          <%= influencer.reviews.count %>件
+        </td>
       <% end %>
     </tr>
     <tr class="tr_date">

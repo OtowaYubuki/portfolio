@@ -3,6 +3,7 @@ class InfluencersController < ApplicationController
 
   def index
     @influencers = Influencer.all
+    @reviews = Review.all
   end
 
   def show
