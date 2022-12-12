@@ -1,10 +1,43 @@
-<div id="service_explanation">
-  <p id="service_explanation_text">WEBサービスの説明テキストが入ります</p>
-    <div id="service_explanation_links">
-      <%= link_to "今すぐはじめる", new_user_registration_path, class:"link" %>
-      <%= link_to "アカウントをお持ちの方", new_user_session_path, class:"link" %>
-    </div>
-</div>
+<% if user_signed_in? %>
+  <table class="new_counselings">
+    <tr class="tr_image">
+      <% @influencers.first(5).each do |influencer| %>
+        <td><%= image_tag influencer.influencer_image.variant(resize:'100x100') %></td>
+      <% end %>
+    </tr>
+    <tr class="tr_title">
+      <% @influencers.first(5).each do |influencer| %>
+        <td>
+          <%= influencer.name %>
+          <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+          </span>
+        </td>
+      <% end %>
+    </tr>
+    <tr class="tr_date">
+      <% @influencers.first(5).each do |influencer| %>
+        <td><%= influencer.profile %></td>
+      <% end %>
+    </tr>
+    <tr class="tr_button">
+      <% @influencers.first(5).each do |influencer| %>
+        <td><%= link_to "もっと見る", influencer_path(influencer) %></td>
+      <% end %>
+    </tr>
+  </table>
+<% else %>
+  <div id="service_explanation">
+    <p id="service_explanation_text">WEBサービスの説明テキストが入ります</p>
+      <div id="service_explanation_links">
+        <%= link_to "今すぐはじめる", new_user_registration_path, class:"link" %>
+        <%= link_to "アカウントをお持ちの方", new_user_session_path, class:"link" %>
+      </div>
+  </div>
+<% end %>
+
+
 <div id="new_counseling_index">
   <table class="new_counselings">
     <tr class="tr_image">
@@ -39,9 +72,13 @@
     </tr>
   </table>
 </div>
-<div id="service_explanation_bottom">
-  <p id="service_explanation_text_bottom">WEBサービスの説明テキストが入ります</p>
-    <div id="service_explanation_links">
-      <%= link_to "さっそくはじめる", new_user_registration_path, class:"link" %>
-    </div>
-</div>
+
+<% if user_signed_in? %>
+<% else %>
+  <div id="service_explanation_bottom">
+    <p id="service_explanation_text_bottom">WEBサービスの説明テキストが入ります</p>
+      <div id="service_explanation_links">
+        <%= link_to "さっそくはじめる", new_user_registration_path, class:"link" %>
+      </div>
+  </div>
+<% end %>

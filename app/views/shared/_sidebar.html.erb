@@ -1,5 +1,5 @@
 <div id="sidebar">
-  <a href="#" style="text-decoration:none;">Home</a><br>
+  <%= link_to "HOME", root_path, class:"link" %>
   <%= link_to "プロフィール", user_path(current_user.id), class:"link" %>
   <%= link_to "カウンセリングを探す", counselings_path, class:"link" %>
   <%= link_to "インフルエンサーを探す", influencers_path, class:"link" %>
