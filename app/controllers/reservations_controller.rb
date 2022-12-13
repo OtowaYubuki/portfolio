@@ -20,6 +20,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation = current_user.reservations.build(counseling_id: params[:counseling_id])
     if @reservation.save
+      ReservationMailer.with(user: @user).send_when_reservation_reply
       redirect_to user_reservations_path(user_id: current_user.id), notice: "予約が完了しました"
     else
       render :new
