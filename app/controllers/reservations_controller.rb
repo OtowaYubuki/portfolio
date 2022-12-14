@@ -23,7 +23,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       @user = User.find(current_user.id)
       ReservationMailer.send_when_reservation_reply(@user).deliver
-      redirect_to user_reservations_path(user_id: current_user.id), notice: "予約が完了しました"
+      redirect_to user_reservations_path(user_id: current_user.id), notice: "予約が完了しました。詳細をご登録のメールアドレス宛てにお送りしましたのでご確認ください"
     else
       render :new
     end
