@@ -20,11 +20,15 @@
 <div id="counseling_show_people">
   <p><%= l @counseling.day, format: :long %></p>
   <p><%= l @counseling.starttime, format: :short %>〜</p>
-  <p>残り<%= @people %>/<%= @counseling.people %>枠</p>
   <% if current_user.already_reserved?(@counseling) %>
     <%= link_to '予約を取り消す', counseling_reservation_path(@counseling), method: :delete, data: {confirm: "予約を取り消しますか？"} %>
   <% else %>
+    <% if @counseling.reservations.count == @counseling.people %>
+      <p>募集人数に達したため予約は締め切りました</p>
+    <% else %>
+      <p>残り<%= @people %>/<%= @counseling.people %>枠</p>
     <%= link_to "予約する", new_counseling_reservation_path(@counseling) %>
+    <% end %>
   <% end %>
 </div>
 <div id="counseling_show_influencer">
