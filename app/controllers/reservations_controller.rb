@@ -18,8 +18,10 @@ class ReservationsController < ApplicationController
   def create
     @counseling = Counseling.find(params[:counseling_id])
     @reservation = Reservation.new(reservation_params)
-    @reservation = current_user.reservations.build(counseling_id: params[:counseling_id])
+    @reservation.user_id = current_user.id
+    @reservation.counseling_id = @counseling.id
     if @reservation.save
+      @user = User.find(current_user.id)
       ReservationMailer.send_when_reservation_reply(@user).deliver
       redirect_to user_reservations_path(user_id: current_user.id), notice: "予約が完了しました"
     else
@@ -36,6 +38,6 @@ class ReservationsController < ApplicationController
 
   private
   def reservation_params
-    params.require(:reservation).permit(:question)
+    params.require(:reservation).permit(:question, :user_id)
   end
 end
