@@ -18,7 +18,7 @@
   </tr>
 </table>
 <div id="counseling_show_people">
-  <p><%= l @counseling.day, format: :long %>/p>
+  <p><%= l @counseling.day, format: :long %></p>
   <p><%= l @counseling.starttime, format: :short %>〜</p>
   <p>残り<%= @people %>/<%= @counseling.people %>枠</p>
   <% if current_user.already_reserved?(@counseling) %>
