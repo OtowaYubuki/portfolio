@@ -67,7 +67,7 @@
     </tr>
     <tr class="tr_button">
       <% @counselings.first(5).each do |counseling| %>
-        <td><%= link_to "予約する", new_user_registration_path, class:"link" %></td>
+        <td><%= link_to "予約する", counseling_path(counseling), class:"link" %></td>
       <% end %>
     </tr>
   </table>
