@@ -10,7 +10,6 @@ class CounselingsController < ApplicationController
     @counseling = Counseling.find(params[:id])
     @influencer = @counseling.influencer
     @people =  @counseling.people - @counseling.reservations.count
-    @day = Date.today
   end
 
   def search

@@ -18,7 +18,7 @@
   </tr>
 </table>
 <div id="counseling_show_people">
-  <% if @day <= @counseling.day %>
+  <% if Date.today >= @counseling.day %>
     <p>開催日を過ぎたため予約は締め切りました</p>
   <% else %>
     <p><%= l @counseling.day, format: :long %></p>
@@ -30,8 +30,8 @@
         <p>募集人数に達したため予約は締め切りました</p>
       <% else %>
         <p>残り<%= @people %>/<%= @counseling.people %>枠</p>
-        <%= link_to "予約する", new_counseling_reservation_path(@counseling) %>
-      <% end %>
+      <%= link_to "予約する", new_counseling_reservation_path(@counseling) %>
+        <% end %>
     <% end %>
   <% end %>
 </div>

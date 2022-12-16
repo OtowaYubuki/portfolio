@@ -334,7 +334,7 @@ Influencer.create!(
 
 require "csv"
 
-CSV.foreach('db/new_user_credentials/counseling-表1.csv', headers: true) do |row|
+CSV.foreach('db/new_user_credentials/new_user_credentials/counseling-表1.csv', headers: true) do |row|
   Counseling.create(
     name: row['name'],
     content: row['content'],
