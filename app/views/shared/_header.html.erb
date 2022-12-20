@@ -1,9 +1,10 @@
 <header>
-  <div id="header_logo">
-    <%= link_to "meselling", root_path, class:"link" %>
-  </div>
-  <div id="header_links">
-    <%= link_to "新規登録", new_user_registration_path, class:"link" %>
-    <%= link_to "ログイン", new_user_session_path, class:"link" %>
+  <%= link_to "meselling", root_path, class:"header_logo" %>
+  <%= link_to "新規登録", new_user_registration_path, class:"new_user_registration_header_link" %>
+  <%= link_to "ログイン", new_user_session_path, class:"new_user_session_header_link" %>
+  <div id="header_explain">
+    <a href="#what_meseling" id="what_meseling">meselingとは？</a>
+    <a href="#howtouse" id="howtouse">使い方</a>
+    <a href="#searchforcounselig" id="searchforcounselig">カウンセリングを探す</a>
   </div>
 </header>
