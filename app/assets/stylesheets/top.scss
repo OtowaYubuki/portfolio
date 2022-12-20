@@ -1,11 +1,48 @@
-#service_explanation{
+#service_explanation_text{
+  color: rgb(255, 255, 255);
   position: absolute;
-  top:150px;
-  left: 50px;
-  width: 90%;
-  height: 20%;
+  top: 350px;
+  left: 210px;
+  text-align: center;
+  font-size: 18px;
+}
+
+#service_explanation_cap{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 290px;
+  left: 520px;
+  text-align: center;
+}
+
+.service_explanation_image{
+  position: absolute;
+  top: 180px;
+  left: 180px;
+
+}
+
+.new_user_registration_inservice_explanation, .new_user_session_service_explanation{
+  text-decoration: none;
+  position: absolute;
+  top: 520px;
+  color: rgb(255, 255, 255);
+  border-radius: 100px;
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  border: 5px solid #fe7c98;
   font-weight: bold;
-  border: solid 3px #000000;
+}
+
+.new_user_registration_inservice_explanation{
+  position: absolute;
+  left: 430px;
+}
+
+.new_user_session_service_explanation{
+  position: absolute;
+  left: 710px;
 }
 
 #new_counseling_index{
