@@ -76,21 +76,21 @@
   width: 100%;
 }
 
-#what_meseling{
+.what_meseling{
   position: absolute;
   right: 670px;
   color: rgb(111, 110, 110);
   text-decoration: none;
 }
 
-#howtouse{
+.how_to_use{
   position: absolute;
   right: 580px;
   color: rgb(111, 110, 110);
   text-decoration: none;
 }
 
-#searchforcounselig{
+.search_for_counselig{
   position: absolute;
   right: 380px;
   color: rgb(111, 110, 110);

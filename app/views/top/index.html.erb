@@ -29,7 +29,7 @@
   </table>
 <% else %>
   <%= image_tag '25154806_s.jpg', size:'1000x500', alt: "コスメ", class: "service_explanation_image" %>
-  <a name="what_meseling"><h1 id="service_explanation_cap">「貴重な体験を気軽に」</h1></a>
+  <h1 id="service_explanation_cap">「貴重な体験を気軽に」</h1>
   <p id="service_explanation_text">SNSを通じて、たくさんのインフルエンサーが情報を発信している時代。<br>
     多くのフォロワーを抱えているインフルエンサーと直接つながることは難しくなりました。<br>
     meseling（ミセリング）は、インフルエンサー本人が開催するカウンセリングに参加できるオンラインサービスです。<br>
@@ -37,42 +37,44 @@
   <%= link_to "今すぐはじめる", new_user_registration_path, class:"new_user_registration_inservice_explanation" %>
   <%= link_to "アカウントをお持ちの方", new_user_session_path, class:"new_user_session_service_explanation" %>
 <% end %>
-
-<div id="new_counseling_index">
-  <table class="new_counselings">
-    <tr class="tr_image">
-      <% @counselings.first(5).each do |counseling| %>
-        <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-      <% end %>    
-    </tr>
-    <tr class="tr_title">
-      <% @counselings.first(5).each do |counseling| %>
-        <td><%= counseling.name %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_date">
-      <% @counselings.first(5).each do |counseling| %>
-        <td><%= l counseling.day, format: :long %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_date">
-      <% @counselings.first(5).each do |counseling| %>
-        <td><%= l counseling.starttime, format: :short %>〜</td>
-      <% end %>
-    </tr>
-    <tr class="tr_people">
-      <% @counselings.first(5).each do |counseling| %>
-        <td><%= counseling.people %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_button">
-      <% @counselings.first(5).each do |counseling| %>
-        <td><%= link_to "予約する", counseling_path(counseling), class:"link" %></td>
-      <% end %>
-    </tr>
-  </table>
-</div>
-
+<h2 id="top_searchforcounselig">カウンセリングを探す</h2>
+<table class="counselings">
+  <tr>
+    <% @counselings.first(5).each do |counseling| %>
+      <th><%= image_tag '25307560_s.jpg', size:'200x150' %></th>
+    <% end %>    
+  </tr>
+  <tr>
+    <% @counselings.first(5).each do |counseling| %>
+      <td><%= counseling.name %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <% @counselings.first(5).each do |counseling| %>
+      <td><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</td>
+    <% end %>
+  </tr>
+  <tr>
+    <% @influencers.first(5).each do |influencer| %>
+      <td><span class="star-rating">
+          <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+          </span>
+          （<%= influencer.reviews.count %>）
+      </td>
+    <% end %>
+  </tr>
+  <tr>
+    <% @influencers.first(5).each do |influencer| %>
+      <td><%= image_tag influencer.influencer_image, size:'50x30' %>  <%= influencer.name %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <% @counselings.first(5).each do |counseling| %>
+      <td><%= link_to "予約する", counseling_path(counseling), class:"link" %></td>
+    <% end %>
+  </tr>
+</table>
 <% if user_signed_in? %>
 <% else %>
   <div id="service_explanation_bottom">
@@ -82,5 +84,3 @@
       </div>
   </div>
 <% end %>
-
-
