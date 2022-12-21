@@ -80,10 +80,35 @@
 
 #service_explanation_cap_bottom{
   position: absolute;
-  top: 1300px;
-  left: 50px;
-  width: 90%;
-  height: 20%;
-  font-weight: bold;
-  border: solid 3px #000000;
+  top: 1350px;
+  left: 180px;
+  color: rgb(111, 110, 110);
+}
+
+.service_explanation_bottom_image{
+  position: absolute;
+  top: 1350px;
+  left: 750px;
+  border-radius: 50%;  
+}
+
+#service_explanation_text_bottom{
+  position: absolute;
+  top: 1430px;
+  left: 190px;
+  color: rgb(111, 110, 110);
+}
+
+.new_user_registration_explanation_bottom{
+  position: absolute;
+  top: 1550px;
+  left: 300px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 100px;
+  width: 100px;
+  padding: 15px;
+  background: #fe7c98;
+  text-align: center;
+  width: 180px;
 }

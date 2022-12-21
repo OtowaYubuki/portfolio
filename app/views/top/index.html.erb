@@ -73,8 +73,9 @@
 </table>
 <% if user_signed_in? %>
 <% else %>
+  <%= image_tag '25067882_s.jpg', size:'400x400', alt: "携帯", class: "service_explanation_bottom_image" %>
   <h1 id="service_explanation_cap_bottom">使い方</h1>
   <p id="service_explanation_text_bottom">参加したいカウンセリングを検索して、予約するだけ！<br>
-  フォロー機能やお気に入り機能を使って、気になるインフルエンサーやカウンセリングを保存することもできます。</p>
-  <%= link_to "さっそくはじめる", new_user_registration_path, class:"link" %>
+  フォロー機能やお気に入り機能を使って、<br>気になるインフルエンサーやカウンセリングを保存することもできます。</p>
+  <%= link_to "さっそくはじめる", new_user_registration_path, class:"new_user_registration_explanation_bottom" %>
 <% end %>
