@@ -45,6 +45,40 @@
   left: 710px;
 }
 
+#border1, #border2, #border3, #border4, #border5{
+  position: absolute;
+  top: 842px;
+  border: 1px solid #858484;
+	width: 200px;
+	height: 330px;
+  background-color: #ffffff;
+}
+
+#border1{
+  position: absolute;
+  left: 182px;
+}
+
+#border2{
+  position: absolute;
+  left: 386px;
+}
+
+#border3{
+  position: absolute;
+  left: 590px;
+}
+
+#border4{
+  position: absolute;
+  left: 794px;
+}
+
+#border5{
+  position: absolute;
+  left: 998px;
+}
+
 .counselings{
   position: absolute;
   top:840px;
@@ -52,6 +86,7 @@
   font-size: 13px;
   color: rgb(111, 110, 110);
   width: 200px;
+  text-align: center;
 }
 
 #top_searchforcounselig_background{
