@@ -73,10 +73,8 @@
 </table>
 <% if user_signed_in? %>
 <% else %>
-  <div id="service_explanation_bottom">
-    <p id="service_explanation_text_bottom">WEBサービスの説明テキストが入ります</p>
-      <div id="service_explanation_links">
-        <%= link_to "さっそくはじめる", new_user_registration_path, class:"link" %>
-      </div>
-  </div>
+  <h1 id="service_explanation_cap_bottom">使い方</h1>
+  <p id="service_explanation_text_bottom">参加したいカウンセリングを検索して、予約するだけ！<br>
+  フォロー機能やお気に入り機能を使って、気になるインフルエンサーやカウンセリングを保存することもできます。</p>
+  <%= link_to "さっそくはじめる", new_user_registration_path, class:"link" %>
 <% end %>
