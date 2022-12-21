@@ -28,10 +28,10 @@
  }
 
 .container{
-  position: relative;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
 }
 
  /* header*/

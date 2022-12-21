@@ -69,11 +69,7 @@
       <td><%= image_tag influencer.influencer_image, size:'50x30' %>  <%= influencer.name %></td>
     <% end %>
   </tr>
-  <tr>
-    <% @counselings.first(5).each do |counseling| %>
-      <td><%= link_to "予約する", counseling_path(counseling), class:"link" %></td>
-    <% end %>
-  </tr>
+  <%= link_to "もっと見る", new_user_session_path, class:"see_more_counseling" %>
 </table>
 <% if user_signed_in? %>
 <% else %>
