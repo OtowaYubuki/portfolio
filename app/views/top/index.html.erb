@@ -66,7 +66,7 @@
   </tr>
   <tr>
     <% @influencers.first(5).each do |influencer| %>
-      <td><%= image_tag influencer.influencer_image, size:'50x30' %>  <%= influencer.name %></td>
+      <td><%= image_tag influencer.influencer_image, size:'50x40', class: "influencer_image" %>  <%= influencer.name %></td>
     <% end %>
   </tr>
   <%= link_to "もっと見る", new_user_session_path, class:"see_more_counseling" %>
