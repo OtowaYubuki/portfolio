@@ -157,6 +157,20 @@
   top: 16px;
 }
 
+.logout{
+  position: absolute;
+  top:15px;
+  right: 120px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 100px;
+  width: 100px;
+  padding: 15px;
+  background: #fe7c98;
+  text-align: center;
+}
+
 #service_explanation_text{
   color: rgb(255, 255, 255);
   position: absolute;
