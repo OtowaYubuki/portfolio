@@ -1,8 +1,4 @@
 <header>
-  <div id="header_logo">
-    <%= link_to "meselling", root_path, class:"link" %>
-  </div>
-  <div id="header_links">
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか?" } %>
-  </div>
+  <%= link_to "meselling", root_path, class:"header_logo" %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか?" }, class:"logout" %>
 </header>
