@@ -1,5 +1,23 @@
 #sign_in, #sign_up, #current_user, #profile_edit{
-  position: absolute;
-  top:100px;
-  left:300px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 70px;
+}
+
+.cap{
+  color: rgb(111, 110, 110);
+}
+
+.button{
+  color: #ffff;
+  background-color: #fb5d80;
+  width: 345px;
+  height: 40px;
+  border: none;
+}
+
+.user_field{
+  height: 40px;
+  width: 337px;
+  font-size: 15px;
 }
