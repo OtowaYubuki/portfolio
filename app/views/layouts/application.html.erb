@@ -10,7 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="body_main">
+  <body>
     <%= render 'layouts/notification' %>
     <% if user_signed_in? %>
       <%= render "shared/signin_header" %>
