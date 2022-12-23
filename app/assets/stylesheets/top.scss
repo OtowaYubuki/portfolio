@@ -1,3 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+ .header_logo{
+  position: absolute;
+  top:0px;
+  left:10px;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 55px;
+  text-decoration: none;
+  color: #fe7c98;
+}
+
+.new_user_registration_header_link, .new_user_session_header_link{
+  position: absolute;
+  top:35px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 100px;
+  width: 100px;
+  padding: 15px;
+  background: #fe7c98;
+  text-align: center;
+}
+
+.new_user_registration_header_link{
+  position: absolute;
+  right: 200px;
+}
+
+.new_user_session_header_link{
+  position: absolute;
+  right: 50px;
+}
+
+#header_explain{
+  position: absolute;
+  top:45px;
+  width: 100%;
+}
+
+.what_meseling{
+  position: absolute;
+  right: 670px;
+  color: rgb(111, 110, 110);
+  text-decoration: none;
+}
+
+.how_to_use{
+  position: absolute;
+  right: 580px;
+  color: rgb(111, 110, 110);
+  text-decoration: none;
+}
+
+.search_for_counselig{
+  position: absolute;
+  right: 380px;
+  color: rgb(111, 110, 110);
+  text-decoration: none;
+}
+
 #service_explanation_text{
   color: rgb(255, 255, 255);
   position: absolute;
@@ -45,7 +106,14 @@
   left: 710px;
 }
 
-#border1, #border2, #border3, #border4, #border5{
+.top_searchforcounselig{
+  position: absolute;
+  top:750px;
+  left: 180px;
+  color: rgb(111, 110, 110);
+}
+
+.border1, .border2, .border3, .border4, .border5{
   position: absolute;
   top: 842px;
   border: 1px solid #858484;
@@ -54,27 +122,27 @@
   background-color: #ffffff;
 }
 
-#border1{
+.border1{
   position: absolute;
   left: 182px;
 }
 
-#border2{
+.border2{
   position: absolute;
   left: 386px;
 }
 
-#border3{
+.border3{
   position: absolute;
   left: 590px;
 }
 
-#border4{
+.border4{
   position: absolute;
   left: 794px;
 }
 
-#border5{
+.border5{
   position: absolute;
   left: 998px;
 }
@@ -95,13 +163,6 @@
   top:730px;
   width: 100%;
   height: 570px;
-}
-
-#top_searchforcounselig{
-  position: absolute;
-  top:750px;
-  left: 180px;
-  color: rgb(111, 110, 110);
 }
 
 .star-rating{
@@ -166,4 +227,17 @@
   background: #fe7c98;
   text-align: center;
   width: 180px;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fe7c98;
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  height: 30px;
 }
