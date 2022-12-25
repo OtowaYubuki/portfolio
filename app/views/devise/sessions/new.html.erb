@@ -1,13 +1,12 @@
 <div id="sign_in">
-  <h2>ログイン</h2>
+  <h2 class="cap">ログイン</h2>
   <%= form_with model: @user, url: new_user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, :placeholder =>"メールアドレス", autofocus: true, autocomplete: "email", class:"user_field" %>
     </div>
+    </br>
     <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
+      <%= f.password_field :password, :placeholder =>"パスワード(6文字以上)", autocomplete: "current-password", class:"user_field" %>
     </div>
     <% if devise_mapping.rememberable? %>
       <div class="field">
@@ -16,7 +15,7 @@
       </div>
     <% end %>
     <div class="actions">
-      <%= f.submit "ログイン" %>
+      <%= f.submit "ログイン", class:"button" %>
     </div>
   <% end %>
   <%= render "devise/shared/links" %>
