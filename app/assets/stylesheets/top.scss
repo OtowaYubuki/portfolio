@@ -223,20 +223,25 @@
   left: 730px;
 }
 
-#top_searchforcounselig{
+#toppage{
   position: absolute;
-  top:750px;
-  left: 220px;
+  top: 800px;
+}
+
+.top_searchforcounselig{
+  margin-left: 210px;
+  margin-top: 0px;
   color: rgb(111, 110, 110);
+  writing-mode: horizontal-tb;
 }
 
 .border1, .border2, .border3, .border4, .border5{
   position: absolute;
-  top: 842px;
   border: 1px solid #858484;
 	width: 200px;
 	height: 330px;
   background-color: #ffffff;
+  margin-top: 2px;
 }
 
 .border1{
@@ -266,7 +271,6 @@
 
 .counselings{
   position: absolute;
-  top:840px;
   left: 210px;
   font-size: 13px;
   color: rgb(111, 110, 110);
@@ -290,9 +294,9 @@
   border-radius: 50%;
 }
 
-.see_more_counseling{
+#see_more_counseling{
   position: absolute;
-  top:1200px;
+  top: 420px;
   left: 655px;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -357,4 +361,9 @@ footer{
   background-color: #ffedf0;
   width: 100%;
   height: 30px;
+}
+
+#signin_toppage{
+  position: absolute;
+  top: 150px;
 }

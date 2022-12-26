@@ -1,32 +1,45 @@
 <% if user_signed_in? %>
-  <table class="new_counselings">
-    <tr class="tr_image">
-      <% @influencers.first(5).each do |influencer| %>
-        <td><%= image_tag influencer.influencer_image.variant(resize:'100x100') %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_title">
-      <% @influencers.first(5).each do |influencer| %>
-        <td>
-          <%= influencer.name %>
-          <span class="star-rating">
-            <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
-            <span class="star-rating-back">★★★★★</span>
-          </span>
-        </td>
-      <% end %>
-    </tr>
-    <tr class="tr_date">
-      <% @influencers.first(5).each do |influencer| %>
-        <td><%= influencer.profile %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_button">
-      <% @influencers.first(5).each do |influencer| %>
-        <td><%= link_to "もっと見る", influencer_path(influencer) %></td>
-      <% end %>
-    </tr>
-  </table>
+  <div id="signin_toppage">
+    <h2 class="top_searchforcounselig">カウンセリングを探す</h2>
+    <div class="border1"></div>
+    <div class="border2"></div>
+    <div class="border3"></div>
+    <div class="border4"></div>
+    <div class="border5"></div>
+    <table class="counselings">
+      <tr>
+        <% @counselings.first(5).each do |counseling| %>
+          <th><%= image_tag '25307560_s.jpg', size:'200x150' %></th>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @counselings.first(5).each do |counseling| %>
+          <td><%= counseling.name %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @counselings.first(5).each do |counseling| %>
+          <td><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @influencers.first(5).each do |influencer| %>
+          <td><span class="star-rating">
+              <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+              </span>
+              （<%= influencer.reviews.count %>）
+          </td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @influencers.first(5).each do |influencer| %>
+          <td><%= image_tag influencer.influencer_image, size:'50x40', class: "image" %>  <%= influencer.name %></td>
+        <% end %>
+      </tr>
+      <%= link_to "もっと見る", new_user_session_path, class:"see_more_counseling" %>
+    </table>
+  </div>
 <% else %>
   <%= image_tag '25154806_s.jpg', size:'1000x500', alt: "コスメ", class: "service_explanation_image" %>
   <h1 id="service_explanation_cap">「貴重な体験を気軽に」</h1>
@@ -36,49 +49,48 @@
     憧れのインフルエンサーに質問したり、アドバイスをもらったり「貴重な体験を気軽にできる」を叶えました。</p>
   <%= link_to "今すぐはじめる", new_user_registration_path, class:"new_user_registration_inservice_explanation" %>
   <%= link_to "アカウントをお持ちの方", new_user_session_path, class:"new_user_session_service_explanation" %>
-<% end %>
-<div id="top_searchforcounselig_background"></div>
-<h2 id="top_searchforcounselig">カウンセリングを探す</h2>
-<div class="border1"></div>
-<div class="border2"></div>
-<div class="border3"></div>
-<div class="border4"></div>
-<div class="border5"></div>
-<table class="counselings">
-  <tr>
-    <% @counselings.first(5).each do |counseling| %>
-      <th><%= image_tag '25307560_s.jpg', size:'200x150' %></th>
-    <% end %>    
-  </tr>
-  <tr>
-    <% @counselings.first(5).each do |counseling| %>
-      <td><%= counseling.name %></td>
-    <% end %>
-  </tr>
-  <tr>
-    <% @counselings.first(5).each do |counseling| %>
-      <td><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</td>
-    <% end %>
-  </tr>
-  <tr>
-    <% @influencers.first(5).each do |influencer| %>
-      <td><span class="star-rating">
-          <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
-          <span class="star-rating-back">★★★★★</span>
-          </span>
-          （<%= influencer.reviews.count %>）
-      </td>
-    <% end %>
-  </tr>
-  <tr>
-    <% @influencers.first(5).each do |influencer| %>
-      <td><%= image_tag influencer.influencer_image, size:'50x40', class: "image" %>  <%= influencer.name %></td>
-    <% end %>
-  </tr>
-  <%= link_to "もっと見る", new_user_session_path, class:"see_more_counseling" %>
-</table>
-<% if user_signed_in? %>
-<% else %>
+  <div id="top_searchforcounselig_background"></div>
+  <div id="toppage">
+    <h2 class="top_searchforcounselig">カウンセリングを探す</h2>
+    <div class="border1"></div>
+    <div class="border2"></div>
+    <div class="border3"></div>
+    <div class="border4"></div>
+    <div class="border5"></div>
+    <table class="counselings">
+      <tr>
+        <% @counselings.first(5).each do |counseling| %>
+          <th><%= image_tag '25307560_s.jpg', size:'200x150' %></th>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @counselings.first(5).each do |counseling| %>
+          <td><%= counseling.name %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @counselings.first(5).each do |counseling| %>
+          <td><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @influencers.first(5).each do |influencer| %>
+          <td><span class="star-rating">
+              <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+              </span>
+              （<%= influencer.reviews.count %>）
+          </td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @influencers.first(5).each do |influencer| %>
+          <td><%= image_tag influencer.influencer_image, size:'50x40', class: "image" %>  <%= influencer.name %></td>
+        <% end %>
+      </tr>
+      <%= link_to "もっと見る", new_user_session_path, id:"see_more_counseling" %>
+    </table>
+  </div>
   <div id="howtouse"></div>
   <%= image_tag '25067882_s.jpg', size:'400x400', alt: "携帯", class: "service_explanation_bottom_image" %>
   <h1 id="service_explanation_cap_bottom">使い方</h1>
