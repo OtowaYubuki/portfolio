@@ -14,8 +14,22 @@ margin-top: 50px;
   color: rgb(111, 110, 110);
 }
 
-.image{
-  border-radius: 50%;  
+.user_image{
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.show_user_image{
+  position: absolute;
+  border-radius: 50%;
+  left: 655px;
+}
+
+#user_profile{
+  position: absolute;
+  top: 350px;
+  font-size: 18px;
 }
 
 #em{
@@ -29,6 +43,20 @@ margin-top: 50px;
   width: 345px;
   height: 40px;
   border: none;
+}
+
+#edit_button{
+position: absolute;
+top: 500px;
+left: 560px;
+text-decoration: none;
+background-color: #fb5d80;
+color: #ffff;
+width: 345px;
+height: 40px;
+text-align: center;
+line-height: 2.5;
+
 }
 
 .user_field{
