@@ -181,7 +181,7 @@
   color: rgb(255, 255, 255);
   position: absolute;
   top: 350px;
-  left: 210px;
+  left: 250px;
   text-align: center;
   font-size: 18px;
 }
@@ -190,15 +190,14 @@
   color: rgb(255, 255, 255);
   position: absolute;
   top: 290px;
-  left: 520px;
+  left: 540px;
   text-align: center;
 }
 
 .service_explanation_image{
-  position: absolute;
-  top: 180px;
-  left: 180px;
-
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .new_user_registration_inservice_explanation, .new_user_session_service_explanation{
@@ -216,18 +215,18 @@
 
 .new_user_registration_inservice_explanation{
   position: absolute;
-  left: 430px;
+  left: 450px;
 }
 
 .new_user_session_service_explanation{
   position: absolute;
-  left: 710px;
+  left: 730px;
 }
 
 #top_searchforcounselig{
   position: absolute;
   top:750px;
-  left: 180px;
+  left: 220px;
   color: rgb(111, 110, 110);
 }
 
@@ -242,33 +241,33 @@
 
 .border1{
   position: absolute;
-  left: 182px;
+  left: 212px;
 }
 
 .border2{
   position: absolute;
-  left: 386px;
+  left: 416px;
 }
 
 .border3{
   position: absolute;
-  left: 590px;
+  left: 620px;
 }
 
 .border4{
   position: absolute;
-  left: 794px;
+  left: 824px;
 }
 
 .border5{
   position: absolute;
-  left: 998px;
+  left: 1028px;
 }
 
 .counselings{
   position: absolute;
   top:840px;
-  left: 180px;
+  left: 210px;
   font-size: 13px;
   color: rgb(111, 110, 110);
   width: 200px;
@@ -294,7 +293,7 @@
 .see_more_counseling{
   position: absolute;
   top:1200px;
-  left: 620px;
+  left: 655px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   border-radius: 100px;
@@ -307,7 +306,7 @@
 #service_explanation_cap_bottom{
   position: absolute;
   top: 1350px;
-  left: 180px;
+  left: 210px;
   color: rgb(111, 110, 110);
 }
 
@@ -329,14 +328,14 @@
 #service_explanation_text_bottom{
   position: absolute;
   top: 1430px;
-  left: 190px;
+  left: 210px;
   color: rgb(111, 110, 110);
 }
 
 .new_user_registration_explanation_bottom{
   position: absolute;
   top: 1550px;
-  left: 300px;
+  left: 335px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   border-radius: 100px;
