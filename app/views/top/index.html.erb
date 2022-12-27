@@ -1,45 +1,60 @@
 <% if user_signed_in? %>
   <div id="signin_toppage">
     <h2 class="top_searchforcounselig">カウンセリングを探す</h2>
-    <div class="border1"></div>
-    <div class="border2"></div>
-    <div class="border3"></div>
-    <div class="border4"></div>
-    <div class="border5"></div>
     <table class="counselings">
       <tr>
         <% @counselings.first(5).each do |counseling| %>
-          <th><%= image_tag '25307560_s.jpg', size:'200x150' %></th>
+          <th><div class="border1"><%= image_tag '25307560_s.jpg', size:'200x150' %></div></th>
         <% end %>    
       </tr>
       <tr>
         <% @counselings.first(5).each do |counseling| %>
-          <td><%= counseling.name %></td>
+          <td><div class="counseling_name"><%= counseling.name %></div></td>
         <% end %>
       </tr>
       <tr>
         <% @counselings.first(5).each do |counseling| %>
-          <td><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</td>
+          <td><div class="counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
         <% end %>
       </tr>
       <tr>
         <% @influencers.first(5).each do |influencer| %>
-          <td><span class="star-rating">
+          <td><div class="host_influencer"><%= image_tag influencer.influencer_image, size:'50x40', class: "image" %>  <%= influencer.name %></div></td>
+        <% end %>
+      </tr>
+      <%= link_to "もっと見る", counselings_path, id:"signin_see_more_counseling" %>
+    </table>
+  </div>
+
+  <div id="top_searchforinfluencer_background"></div>
+  <div id="signin_toppage_bottom">
+    <h2 class="top_searchforinfluencer">インフルエンサーを探す</h2>
+    <table class="influencers">
+      <tr>
+        <% @influencers.last(5).each do |influencer| %>
+          <th><div class="border6"><%= image_tag influencer.influencer_image, size:'100x90', class: "influencer_image" %></div></th>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @influencers.last(5).each do |influencer| %>
+          <td><div class="name"><%= influencer.name %></div></td>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @influencers.last(5).each do |influencer| %>
+          <td><div class="star"><span class="star-rating">
               <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
               <span class="star-rating-back">★★★★★</span>
               </span>
               （<%= influencer.reviews.count %>）
-          </td>
+          </div></td>
         <% end %>
       </tr>
-      <tr>
-        <% @influencers.first(5).each do |influencer| %>
-          <td><%= image_tag influencer.influencer_image, size:'50x40', class: "image" %>  <%= influencer.name %></td>
-        <% end %>
-      </tr>
-      <%= link_to "もっと見る", new_user_session_path, class:"see_more_counseling" %>
     </table>
+    <%= link_to "もっと見る", influencers_path, id:"signin_see_more_influencer" %>
   </div>
+
+
 <% else %>
   <%= image_tag '25154806_s.jpg', size:'1000x500', alt: "コスメ", class: "service_explanation_image" %>
   <h1 id="service_explanation_cap">「貴重な体験を気軽に」</h1>

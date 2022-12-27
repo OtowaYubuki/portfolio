@@ -228,15 +228,7 @@
   top: 800px;
 }
 
-.top_searchforcounselig{
-  margin-left: 210px;
-  margin-top: 0px;
-  color: rgb(111, 110, 110);
-  writing-mode: horizontal-tb;
-}
-
-.border1, .border2, .border3, .border4, .border5{
-  position: absolute;
+.border1{
   border: 1px solid #858484;
 	width: 200px;
 	height: 330px;
@@ -244,46 +236,124 @@
   margin-top: 2px;
 }
 
-.border1{
-  position: absolute;
-  left: 212px;
+.border6{
+  border: 1px solid #858484;
+	width: 150px;
+	height: 280px;
+  background-color: #ffffff;
+  margin-top: 2px;
+  border-radius: 5%;
 }
 
-.border2{
-  position: absolute;
-  left: 416px;
-}
 
-.border3{
-  position: absolute;
-  left: 620px;
-}
-
-.border4{
-  position: absolute;
-  left: 824px;
-}
-
-.border5{
-  position: absolute;
-  left: 1028px;
+#signin_toppage{
+  position: relative;
+  top: 50px;
 }
 
 .counselings{
   position: absolute;
   left: 210px;
+  top: 150px;
   font-size: 13px;
   color: rgb(111, 110, 110);
   width: 200px;
   text-align: center;
 }
 
-#top_searchforcounselig_background{
+.counseling_name{
+  position: absolute;
+  top:170px;
+  width: 180px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.counseling_day{
+  position: absolute;
+  top:230px;
+  width: 200px;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.host_influencer{
+  position: absolute;
+  top:280px;
+  width: 180px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.influencers{
+  position: absolute;
+  top: 100px;
+  left: 120px;
+}
+
+.name{
+  position: absolute;
+  top:140px;
+  width: 130px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.star{
+  position: absolute;
+  top:250px;
+  width: 130px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.top_searchforcounselig{
+  position: absolute;
+  top: 20px;
+  left: 210px;
+  color: rgb(111, 110, 110);
+}
+
+#top_searchforcounselig_background, #top_searchforinfluencer_background{
   background-color: #ffedf0;
   position: absolute;
-  top:730px;
   width: 100%;
+}
+
+#top_searchforcounselig_background{
+  position: relative;
+  top:730px;
   height: 570px;
+}
+
+#top_searchforinfluencer_background{
+  position: relative;
+  top:720px;
+  height: 580px;
+}
+
+#signin_toppage_bottom{
+  position: absolute;
+  top: 880px;
+  left: 210px;
+}
+
+.top_searchforinfluencer{
+  color: rgb(111, 110, 110);
+}
+
+#signin_see_more_influencer{
+  position: absolute;
+  top:430px;
+  left: 450px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 100px;
+  width: 100px;
+  padding: 15px;
+  background: #fe7c98;
+  text-align: center;
 }
 
 .star-rating{
@@ -294,9 +364,13 @@
   border-radius: 50%;
 }
 
-#see_more_counseling{
+.influencer_image{
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+#see_more_counseling, #signin_see_more_counseling{
   position: absolute;
-  top: 420px;
   left: 655px;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -305,6 +379,15 @@
   padding: 15px;
   background: #fe7c98;
   text-align: center;
+}
+
+#see_more_counseling{
+  position: absolute;
+  top: 420px;
+}
+
+#signin_see_more_counseling{
+  top: 540px;
 }
 
 #service_explanation_cap_bottom{
@@ -363,7 +446,3 @@ footer{
   height: 30px;
 }
 
-#signin_toppage{
-  position: absolute;
-  top: 150px;
-}
