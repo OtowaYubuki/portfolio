@@ -1,17 +1,28 @@
-#influencer_ranking{
-  position: absolute;
-  top:20px;
-  left: 50px;
-  width: 60%;
-  height: 20%;
+#influencer_index{
+    position: absolute;
+    top: 200px;
+    left: 210px;
 }
 
-#recomend_influencer{
+.index_searchforinfluencer{
+  margin-left: 120px;
+  color: rgb(111, 110, 110);
+}
+
+.star{
   position: absolute;
-  top:360px;
-  left: 50px;
-  width: 60%;
-  height: 20%;
+  top: 200px;
+  width: 130px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.influencer_show_link{
+  position: absolute;
+  top: 250px;
+  width: 130px;
+  text-align: center;
+  margin-left: 10px;
 }
 
 #influencer_search_window{

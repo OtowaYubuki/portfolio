@@ -1,68 +1,37 @@
-<div id="influencer_ranking">
-<table class="new_counselings">
+
+<%= sort_link(@q, :reviews_comment, "レビュー件数が多い順", default_order: :desc, hide_indicator: true) %>
+<%= sort_link(@q, :created_at, "登録日が新しい順", default_order: :desc, hide_indicator: true) %>
+<div id="influencer_index">
+  <h2 class="index_searchforinfluencer">インフルエンサーを探す</h2>
+  <table class="influencers">
     <tr>
-      <th><%= sort_link(@q, :reviews_comment, "レビュー件数が多い順", default_order: :desc, hide_indicator: true) %></th>
-      <th><%= sort_link(@q, :created_at, "登録日が新しい順", default_order: :desc, hide_indicator: true) %></th>
+      <% @influencers.each do |influencer| %>
+        <th><div class="border6"><%= image_tag influencer.influencer_image, size:'100x90', class: "influencer_image" %></div></th>
+      <% end %>    
     </tr>
-  <tr class="tr_image">
-    <% @influencers.first(5).each do |influencer| %>
-      <td><%= image_tag influencer.influencer_image.variant(resize:'100x100') %></td>
-    <% end %>
-  </tr>
-  <tr class="tr_title">
-    <% @influencers.first(5).each do |influencer| %>
-      <td>
-        <%= influencer.name %>
-        <span class="star-rating">
-          <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
-          <span class="star-rating-back">★★★★★</span>
-        </span>
-      </td>
-    <% end %>
-  </tr>
-  <tr class="tr_date">
-    <% @influencers.first(5).each do |influencer| %>
-      <td><%= influencer.profile %></td>
-    <% end %>
-  </tr>
-  <tr class="tr_button">
-    <% @influencers.first(5).each do |influencer| %>
-      <td><%= link_to "もっと見る", influencer_path(influencer) %></td>
-    <% end %>
-  </tr>
-</table>
-</div>
-<div id="recomend_influencer"> 
-  <table class="new_counselings">
-    <tr class="tr_image">
-    <% @influencers.last(5).each do |influencer| %>
-      <td><%= image_tag influencer.influencer_image.variant(resize:'100x100') %></td>
-    <% end %>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="name"><%= influencer.name %></div></td>
+      <% end %>    
     </tr>
-    <tr class="tr_title">
-      <% @influencers.last(5).each do |influencer| %>
-        <td>
-          <%= influencer.name %>
-          <span class="star-rating">
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="star"><span class="star-rating">
             <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
             <span class="star-rating-back">★★★★★</span>
-          </span>
-          <%= influencer.reviews.count %>件のレビュー
-        </td>
+            </span>
+            （<%= influencer.reviews.count %>）
+        </div></td>
       <% end %>
     </tr>
-    <tr class="tr_date">
-      <% @influencers.last(5).each do |influencer| %>
-        <td><%= influencer.profile %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_button">
-      <% @influencers.last(5).each do |influencer| %>
-        <td><%= link_to "もっと見る", influencer_path(influencer) %></td>
-      <% end %>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="influencer_show_link"><%= link_to "詳細", influencer_path(influencer) %></div></td>
+      <% end %>    
     </tr>
   </table>
 </div>
+
 <div id="influencer_search_window">
   <h3>インフルエンサー検索</h3>
   <%= search_form_for @q, url: search_influencers_path do |f| %>
@@ -85,5 +54,5 @@
   <% end %>
 </div>
 <div class="paginate">
-  <%= paginate @counselings %>
+  <%= paginate @influencers %>
 </div>
