@@ -2,8 +2,8 @@ class CounselingsController < ApplicationController
   before_action :set_q, only: [:index, :search]
 
   def index
-    @counselings = Counseling.all.page(params[:page])
-    @counselings = @q.result.all.page(params[:page])
+    @counselings = Counseling.all.page(params[:page]).per(5)
+    @counselings = @q.result.all.page(params[:page]).per(5)
   end
 
   def show
