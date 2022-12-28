@@ -2,9 +2,9 @@ class InfluencersController < ApplicationController
   before_action :set_q, only: [:index, :search]
 
   def index
-    @influencers = Influencer.all
-    @reviews = Review.all
-    @influencers = @q.result
+    @influencers = Influencer.all.page(params[:page]).per(6)
+    @reviews = Review.all.page(params[:page]).per(6)
+    @influencers = @q.result.page(params[:page]).per(6)
   end
 
   def show
