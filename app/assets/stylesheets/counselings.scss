@@ -1,58 +1,12 @@
-.new_counselings{
-  position: absolute;
-  top:120px;
-  left:450px;
-  width: 65%;
-  text-align: center;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.tr_image{
-height: 120px;
-}
-
-.tr_title, .tr_date, .tr_people{
-  height: 10px;
-  font-size: 10px;
-}
-
-.new_counselings th{
-  padding: 10px;
-  background: #e9faf9;
-  border: solid 1px #778ca3;
-}
-
-.new_counselings td{
-  padding: 10px;
-  border: solid 1px #778ca3;
-}
-
-.popular_counselings{
-  position: absolute;
-  top:500px;
-  left:450px;
-  width: 65%;
-  text-align: center;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.popular_counselings th{
-  padding: 10px;
-  background: #e9faf9;
-  border: solid 1px #778ca3;
-}
-
-.popular_counselings td{
-  padding: 10px;
-  border: solid 1px #778ca3;
+#index_counseling{
+  position: relative;
+  bottom: 23px;
 }
 
 #counseling_search_window{
   position: absolute;
   top:120px;
-  left: 170px;
+  left: 20px;
   width: 30%;
   height: 70%;
   font-weight: bold;
@@ -133,4 +87,25 @@ height: 120px;
   position: absolute;
   top:250px;
   left: 200px;
+}
+
+.index_counseling_day{
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 15px;
+  top: 250px;
+}
+
+.counseling_people{
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 60px;
+  top: 270px;
+}
+
+.counselings_link{
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 83px;
+  top: 290px;
 }
