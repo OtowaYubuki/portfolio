@@ -1,7 +1,7 @@
 #influencer_index{
-    position: absolute;
-    top: 200px;
-    left: 210px;
+  position: absolute;
+  top: 200px;
+  left: 210px;
 }
 
 .index_searchforinfluencer{
@@ -43,14 +43,118 @@
   top:120px;
 }
 
-#influenser_counseling{
-  position: absolute;
-  top:500px;
-  left: 250px;
-}
-
 #influenser_reviews{
   position: absolute;
   bottom: 100px;
   right: 300px;
+}
+
+#influencer_show{
+  position: absolute;
+  top: 150px;
+}
+
+.influencers_show{
+  position: relative;
+  top: 20px;
+  left: 250px;
+}
+
+.show_searchforinfluencer{
+  color: rgb(111, 110, 110);
+  margin-left: 210px;
+}
+
+.border7{
+  border: 1px solid #858484;
+	width: 380px;
+	height: 450px;
+  background-color: #ffffff;
+  border-radius: 5%;
+}
+
+.influencer_show_image{
+  position: absolute;
+  top:30px;
+  left:30px;
+  border-radius: 50%;
+}
+
+.show_name{
+  position: absolute;
+  top:50px;
+  left:165px;
+  font-weight: bold;
+  font-size: 15px;
+  width: 190px;
+}
+
+.follower{
+  position: absolute;
+  top:90px;
+  left:165px;
+  font-size: 13px;
+}
+
+.show_star{
+  position: absolute;
+  top:87px;
+  left:251px;
+}
+
+.follow_button{
+  position: absolute;
+  top:50px;
+  left:251px;
+}
+
+.show_profile{
+  position: absolute;
+  top:200px;
+  left:50px;
+  font-size: 15px;
+  width: 300px;
+  text-align: left;
+}
+
+.show_genre{
+  position: absolute;
+  top:350px;
+  left:50px;
+  font-size: 12px;
+  width: 300px;
+}
+
+.genre{
+  color: rgb(111, 110, 110);
+}
+
+#write_review{
+  position: absolute;
+  top: 670px;
+  left :380px;
+}
+
+.influencer_counselig{
+  margin-top:140px;
+  margin-left: 730px;
+  color: rgb(111, 110, 110);
+}
+
+.influencer_counselings{
+  position: absolute;
+  left: 750px;
+  top: 330px;
+  font-size: 13px;
+  color: rgb(111, 110, 110);
+  width: 200px;
+  text-align: center;
+}
+
+.border8{
+  border: 1px solid #858484;
+	width: 200px;
+	height: 330px;
+  background-color: #ffffff;
+  margin-top: 2px;
 }

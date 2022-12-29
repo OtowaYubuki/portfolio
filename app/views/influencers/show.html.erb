@@ -1,63 +1,68 @@
-<table id="counseling_show">
-  <tr id="counseling_show_title">
-    <td><%= image_tag @influencer.influencer_image.variant(resize:'100x100') %></td>
-   </tr>
-  <tr id="counseling_show_title">
-    <td><%= @influencer.name %></td>
-  </tr>
-  <tr id="counseling_show_content">
-    <td><%= @influencer.profile %></td>
-  </tr>
-  <tr id="favorite">
-    <td>
-      <% if current_user.already_followed?(@influencer) %>
-        <%= link_to 'フォローを外す', influencer_relationships_path(@influencer), method: :delete %>
-      <% else %>
-        <%= link_to 'フォローする', influencer_relationships_path(@influencer), method: :post %>
+<div id="influencer_show">
+  <h2 class="show_searchforinfluencer">インフルエンサー詳細</h2>
+  <table class="influencers_show">
+    <tr>
+      <th><div class="border7"><%= image_tag @influencer.influencer_image, size:'120x110', class: "influencer_show_image" %></div></th>
+    </tr>
+    <tr>
+      <td><div class="follower"><%= @influencer.relationships.count %> フォロワー |</div></td>
+    </tr>
+    <tr>
+      <td><div class="show_name"><%= @influencer.name %></div></td>
+    </tr>
+    <tr>
+      <td><div class="follow_button"><% if current_user.already_followed?(@influencer) %>
+            <%= link_to 'フォローを外す', influencer_relationships_path(@influencer), method: :delete, id:"follow_button" %>
+          <% else %>
+            <%= link_to 'フォローする', influencer_relationships_path(@influencer), method: :post, id:"follow_button" %>
+          <% end %>
+      </div></td>
+    </tr>
+    <tr>
+      <td><div class="show_star"><span class="star-rating">
+          <span class="star-rating-front" style="width: <%= @influencer.avg_score * 20 %>%">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+          </span>
+          （<%= link_to @influencer.reviews.count, influencer_reviews_path(@influencer) %>）
+      </div></td>
+    </tr>
+    <tr>
+      <td><div class="show_profile"><%= @influencer.profile %></div></td>
+    </tr>
+    <tr>
+      <td><div class="show_genre">得意なジャンル<br><div class="genre"><%= @influencer.genre %><div></div></td>
+    </tr>
+  </table>
+</div>
+<%= link_to 'レビューを書く', new_influencer_review_path(@influencer), id:"write_review" %>
+
+<div id="influencer_counselings">
+  <h2 class="influencer_counselig">開催中のカウンセリング</h2>
+  <table class="influencer_counselings">
+    <tr>
+      <% @counselings.each do |counseling| %>
+        <th><div class="border8"><%= image_tag '25307560_s.jpg', size:'200x150' %></div></th>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @counselings.each do |counseling| %>
+        <td><div class="counseling_name"><%= counseling.name %></div></td>
       <% end %>
-      <%= @influencer.relationships.count %>
-      <%= link_to 'レビューを書く', new_influencer_review_path(@influencer) %>
-      <%= link_to @influencer.reviews.count, influencer_reviews_path(@influencer) %>
-      <span class="star-rating">
-        <span class="star-rating-front" style="width: <%= @influencer.avg_score * 20 %>%">★★★★★</span>
-        <span class="star-rating-back">★★★★★</span>
-        <span class="average-score-display">
-          (<%= @influencer.avg_score %>点)
-        </span>
-      </span>
-    </td>
-  </tr>
-</table>
-<h2 id="influenser_counseling">現在開催中のカウンセリング</h2>
-<table class="new_counselings">
-  <tr class="tr_image">
-    <% @counselings.each do |counseling| %>
-      <th><%= image_tag '25307560_s.jpg', size:'100x100' %></th>
-    <% end %>
-  </tr>
-  <tr class="tr_title">
-    <% @counselings.each do |counseling| %>
-      <td><%= counseling.name %></td>
-    <% end %>
-  </tr>
-  <tr class="tr_date">
-    <% @counselings.each do |counseling| %>
-      <td><%= l counseling.day, format: :long %></td>
-    <% end %>
-  </tr>
-  <tr class="tr_date">
-    <% @counselings.each do |counseling| %>
-      <td><%= l counseling.starttime, format: :short %>〜</td>
-    <% end %>
-  </tr>
-  <tr class="tr_people">
-    <% @counselings.each do |counseling| %>
-      <td><%= counseling.people %></td>
-    <% end %>
-  </tr>
-  <tr class="tr_button">
-    <% @counselings.each do |counseling| %>
-      <td><%= link_to "詳細", counseling_path(counseling) %></td>
-    <% end %>
-  </tr>
-</table>
+    </tr>
+    <tr>
+      <% @counselings.each do |counseling| %>
+        <td><div class="index_counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @counselings.each do |counseling| %>
+        <td><div class="counseling_people">募集人数：<%= counseling.people %>名</div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @counselings.each do |counseling| %>
+        <td><div class="counselings_link"><%= link_to "詳細", counseling_path(counseling) %></div></td>
+      <% end %>
+    </tr>
+  </table>
+</div>
