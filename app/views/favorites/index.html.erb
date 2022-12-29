@@ -1,33 +1,38 @@
-<div id="index_counseling">
-  <h2 class="top_searchforcounselig">お気に入り一覧</h2>
-  <table class="counselings">
-    <tr>
-      <% @counselings.each do |counseling| %>
-        <th><div class="border1"><%= image_tag '25307560_s.jpg', size:'200x150' %></div></th>
-      <% end %>    
-    </tr>
-    <tr>
-      <% @counselings.each do |counseling| %>
-        <td><div class="counseling_name"><%= counseling.name %></div></td>
-      <% end %>
-    </tr>
-    <tr>
-      <% @counselings.each do |counseling| %>
-        <td><div class="index_counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
-      <% end %>
-    </tr>
-    <tr>
-      <% @counselings.each do |counseling| %>
-        <td><div class="counseling_people">募集人数：<%= counseling.people %>名</div></td>
-      <% end %>
-    </tr>
-    <tr>
-      <% @counselings.each do |counseling| %>
-        <td><div class="counselings_link"><%= link_to "詳細", counseling_path(counseling) %></div></td>
-      <% end %>
-    </tr>
-  </table>
-</div>
+<h2 class="favorite_counselig">お気に入り一覧</h2>
+<% if @counselings.blank? %>
+  <p id="not_favorites">お気に入りしたカウンセリングはまだありません</p>
+<% else %>
+  <h3 id="favorites">お気に入り：<%= @counselings.count %>件</h3>
+  <div id="index_favorite">
+    <table class="counselings">
+      <tr>
+        <% @counselings.each do |counseling| %>
+          <th><div class="border1"><%= image_tag '25307560_s.jpg', size:'200x150' %></div></th>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @counselings.each do |counseling| %>
+          <td><div class="counseling_name"><%= counseling.name %></div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @counselings.each do |counseling| %>
+          <td><div class="index_counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @counselings.each do |counseling| %>
+          <td><div class="counseling_people">募集人数：<%= counseling.people %>名</div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @counselings.each do |counseling| %>
+          <td><div class="counselings_link"><%= link_to "詳細", counseling_path(counseling) %></div></td>
+        <% end %>
+      </tr>
+    </table>
+  </div>
+<% end %>
 <div class="paginate">
   <%= paginate @counselings %>
 </div>
