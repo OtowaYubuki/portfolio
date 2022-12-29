@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @counselings = @user.counselings
+    @counselings = @user.counselings.page(params[:page]).per(5)
   end
   
   def create
