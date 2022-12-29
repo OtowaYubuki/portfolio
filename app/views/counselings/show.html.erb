@@ -1,43 +1,67 @@
-<h2 id="show_counseling_text">カウンセリング詳細</h2>
-<table id="counseling_show">
-  <tr id="counseling_show_title">
-    <td><%= @counseling.name %></td>
-  </tr>
-  <tr id="counseling_show_content">
-    <td><%= @counseling.content %></td>
-  </tr>
-  <tr id="favorite">
-    <td>
-      <% if current_user.already_favorited?(@counseling) %>
-        <%= link_to 'お気に入り解除', counseling_favorites_path(@counseling), method: :delete %>
-      <% else %>
-        <%= link_to 'お気に入り登録', counseling_favorites_path(@counseling), method: :post %>
-      <% end %>
-      <%= @counseling.favorites.count %>
-    </td>
-  </tr>
-</table>
-<div id="counseling_show_people">
-  <% if Date.today >= @counseling.day %>
-    <p>開催日を過ぎたため予約は締め切りました</p>
-  <% else %>
-    <p><%= l @counseling.day, format: :long %></p>
-    <p><%= l @counseling.starttime, format: :short %>〜</p>
-    <% if current_user.already_reserved?(@counseling) %>
-      <%= link_to '予約を取り消す', counseling_reservation_path(@counseling), method: :delete, data: {confirm: "予約を取り消しますか？"} %>
-    <% else %>
-      <% if @counseling.reservations.count == @counseling.people %>
-        <p>募集人数に達したため予約は締め切りました</p>
-      <% else %>
-        <p>残り<%= @people %>/<%= @counseling.people %>枠</p>
-      <%= link_to "予約する", new_counseling_reservation_path(@counseling) %>
+<div id="counseling_detail">
+  <h2 class="counseling_detail">カウンセリング詳細</h2>
+  <table class="detail_counselings">
+    <tr>
+      <th class="border3"></th>
+    </tr>
+    <tr>
+      <td><div class="detail_counseling_name"><%= @counseling.name %></div></td>
+    </tr>
+    <tr>
+      <td><div class="detail_counseling_content"><%= @counseling.content %></div></td>
+    </tr>
+    <tr>
+      <td><div class="detail_counseling_day">
+        <% if Date.today >= @counseling.day %>
+          <p><div class="over_day">※開催日を過ぎたため予約は締め切りました</p></div>
+        <% else %>
+          <p><%= l @counseling.day, format: :long %></p></div>
+          <p><div class="detail_counseling_time"><%= l @counseling.starttime, format: :short %>〜</p></div>
+            <% if current_user.already_reserved?(@counseling) %>
+              <%= link_to '予約を取り消す', counseling_reservation_path(@counseling), method: :delete, data: {confirm: "予約を取り消しますか？"} %>
+            <% else %>
+              <% if @counseling.reservations.count == @counseling.people %>
+                <p><div class="full_people">※募集人数に達したため予約は締め切りました</p></div>
+              <% else %>
+                <p><div class="detail_counseling_people">残り<%= @people %>/<%= @counseling.people %>枠</p></div>
+                  <%= link_to "予約する", new_counseling_reservation_path(@counseling), id:"create_reserve" %>
+              <% end %>
+            <% end %>
         <% end %>
-    <% end %>
-  <% end %>
+      </div></td>
+    </tr>
+    <tr>
+      <td>
+        <% if current_user.already_favorited?(@counseling) %>
+          <%= link_to 'お気に入り解除', counseling_favorites_path(@counseling), method: :delete, id:"create_favorite" %>
+        <% else %>
+          <%= link_to 'お気に入り登録', counseling_favorites_path(@counseling), method: :post, id:"create_favorite" %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
 </div>
+
 <div id="counseling_show_influencer">
-  <p><%= @counseling.influencer.name %></p>
-  <%= image_tag @counseling.influencer.influencer_image.variant(resize:'100x100') %>
-  <%= link_to "詳しく見る", influencer_path(@influencer) %>
+  <h2 class="index_searchforinfluencer">主催のインフルエンサー</h2>
+  <table class="influencers">
+    <tr>
+      <th><div class="border6"><%= image_tag @counseling.influencer.influencer_image, size:'100x90', class: "influencer_image" %></div></th>
+    </tr>
+    <tr>
+      <td><div class="name"><%= @counseling.influencer.name %></div></td>
+    </tr>
+    <tr>
+      <td><div class="star"><span class="star-rating">
+          <span class="star-rating-front" style="width: <%= @counseling.influencer.avg_score * 20 %>%">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+          </span>
+          （<%= @counseling.influencer.reviews.count %>）
+      </div></td>
+    </tr>
+    <tr>
+      <td><div class="influencer_show_link"><%= link_to "詳細", influencer_path(@influencer) %></div></td>
+    </tr>
+  </table>
 </div>
-<%= link_to "カウンセリング一覧に戻る", counselings_path, id:"backto_counseling_index" %>
+<%= link_to "カウンセリング一覧に戻る", counselings_path, id:"backto_counseling" %>

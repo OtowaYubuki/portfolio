@@ -63,12 +63,8 @@
 
 #counseling_show_influencer{
   position: absolute;
-  top:400px;
-  right: 100px;
-  width: 20%;
-  height: 30%;
-  font-weight: bold;
-  border: solid 3px #000000;
+  top:200px;
+  left: 850px;
 }
 
 #back_to_counselings_link{
@@ -115,4 +111,107 @@
   margin-right: auto;
   margin-top: 470px;
   padding-bottom: 30px;
+}
+
+#counseling_detail{
+  position: absolute;
+  top: 120px;
+  left: 280px;
+}
+
+.counseling_detail{
+  margin-top: 50px;
+  left: 280px;
+  color: rgb(111, 110, 110);
+}
+
+.detail_counselings{
+  width: 600px;
+	height: 420px;
+}
+
+.border3{
+  border: 1px solid #858484;
+	width: 600px;
+  height: 420px;
+  margin-top: 2px;
+  background-color: #ffedf0;
+}
+
+.detail_counseling_name{
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  font-weight: bold;
+  font-size: 17px;
+  width: 570px;
+  text-align: center;
+}
+
+.detail_counseling_content{
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  width: 530px;
+  text-align: left;
+}
+
+.detail_counseling_day{
+  position: absolute;
+  top: 320px;
+  left: 60px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.detail_counseling_time{
+  position: absolute;
+  top: 340px;
+  left: 250px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.detail_counseling_people{
+  position: absolute;
+  top: 335px;
+  left: 350px;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+#create_reserve{
+  position: absolute;
+  top:400px;
+  left: 400px;
+  width: 100px;
+}
+
+#create_favorite{
+  position: absolute;
+  top:400px;
+  left: 100px;
+  width: 150px;
+}
+
+#backto_counseling{
+  margin-top:580px;
+  margin-left: 280px;
+  padding-bottom: 50px;
+}
+
+.full_people{
+  position: absolute;
+  top:310px;
+  left: 50px;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.over_day{
+  position: absolute;
+  left: 50px;
+  font-size: 13px;
+  width: 600px;
+  margin-top: 20px;
 }
