@@ -17,7 +17,7 @@
           <p>開催日：<%= l @counseling.day, format: :long %></p></div>
           <p><div class="detail_counseling_time">開始時間：<%= l @counseling.starttime, format: :short %>〜</p></div>
             <% if current_user.already_reserved?(@counseling) %>
-              <%= link_to '予約を取り消す', counseling_reservation_path(@counseling), method: :delete, data: {confirm: "予約を取り消しますか？"} %>
+              <%= link_to '-予約を取り消す', counseling_reservation_path(@counseling), method: :delete, data: {confirm: "予約を取り消しますか？"}, id:"delete_reserve" %>
             <% else %>
               <% if @counseling.reservations.count == @counseling.people %>
                 <p><div class="full_people">※募集人数に達したため予約は締め切りました</p></div>
