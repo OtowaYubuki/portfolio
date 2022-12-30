@@ -13,7 +13,8 @@ class InfluencersController < ApplicationController
   end
 
   def search
-    @results = @q.result
+    @results = @q.result.page(params[:page]).per(6)
+    @result = @q.result.all
   end
 
   private
