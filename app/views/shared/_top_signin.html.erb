@@ -1,0 +1,53 @@
+<div id="signin_toppage">
+  <h2 class="top_searchforcounselig">カウンセリングを探す</h2>
+  <table class="counselings">
+    <tr>
+      <% @counselings.first(5).each do |counseling| %>
+        <th><div class="border1"><%= image_tag '25307560_s.jpg', size:'200x150' %></div></th>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @counselings.first(5).each do |counseling| %>
+        <td><div class="counseling_name"><%= counseling.name %></div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @counselings.first(5).each do |counseling| %>
+        <td><div class="counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @influencers.first(5).each do |influencer| %>
+        <td><div class="host_influencer"><%= image_tag influencer.influencer_image, size:'50x40', class: "image" %>  <%= influencer.name %></div></td>
+      <% end %>
+    </tr>
+    <%= link_to "もっと見る", counselings_path, id:"signin_see_more_counseling" %>
+  </table>
+</div>
+<div id="top_searchforinfluencer_background"></div>
+<div id="signin_toppage_bottom">
+  <h2 class="top_searchforinfluencer">インフルエンサーを探す</h2>
+  <table class="influencers">
+    <tr>
+      <% @influencers.last(5).each do |influencer| %>
+        <th><div class="border6"><%= image_tag influencer.influencer_image, size:'100x90', class: "influencer_image" %></div></th>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.last(5).each do |influencer| %>
+        <td><div class="name"><%= influencer.name %></div></td>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.last(5).each do |influencer| %>
+        <td><div class="star"><span class="star-rating">
+            <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+            </span>
+            （<%= influencer.reviews.count %>）
+        </div></td>
+      <% end %>
+    </tr>
+  </table>
+  <%= link_to "もっと見る", influencers_path, id:"signin_see_more_influencer" %>
+</div>
