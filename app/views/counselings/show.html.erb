@@ -1,5 +1,4 @@
 <div id="counseling_detail">
-  <h2 class="counseling_detail">カウンセリング詳細</h2>
   <table class="detail_counselings">
     <tr>
       <th class="border3"></th>
@@ -15,8 +14,8 @@
         <% if Date.today >= @counseling.day %>
           <p><div class="over_day">※開催日を過ぎたため予約は締め切りました</p></div>
         <% else %>
-          <p><%= l @counseling.day, format: :long %></p></div>
-          <p><div class="detail_counseling_time"><%= l @counseling.starttime, format: :short %>〜</p></div>
+          <p>開催日：<%= l @counseling.day, format: :long %></p></div>
+          <p><div class="detail_counseling_time">開始時間：<%= l @counseling.starttime, format: :short %>〜</p></div>
             <% if current_user.already_reserved?(@counseling) %>
               <%= link_to '予約を取り消す', counseling_reservation_path(@counseling), method: :delete, data: {confirm: "予約を取り消しますか？"} %>
             <% else %>
