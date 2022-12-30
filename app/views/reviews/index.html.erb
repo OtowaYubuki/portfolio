@@ -1,13 +1,13 @@
 <table id="influenser_reviews">
   <tr>
     <% @reviews.each do |review| %>
-      <td><%= review.user.name %>さん</td>
+      <td class="review_user_name">by <%= review.user.name %>さん</td>
     <% end %>
   </tr>
   <tr>
   <% @reviews.each do |review| %>
     <td>
-      <div class="star-rating">
+      <div class="star-rating_reviews">
       <div class="star-rating-front">
       <% if review.score? %>
         <% for i in 1..review.score do %>
@@ -21,7 +21,7 @@
   </tr>
   <tr>
     <% @reviews.each do |review| %>
-      <td><%= review.comment %></td>
+      <td class="review_comment"><%= review.comment %></td>
     <% end %>
   </tr>
 </table>
