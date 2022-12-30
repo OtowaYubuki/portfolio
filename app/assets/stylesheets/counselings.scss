@@ -204,13 +204,20 @@
 
 #create_favorite{
   position: absolute;
-  top:400px;
-  left: 100px;
-  width: 150px;
+  top:500px;
+  left: 40px;
+  width: 160px;
+  height: 30px;
+  border: 1px solid #858484;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #858484;
+  text-align: center;
+  padding-top: 5px;
 }
 
 #backto_counseling{
-  margin-top:580px;
+  margin-top:560px;
   margin-left: 280px;
   padding-bottom: 50px;
 }
