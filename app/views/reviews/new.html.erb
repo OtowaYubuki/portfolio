@@ -1,19 +1,19 @@
 <div id="score_new">
-  <h5>総合評価</h5>
+  <h2>総合評価</h2>
     <div class="post_form">
       <%= form_with model: [@influencer, @review], url: confirm_influencer_reviews_path(@influencer, @reservation), local: true do |f| %>
-        <%= f.radio_button :score, 5 ,id: 'star1'%>
+        <%= f.radio_button :score, 1 ,id: 'star1'%>
         <label for="star1"><span class="text">最高</span>★</label>
-        <%= f.radio_button :score, 4 ,id: 'star2'%>
+        <%= f.radio_button :score, 2 ,id: 'star2'%>
         <label for="star2"><span class="text">良い</span>★</label>
         <%= f.radio_button :score, 3 ,id: 'star3'%>
         <label for="star3"><span class="text">普通</span>★</label>
-        <%= f.radio_button :score, 2 ,id: 'star4'%>
+        <%= f.radio_button :score, 4 ,id: 'star4'%>
         <label for="star4"><span class="text">悪い</span>★</label>
-        <%= f.radio_button :score, 1 ,id: 'star5'%>
+        <%= f.radio_button :score, 5 ,id: 'star5'%>
         <label for="star5"><span class="text">最悪</span>★</label>
-        <%= f.text_area :comment %>
-        <%= f.submit 'レビューを送信する' %>
+        <%= f.text_area :comment, size:"50x3" %>
+        <%= f.submit 'レビューを送信する', id:"submit_review" %>
       <% end %>
     </div>
 </div>
