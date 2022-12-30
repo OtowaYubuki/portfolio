@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   def index
-    @reviews = Review.all
+    @influencer = Influencer.find(params[:influencer_id])
+    @reviews = @influencer.reviews
   end
 
   def new
