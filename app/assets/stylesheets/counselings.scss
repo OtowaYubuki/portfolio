@@ -33,19 +33,6 @@
   border-spacing: 0;
 }
 
-#counseling_show_title td{
-  padding: 10px;
-  background: #e9faf9;
-  border: solid 1px #778ca3;
-}
-
-#counseling_show_content td{
-  padding: 10px;
-  background: #e9faf9;
-  border: solid 1px #778ca3;
-  height: 300px;
-}
-
 #backto_counseling_index{
   position: absolute;
   bottom: 80px;
@@ -119,9 +106,10 @@
   left: 280px;
 }
 
-.detail_counselings{
-  width: 600px;
-	height: 420px;
+.new_reserve{
+  position: absolute;
+  top: 120px;
+  left: 280px;
 }
 
 .border3{

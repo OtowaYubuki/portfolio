@@ -1,17 +1,18 @@
 <%= form_with model: [@counseling, @reservation], url: confirm_counseling_reservations_path(@counseling, @reservation), local: true do |f| %>
-  <table id="counseling_show">
-    <tr id="counseling_show_title">
+  <table class="new_reserve">
+    <tr id="reserve_name">
       <td><%= @counseling.name %></td>
     </tr>
-    <tr id="counseling_show_title">
+    <tr id="reserve_day">
       <td><%= l @counseling.day, format: :long %></td>
     </tr>
-    <tr id="counseling_show_title">
-      <td><%= l @counseling.starttime, format: :short %></td>
+    <tr id="reserve_time">
+      <td><%= l @counseling.starttime, format: :short %>〜</td>
     </tr>
-    <tr id="counseling_show_content">
-      <td><%= f.text_area :question, autofocus: true, :placeholder =>"カウンセリング時に聞きたいことがあれば事前に入力してください", size: "50x20" %></td>
+    <tr id="question">
+      <td><%= f.text_area :question, autofocus: true, :placeholder =>"カウンセリング時に聞きたいことがあれば事前に入力してください", size: "80x5" %></td>
     </tr>
-      <td><%= f.submit '確認画面へ' %></td>
+      <td id="goto_confirm"><%= f.submit '確認画面へ' %></td>
   </table>
 <% end %>
+<%= link_to "カウンセリング詳細に戻る", counseling_path(@counseling), id:"backto_counseling" %>
