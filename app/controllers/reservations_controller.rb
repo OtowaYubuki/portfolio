@@ -2,7 +2,7 @@ class ReservationsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @reservations = @user.reservations
-    @reservation_counselings = @user.reservation_counselings
+    @reservation_counselings = @user.reservation_counselings.page(params[:page]).per(5)
   end
   
   def new
