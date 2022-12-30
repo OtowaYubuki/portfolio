@@ -1,21 +1,24 @@
 <div id="reservation_confirm">
-  <h3>以下の内容を確認してください</h3>
-  <tr id="counseling_show_title">
-    <td>予約するカウンセリング：<%= @counseling.name %></td>
-  </tr>
-  <tr id="counseling_show_title">
-    <td>開始日：<%= l @counseling.day, format: :long %></td>
-  </tr>
-  <tr id="counseling_show_title">
-    <td>開始時間：<%= l @counseling.starttime, format: :short %></td>
-  </tr>
-  <tr id="counseling_show_title">
-    <td>質問内容：<%= @reservation.question %></td>
-  </tr>
-  <%= form_with model: [@counseling, @reservation], local: true do |f| %>
-    <tr id="counseling_show_content">
-      <td><%= f.hidden_field :question %></td>
+  <h2 id="h2">この内容で予約しますか？</h2>
+  <table>
+    <tr>
+      <td><div id="confirm_reserve_name"><%= @counseling.name %></div></td>
     </tr>
-    <td><%= f.submit '予約を確定する' %></td>
-  <% end %>
+    <tr id="reserve_day">
+      <td><%= l @counseling.day, format: :long %></td>
+    </tr>
+    <tr id="reserve_time">
+      <td><%= l @counseling.starttime, format: :short %>〜</td>
+    </tr>
+    <tr id="question">
+      <td><%= @reservation.question %></td>
+    </tr>
+    <%= form_with model: [@counseling, @reservation], local: true do |f| %>
+      <tr id="counseling_show_content">
+        <td><%= f.hidden_field :question %></td>
+      </tr>
+      <td id="goto_confirm"><%= f.submit '予約を確定する' %></td>
+    <% end %>
+  </table>
 </div>
+<%= link_to "カウンセリング詳細に戻る", counseling_path(@counseling), id:"backto_show_counseling" %>
