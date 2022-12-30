@@ -102,10 +102,25 @@
   left:251px;
 }
 
-.follow_button{
+#follow_button{
   position: absolute;
-  top:50px;
-  left:251px;
+  top: 130px;
+  left: 190px;
+  width: 150px;
+  height: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fe7c98;;
+  width: 100px;
+  padding: 15px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 100px;
+  border: 2px solid #fe7c98;
+  font-size: 13px;
+  padding-top: 5px;
 }
 
 .show_profile{

@@ -12,9 +12,9 @@
     </tr>
     <tr>
       <td><div class="follow_button"><% if current_user.already_followed?(@influencer) %>
-            <%= link_to 'フォローを外す', influencer_relationships_path(@influencer), method: :delete, id:"follow_button" %>
+            <%= link_to '-フォローを外す', influencer_relationships_path(@influencer), method: :delete, id:"follow_button" %>
           <% else %>
-            <%= link_to 'フォローする', influencer_relationships_path(@influencer), method: :post, id:"follow_button" %>
+            <%= link_to '+フォローする', influencer_relationships_path(@influencer), method: :post, id:"follow_button" %>
           <% end %>
       </div></td>
     </tr>
