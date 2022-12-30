@@ -1,0 +1,40 @@
+<div id="counseling_search_window">
+  <%= search_form_for @q, url: search_counselings_path do |f| %>
+    <%= f.label :name_or_content_cont, 'キーワードから探す', id:"keyword" %>
+    <%= f.search_field :name_or_content_cont, :placeholder =>"キーワードを入力", size:"20x10" %>
+    <div id="search_word">
+      <p>人気のキーワード</p>
+      <%= link_to "#韓国メイク", search_counselings_path(q: { name_or_content_cont: '韓国メイク' }), class:"link" %></br>
+      <%= link_to "#ブルベ夏", search_counselings_path(q: { name_or_content_cont: 'ブルベ夏' }), class:"link" %></br>
+      <%= link_to "#イエベ春", search_counselings_path(q: { name_or_content_cont: 'イエベ春' }), class:"link" %></br>
+      <%= link_to "#プチプラ", search_counselings_path(q: { name_or_content_cont: 'プチプラ' }), class:"link" %></br>
+      <%= link_to "#垢抜け", search_counselings_path(q: { name_or_content_cont: '垢抜け' }), class:"link" %></br>
+      <%= link_to "#デパコス", search_counselings_path(q: { name_or_content_cont: 'デパコス' }), class:"link" %></br>
+      <%= link_to "#敏感肌", search_counselings_path(q: { name_or_content_cont: '敏感肌' }), class:"link" %></br>
+      <%= link_to "#海外", search_counselings_path(q: { name_or_content_cont: '海外' }), class:"link" %></br>
+      <%= link_to "#韓国コスメ", search_counselings_path(q: { name_or_content_cont: '韓国コスメ' }), class:"link" %></br>
+      <%= link_to "#眉毛", search_counselings_path(q: { name_or_content_cont: '眉毛' }), class:"link" %></br>
+      <%= link_to "#ナチュラルメイク", search_counselings_path(q: { name_or_content_cont: 'ナチュラルメイク' }), class:"link" %></br>
+    </div>
+    <div id="search_day">
+      <%= f.label :day_gteq, '日付から探す' %>
+      <%= f.date_field :day_gteq %>
+      ~
+      <%= f.date_field :day_lteq_end_of_day %>
+    </div>
+    <%= f.label :starttime_cont, '開始時間から探す' %></br>
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '' %>指定しない</br>
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '10:00' %>10時</br>
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '11:00' %>11時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '12:00' %>12時</br>
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '13:00' %>13時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '14:00' %>14時</br>
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '15:00' %>15時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '16:00' %>16時</br>
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '17:00' %>17時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '18:00' %>18時</br>
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '19:00' %>19時
+    <%= f.check_box :starttime_cont_any, { multiple: true }, '20:00' %>20時</br>
+    <%= f.submit '検索' %>
+  <% end %>
+</div>
