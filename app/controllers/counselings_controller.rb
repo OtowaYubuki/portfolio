@@ -13,7 +13,8 @@ class CounselingsController < ApplicationController
   end
 
   def search
-    @results = @q.result
+    @results = @q.result.page(params[:page]).per(5)
+    @result = @q.result.all
   end
 
   private

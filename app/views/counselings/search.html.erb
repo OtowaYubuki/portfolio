@@ -1,41 +1,40 @@
 <% if @results.blank? %>
-  <h2 id="results">検索結果：<%= @results.count %>件</h2>
   <p id="not_results">カウンセリングはありません。もう一度検索してください</p>
 <% else %>
-  <h2 id="results">検索結果：<%= @results.count %>件</h2>
-  <table class="new_counselings">
-    <tr class="tr_image">
-      <% @results.each do |counseling| %>
-        <td><%= image_tag '25307560_s.jpg', size:'100x100' %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_title">
-      <% @results.each do |counseling| %>
-        <td><%= counseling.name %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_date">
-      <% @results.each do |counseling| %>
-        <td><%= l counseling.day, format: :long %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_date">
-      <% @results.each do |counseling| %>
-        <td><%= l counseling.starttime, format: :short %>〜</td>
-      <% end %>
-    </tr>
-    <tr class="tr_people">
-      <% @results.each do |counseling| %>
-        <td><%= counseling.people %></td>
-      <% end %>
-    </tr>
-    <tr class="tr_button">
-      <% @results.each do |counseling| %>
-        <td><%= link_to "詳細", counseling_path(counseling) %></td>
-      <% end %>
-    </tr>
-  </table>
-<% end %>
+  <div id="index_counseling">
+    <h2 id="results">検索結果：<%= @result.count %>件</h2>
+    <table class="counselings">
+      <tr>
+        <% @results.each do |counseling| %>
+          <th><div class="border1"><%= image_tag '25307560_s.jpg', size:'200x150' %></div></th>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @results.each do |counseling| %>
+          <td><div class="counseling_name"><%= counseling.name %></div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @results.each do |counseling| %>
+          <td><div class="index_counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @results.each do |counseling| %>
+          <td><div class="counseling_people">募集人数：<%= counseling.people %>名</div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @results.each do |counseling| %>
+          <td><div class="counselings_link"><%= link_to "詳細", counseling_path(counseling) %></div></td>
+        <% end %>
+      </tr>
+    </table>
+  <% end %>
+</div>
 <div id="back_to_counselings_link">
   <%= link_to "カウンセリング一覧へ戻る", counselings_path, class:"link" %>
+</div>
+<div class="paginate">
+  <%= paginate @results %>
 </div>
