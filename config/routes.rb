@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'top#index'
-  post '/top/guest_sign_in', to: 'top#guest_sign_in'
   devise_for :users, controllers: {registrations: 'users/registrations'}
   resources :users, :only => [:show, :edit, :destroy] do
     resources :favorites, only: [:index]
@@ -29,6 +28,4 @@ Rails.application.routes.draw do
       end
     end
   end
-
 end
-
