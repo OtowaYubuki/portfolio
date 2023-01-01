@@ -1,17 +1,35 @@
+.cap{
+  color: rgb(111, 110, 110);
+}
+
+@media (max-width: 599px) {
+  .cap{
+    color: rgb(111, 110, 110);
+    position: absolute;
+    top: 100px;
+    left: 100px;
+  }
+}
+
+@media (max-width: 599px) {
+  .new_user{
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    width: 250px;
+  }
+}
+
 #sign_in, #sign_up, #current_user{
-margin-left: auto;
-margin-right: auto;
-margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 
 #profile_edit{
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-}
-
-.cap{
-  color: rgb(111, 110, 110);
 }
 
 .user_image{
@@ -45,6 +63,19 @@ margin-top: 50px;
   border: none;
 }
 
+@media (max-width: 599px) {
+  .button{
+    position: absolute;
+    top: 230px;
+    left: 60px;
+    color: #ffff;
+    background-color: #fb5d80;
+    width: 145px;
+    height: 40px;
+    border: none;
+  }
+}
+
 #guest_button{
   position: absolute;
   top: 420px;
@@ -59,22 +90,46 @@ margin-top: 50px;
   padding-top: 10px;
 }
 
+@media (max-width: 599px) {
+  #guest_button{
+    position: absolute;
+    top: 285px;
+    left: 5px;
+    color: #ffff;
+    background-color: #fb5d80;
+    width: 245px;
+    height: 35px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+  }
+}
+
 #edit_button{
-position: absolute;
-top: 500px;
-left: 560px;
-text-decoration: none;
-background-color: #fb5d80;
-color: #ffff;
-width: 345px;
-height: 40px;
-text-align: center;
-line-height: 2.5;
+  position: absolute;
+  top: 500px;
+  left: 560px;
+  text-decoration: none;
+  background-color: #fb5d80;
+  color: #ffff;
+  width: 345px;
+  height: 40px;
+  text-align: center;
+  line-height: 2.5;
 }
 
 .top_actions{
   position: absolute;
   top: 480px;
+}
+
+@media (max-width: 599px) {
+  .top_actions{
+    position: absolute;
+    top: 350px;
+    left: 60px;
+  }
 }
 
 .user_field{

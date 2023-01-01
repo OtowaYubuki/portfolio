@@ -11,8 +11,9 @@
   <table class="counselings">
     <tr>
       <% @counselings.first(5).each do |counseling| %>
-        <th><div class="border1"><%= image_tag '25307560_s.jpg', size:'200x150' %></div></th>
+        <th><div class="border1"><%= image_tag '25307560_s.jpg', size:'200x150', class:"counseling_image" %></div></th>
       <% end %>    
+      <%= image_tag '25307560_s.jpg', size:'399x330', class:"counseling_fake_image" %>
     </tr>
     <tr>
       <% @counselings.first(5).each do |counseling| %>
