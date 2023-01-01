@@ -1,4 +1,4 @@
-<%= image_tag '25154806_s.jpg', size:'1000x500', alt: "コスメ", class: "service_explanation_image" %>
+<%= image_tag '25154806_s.jpg', alt: "コスメ", class: "service_explanation_image" %>
 <h1 id="service_explanation_cap">「貴重な体験を気軽に」</h1>
 <p id="service_explanation_text">SNSを通じて、たくさんのインフルエンサーが情報を発信している時代。<br>
   多くのフォロワーを抱えているインフルエンサーと直接つながることは難しくなりました。<br>
@@ -16,18 +16,29 @@
     </tr>
     <tr>
       <% @counselings.first(5).each do |counseling| %>
-        <td><div class="counseling_name"><%= counseling.name %></div></td>
+        <td>
+          <div class="counseling_name">
+            <%= counseling.name %>
+          </div>
+        </td>
       <% end %>
+      <p class="fake_counseling_name">幸福感がカギ！プチプラコスメで作るイエベの春メイク</p>
     </tr>
     <tr>
       <% @counselings.first(5).each do |counseling| %>
-        <td><div class="counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
+        <td>
+          <div class="counseling_day">
+            <%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜
+          </div>
+        </td>
       <% end %>
+      <p class="fake_counseling_day">2023年3月10日(金)17時〜</p></td>
     </tr>
     <tr>
       <% @influencers.first(5).each do |influencer| %>
         <td><div class="host_influencer"><%= image_tag influencer.influencer_image, size:'50x40', class: "image" %>  <%= influencer.name %></div></td>
       <% end %>
+      <%= image_tag '22857219_s.jpg', class: "fake_image" %><p class="fake_counseling_host">みきまる</p>
     </tr>
     <%= link_to "もっと見る", new_user_session_path, id:"signin_see_more_counseling" %>
   </table>

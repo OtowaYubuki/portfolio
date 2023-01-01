@@ -17,7 +17,7 @@
 
 /* body*/
 
- body{
+body{
   margin: 0;
   font-family: "Helvetica Neue",
   Arial,
@@ -30,7 +30,25 @@
   min-height: 100vh;
   height: 100%;
   position: relative;
- }
+}
+
+@media (max-width: 599px) {
+    body{
+    margin: 0;
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+    width: 600px;
+  }
+}
 
 .Notification{
   position: absolute;
