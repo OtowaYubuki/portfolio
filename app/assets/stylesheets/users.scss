@@ -6,16 +6,16 @@
   .cap{
     color: rgb(111, 110, 110);
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 150px;
+    left: 250px;
   }
 }
 
 @media (max-width: 599px) {
   .new_user{
     position: absolute;
-    top: 200px;
-    left: 20px;
+    top: 250px;
+    left: 130px;
     width: 250px;
   }
 }
@@ -55,7 +55,7 @@
   font-size: 13px;
 }
 
-.button{
+.registration_button, .button{
   color: #ffff;
   background-color: #fb5d80;
   width: 345px;
@@ -64,10 +64,10 @@
 }
 
 @media (max-width: 599px) {
-  .button{
+  .registration_button{
     position: absolute;
     top: 230px;
-    left: 60px;
+    left: 90px;
     color: #ffff;
     background-color: #fb5d80;
     width: 145px;
@@ -91,10 +91,23 @@
 }
 
 @media (max-width: 599px) {
+  .button{
+    position: absolute;
+    top: 130px;
+    left: 90px;
+    color: #ffff;
+    background-color: #fb5d80;
+    width: 145px;
+    height: 40px;
+    border: none;
+  }
+}
+
+@media (max-width: 599px) {
   #guest_button{
     position: absolute;
-    top: 285px;
-    left: 5px;
+    top: 185px;
+    left: 37px;
     color: #ffff;
     background-color: #fb5d80;
     width: 245px;
@@ -127,8 +140,16 @@
 @media (max-width: 599px) {
   .top_actions{
     position: absolute;
-    top: 350px;
-    left: 60px;
+    top: 500px;
+    left: 205px;
+  }
+}
+
+@media (max-width: 599px) {
+  .login_actions{
+    position: absolute;
+    top: 550px;
+    left: 265px;
   }
 }
 
