@@ -1,4 +1,4 @@
-.cap{
+.profile_cap, .edit_cap{
   color: rgb(111, 110, 110);
 }
 
@@ -8,6 +8,16 @@
     position: absolute;
     top: 150px;
     left: 250px;
+  }
+}
+
+@media (max-width: 599px) {
+  .profile_cap, .edit_cap{
+    color: rgb(111, 110, 110);
+    position: absolute;
+    top: 150px;
+    left: 180px;
+    font-size: 25px;
   }
 }
 
@@ -38,6 +48,21 @@
   margin-right: auto;
 }
 
+@media (max-width: 599px) {
+  .user_image{
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .show_user_image{
+    border-radius: 50%;
+    position: absolute;
+    top: 220px;
+    left: 70px;
+  }
+}
+
 .show_user_image{
   position: absolute;
   border-radius: 50%;
@@ -50,12 +75,21 @@
   font-size: 18px;
 }
 
+@media (max-width: 599px) {
+  #user_profile{
+    position: absolute;
+    top: 350px;
+    left: 180px;
+    font-size: 18px;
+  }
+}
+
 #em{
   color: #ff0000;
   font-size: 13px;
 }
 
-.registration_button, .button{
+.registration_button, .button, .edit_button{
   color: #ffff;
   background-color: #fb5d80;
   width: 345px;
@@ -104,6 +138,19 @@
 }
 
 @media (max-width: 599px) {
+  .edit_button{
+    position: absolute;
+    top: 280px;
+    left: 90px;
+    color: #ffff;
+    background-color: #fb5d80;
+    width: 145px;
+    height: 40px;
+    border: none;
+  }
+}
+
+@media (max-width: 599px) {
   #guest_button{
     position: absolute;
     top: 185px;
@@ -130,6 +177,30 @@
   height: 40px;
   text-align: center;
   line-height: 2.5;
+}
+
+@media (max-width: 599px) {
+  #edit_button{
+    position: absolute;
+    top: 500px;
+    left: 120px;
+    text-decoration: none;
+    background-color: #fb5d80;
+    color: #ffff;
+    width: 345px;
+    height: 40px;
+    text-align: center;
+    line-height: 2.5;
+  }
+}
+
+@media (max-width: 599px) {
+  .show_user_image, .user_image{
+    position: absolute;
+    top: 240px;
+    left: 230px;
+    border-radius: 50%;
+  }
 }
 
 .top_actions{
@@ -165,4 +236,17 @@
   border: 1px solid rgb(255, 0, 0);
   width: 345px;
   height: 40px;
+}
+
+@media (max-width: 599px) {
+  .delete{
+    color: rgb(255, 0, 0);
+    background-color: #ffffff;
+    border: 1px solid rgb(255, 0, 0);
+    width: 345px;
+    height: 40px;
+    position: absolute;
+    top: 600px;
+    left: 130px;
+  }
 }

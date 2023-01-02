@@ -1,5 +1,5 @@
 <div id="profile_edit">
-  <h2 class="cap">プロフィール編集</h2>
+  <h2 class="edit_cap">プロフィール編集</h2>
   <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="field">
@@ -34,7 +34,7 @@
     </div>
     </br>
     <div class="actions">
-      <%= f.submit "更新する", class:"button" %>
+      <%= f.submit "更新する", class:"edit_button" %>
     </div>
   <% end %>
   </br>

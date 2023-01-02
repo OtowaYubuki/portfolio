@@ -97,7 +97,14 @@
   }
 }
 
-.menu-btn {
+@media (max-width: 599px) {
+  .menu-btn{
+    position: absolute;
+    left: 30px;
+  }
+}
+
+.menu-btn{
     position: fixed;
     top: 20px;
     right: 15px;
@@ -207,6 +214,22 @@
   padding: 15px;
   background: #fe7c98;
   text-align: center;
+}
+
+@media (max-width: 599px) {
+  .logout{
+    position: absolute;
+    top: 28px;
+    right: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 100px;
+    width: 100px;
+    padding: 15px;
+    background: #fe7c98;
+    text-align: center;
+  }
 }
 
 #service_explanation_cap{
