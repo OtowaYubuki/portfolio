@@ -368,7 +368,7 @@
     left: 170px;
     border: 1px solid #858484;
     width: 200px;
-    height: 330px;
+    height: 380px;
     background-color: #ffffff;
     margin-top: 2px;
   }
@@ -451,7 +451,6 @@
     position: absolute;
     top: 20px;
     left: 100px;
-    background-color: #ffedf0;
     font-size: 35px;
     width: 100%;
   }
@@ -509,7 +508,31 @@
 @media (max-width: 599px) {
   .table_counseling_day{
     position: absolute;
-    top: 320px;
+    top: 380px;
+    left: 170px;
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(111, 110, 110);
+  }
+}
+
+@media (max-width: 599px) {
+  .table_counseling_people{
+    position: absolute;
+    top: 425px;
+    left: 170px;
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(111, 110, 110);
+  }
+}
+
+@media (max-width: 599px) {
+  .table_counselings_link{
+    position: absolute;
+    top: 445px;
     left: 170px;
     width: 200px;
     text-align: center;
@@ -545,7 +568,7 @@
 }
 
 @media screen and (min-width: 769px) {
-  .fake_counseling_name, .fake_counseling_day, .fake_counseling_host, .fake_image, .counseling_fake_image, .table_counselings, .table_influensers{
+  .fake_counseling_name, .fake_counseling_day, .fake_counseling_host, .fake_image, .counseling_fake_image, .table_counselings, .table_influensers, .table_counseling_people, .table_counselings_link{
     display: none;
   }
 }

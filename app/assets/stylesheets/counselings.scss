@@ -239,6 +239,15 @@ top:50px;
   padding-bottom: 30px;
 }
 
+@media (max-width: 599px) {
+  .sort_links{
+    position: absolute;
+    top: 600px;
+    right: 180px;
+    padding-bottom: 30px;
+  }
+}
+
 .link{
  text-decoration: none;
  color: #fe7c98;
