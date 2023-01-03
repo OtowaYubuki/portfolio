@@ -353,6 +353,27 @@
   margin-top: 2px;
 }
 
+.border{
+  border: 1px solid #858484;
+	width: 200px;
+	height: 330px;
+  background-color: #ffffff;
+  margin-top: 2px;
+}
+
+@media (max-width: 599px) {
+  .border{
+    position: absolute;
+    top: 100px;
+    left: 170px;
+    border: 1px solid #858484;
+    width: 200px;
+    height: 330px;
+    background-color: #ffffff;
+    margin-top: 2px;
+  }
+}
+
 @media (max-width: 599px) {
   .border1{
     position: absolute;
@@ -372,6 +393,17 @@
   background-color: #ffffff;
   margin-top: 2px;
   border-radius: 5%;
+}
+
+@media (max-width: 599px) {
+  .border6{
+    border: 1px solid #858484;
+    width: 150px;
+    height: 280px;
+    background-color: #ffffff;
+    margin-top: 120px;
+    border-radius: 5%;
+  }
 }
 
 #signin_toppage{
@@ -397,11 +429,21 @@
   }
 }
 
-#top_searchforcounselig{
+#top_searchforcounselig, #top_search_for_counselig{
   position: absolute;
   top:30px;
   left: 210px;
   color: rgb(111, 110, 110);
+}
+
+@media (max-width: 599px) {
+  #top_search_for_counselig{
+    position: absolute;
+    top:10px;
+    left: 150px;
+    color: rgb(111, 110, 110);
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 599px) {
@@ -431,7 +473,6 @@
     top: 180px;
     left: 40px;
     background-color: #ffedf0;
-    width: 100%;
   }
 }
 
@@ -443,6 +484,19 @@
   margin-left: 10px;
 }
 
+@media (max-width: 599px) {
+  .table_counseling_name{
+    position: absolute;
+    top: 270px;
+    left: 170px;
+    width: 180px;
+    text-align: center;
+    margin-left: 10px;
+    z-index: 1;
+    color: rgb(111, 110, 110);
+  }
+}
+
 .counseling_day{
   position: absolute;
   top:230px;
@@ -450,6 +504,18 @@
   text-align: center;
   margin-top: 10px;
 
+}
+
+@media (max-width: 599px) {
+  .table_counseling_day{
+    position: absolute;
+    top: 320px;
+    left: 170px;
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(111, 110, 110);
+  }
 }
 
 .host_influencer{
@@ -461,19 +527,31 @@
 }
 
 @media (max-width: 599px) {
-  .counseling_name, .counseling_day, .host_influencer{
+  .table_host_influencer{
+    position: absolute;
+    top: 380px;
+    left: 180px;
+    width: 180px;
+    text-align: left;
+    padding-left: 20px;
+    color: rgb(111, 110, 110);
+  }
+}
+
+@media (max-width: 599px) {
+  .counseling_name, .counseling_day, .host_influencer, .influencers{
     display: none;
   }
 }
 
 @media screen and (min-width: 769px) {
-  .fake_counseling_name, .fake_counseling_day, .fake_counseling_host, .fake_image, .counseling_fake_image{
+  .fake_counseling_name, .fake_counseling_day, .fake_counseling_host, .fake_image, .counseling_fake_image, .table_counselings, .table_influensers{
     display: none;
   }
 }
 
 @media (max-width: 599px)  {
-  .counseling_image{
+  .counseling_image, .counselings{
     display: none;
   }
 }
@@ -556,12 +634,35 @@
   font-size: 13px;
 }
 
+@media (max-width: 599px) {
+  .name{
+    position: absolute;
+    top:290px;
+    width: 130px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 13px;
+  }
+}
+
 #top_searchforinfluencer_background{
   background-color: #ffedf0;
   width: 100%;
 }
 
-#top_searchforinfluencer_background{
+@media (max-width: 599px) {
+  #top_search_influencer_background{
+    background-color: #ffedf0;
+    width: 499px;
+    position: relative;
+    top: 300px;
+    height: 400px;
+  }
+}
+
+#top_search_influencer_background{
+  background-color: #ffedf0;
+  width: 100%;
   position: relative;
   top:720px;
   height: 580px;
@@ -577,10 +678,21 @@
   color: rgb(111, 110, 110);
 }
 
+@media (max-width: 599px) {
+  .top_searchforinfluencer{
+    position: absolute;
+    top:10px;
+    left: 10px;
+    color: rgb(111, 110, 110);
+    font-size: 25px;
+    width: 280px;
+  }
+}
+
 #signin_see_more_influencer{
   position: absolute;
-  top:430px;
-  left: 450px;
+  top:1330px;
+  left: 650px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   border-radius: 100px;
@@ -590,8 +702,32 @@
   text-align: center;
 }
 
+@media (max-width: 599px) {
+  #signin_see_more_influencer{
+    position: absolute;
+    top: 1300px;
+    left: 220px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 100px;
+    width: 100px;
+    padding: 15px;
+    background: #fe7c98;
+    text-align: center;
+  }
+}
+
 .star-rating{
   font-size: 15px;
+}
+
+@media (max-width: 599px) {
+  .star{
+    position: absolute;
+    top:340px;
+    width: 130px;
+    text-align: center;
+  }
 }
 
 .image{
@@ -603,7 +739,7 @@
   margin-top: 30px;
 }
 
-#see_more_counseling, #signin_see_more_counseling{
+#see_more_counseling, #signin_see_more_counseling_button{
   position: absolute;
   left: 655px;
   text-decoration: none;
@@ -615,12 +751,28 @@
   text-align: center;
 }
 
+@media (max-width: 599px) {
+  #signin_see_more_counseling_button{
+    position: absolute;
+    top: 470px;
+    left: 205px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 100px;
+    width: 100px;
+    padding: 15px;
+    background: #fe7c98;
+    text-align: center;
+    z-index: 1;
+  }
+}
+
 #see_more_counseling{
   position: absolute;
   top: 420px;
 }
 
-#signin_see_more_counseling{
+#signin_see_more_counseling_button{
   top: 500px;
 }
 
@@ -638,6 +790,12 @@
     background: #fe7c98;
     text-align: center;
     font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #signin_see_more_counseling{
+    display: none;
   }
 }
 
