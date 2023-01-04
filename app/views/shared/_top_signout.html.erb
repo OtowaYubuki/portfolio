@@ -11,37 +11,47 @@
   <table class="counselings">
     <tr>
       <% @counselings.first(5).each do |counseling| %>
-        <th><div class="border1"><%= image_tag '25307560_s.jpg', size:'200x150', class:"counseling_image" %></div></th>
-      <% end %>    
-      <%= image_tag '25307560_s.jpg', size:'399x330', class:"counseling_fake_image" %>
+        <th><div class="border"><%= image_tag '25307560_s.jpg', size:'200x150', class:"counseling_image" %></div></th>
+      <% end %>  
     </tr>
     <tr>
       <% @counselings.first(5).each do |counseling| %>
-        <td>
-          <div class="counseling_name">
-            <%= counseling.name %>
-          </div>
-        </td>
+        <td><div class="counseling_name"><%= counseling.name %></div></td>
       <% end %>
-      <p class="fake_counseling_name">幸福感がカギ！プチプラコスメで作るイエベの春メイク</p>
     </tr>
     <tr>
       <% @counselings.first(5).each do |counseling| %>
-        <td>
-          <div class="counseling_day">
-            <%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜
-          </div>
-        </td>
+        <td><div class="counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
       <% end %>
-      <p class="fake_counseling_day">2023年3月10日(金)17時〜</p></td>
     </tr>
     <tr>
       <% @influencers.first(5).each do |influencer| %>
         <td><div class="host_influencer"><%= image_tag influencer.influencer_image, size:'50x40', class: "image" %>  <%= influencer.name %></div></td>
       <% end %>
-      <%= image_tag '22857219_s.jpg', class: "fake_image" %><p class="fake_counseling_host">みきまる</p>
     </tr>
-    <%= link_to "もっと見る", new_user_session_path, id:"signin_see_more_counseling_button" %>
+  </table>
+  <%= link_to "もっと見る", new_user_session_path, id:"sign_out_see_more_counseling_button" %>
+  <table class="table_counselings">
+    <tr>
+      <% @counselings.first(5).each do |counseling| %>
+        <th><div class="table_border"><%= image_tag '25307560_s.jpg', size:'100x50', class:"table_counseling_image" %></div></th>
+      <% end %>  
+    </tr>
+    <tr>
+      <% @counselings.first(5).each do |counseling| %>
+        <td><div class="table_counseling_name"><%= counseling.name %></div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @counselings.first(5).each do |counseling| %>
+        <td><div class="table_counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @influencers.first(5).each do |influencer| %>
+        <td><div class="table_host_influencer"><%= image_tag influencer.influencer_image, size:'40x30', class: "image" %></div></td>
+      <% end %>
+    </tr>
   </table>
 </div>
 <div id="howtouse"></div>

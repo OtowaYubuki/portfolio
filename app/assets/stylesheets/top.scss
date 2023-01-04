@@ -362,19 +362,6 @@
 }
 
 @media (max-width: 599px) {
-  .border{
-    position: absolute;
-    top: 100px;
-    left: 170px;
-    border: 1px solid #858484;
-    width: 200px;
-    height: 380px;
-    background-color: #ffffff;
-    margin-top: 2px;
-  }
-}
-
-@media (max-width: 599px) {
   .border1{
     position: absolute;
     left: 30px;
@@ -424,7 +411,7 @@
     top: 1050px;
     background-color: #ffedf0;
     width: 100%;
-    height: 1100px;
+    height: 600px;
     z-index: 1;
   }
 }
@@ -467,11 +454,24 @@
 }
 
 @media (max-width: 599px) {
-  .counselings{
+  .table_counselings{
     position: absolute;
-    top: 180px;
-    left: 40px;
-    background-color: #ffedf0;
+    left: 30px;
+    top: 140px;
+    font-size: 13px;
+    color: rgb(111, 110, 110);
+    width: 200px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 599px) {
+  .table_border{
+    border: 1px solid #858484;
+    width: 100px;
+    height: 280px;
+    background-color: #ffffff;
+    margin-top: 2px;
   }
 }
 
@@ -486,13 +486,9 @@
 @media (max-width: 599px) {
   .table_counseling_name{
     position: absolute;
-    top: 270px;
-    left: 170px;
-    width: 180px;
+    top: 60px;
+    width: 100px;
     text-align: center;
-    margin-left: 10px;
-    z-index: 1;
-    color: rgb(111, 110, 110);
   }
 }
 
@@ -502,42 +498,14 @@
   width: 200px;
   text-align: center;
   margin-top: 10px;
-
 }
 
 @media (max-width: 599px) {
   .table_counseling_day{
     position: absolute;
-    top: 380px;
-    left: 170px;
-    width: 200px;
+    top: 190px;
+    width: 100px;
     text-align: center;
-    margin-top: 10px;
-    color: rgb(111, 110, 110);
-  }
-}
-
-@media (max-width: 599px) {
-  .table_counseling_people{
-    position: absolute;
-    top: 425px;
-    left: 170px;
-    width: 200px;
-    text-align: center;
-    margin-top: 10px;
-    color: rgb(111, 110, 110);
-  }
-}
-
-@media (max-width: 599px) {
-  .table_counselings_link{
-    position: absolute;
-    top: 445px;
-    left: 170px;
-    width: 200px;
-    text-align: center;
-    margin-top: 10px;
-    color: rgb(111, 110, 110);
   }
 }
 
@@ -552,93 +520,17 @@
 @media (max-width: 599px) {
   .table_host_influencer{
     position: absolute;
-    top: 380px;
-    left: 180px;
-    width: 180px;
+    top: 250px;
+    width: 90px;
     text-align: left;
-    padding-left: 20px;
     color: rgb(111, 110, 110);
-  }
-}
-
-@media (max-width: 599px) {
-  .counseling_name, .counseling_day, .host_influencer, .influencers{
-    display: none;
+    margin-left: 10px;
   }
 }
 
 @media screen and (min-width: 769px) {
-  .fake_counseling_name, .fake_counseling_day, .fake_counseling_host, .fake_image, .counseling_fake_image, .table_counselings, .table_influensers, .table_counseling_people, .table_counselings_link{
+  .table_counselings, .table_border, .table_counseling_name, .table_counseling_day, .table_host_influencer, .table_counseling_image{
     display: none;
-  }
-}
-
-@media (max-width: 599px)  {
-  .counseling_image, .counselings{
-    display: none;
-  }
-}
-
-@media (max-width: 599px)  {
-  .counseling_fake_image{
-    position: absolute;
-    top: 186px;
-    left: 72px;
-    z-index: 1;
-  }
-}
-
-@media (max-width: 599px) {
-  .fake_counseling_name{
-    position: absolute;
-    top: 500px;
-    left: 90px;
-    width: 350px;
-    text-align: center;
-    margin-left: 10px;
-    z-index: 1;
-    font-size: 25px;
-    color: rgb(111, 110, 110);
-  }
-}
-
-@media (max-width: 599px) {
-  .fake_counseling_day{
-    position: absolute;
-    top: 600px;
-    left: 115px;
-    width: 300px;
-    text-align: center;
-    margin-left: 10px;
-    z-index: 1;
-    font-size: 25px;
-    color: rgb(111, 110, 110);
-  }
-}
-
-@media (max-width: 599px) {
-  .fake_counseling_host{
-    position: absolute;
-    top: 720px;
-    left: 240px;
-    width: 180px;
-    text-align: center;
-    margin-left: 10px;
-    z-index: 1;
-    font-size: 25px;
-    color: rgb(111, 110, 110);
-  }
-}
-
-@media (max-width: 599px) {
-  .fake_image{
-    position: absolute;
-    top: 700px;
-    left: 150px;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    z-index: 1;
   }
 }
 
@@ -762,7 +654,7 @@
   margin-top: 30px;
 }
 
-#see_more_counseling, #signin_see_more_counseling_button{
+#see_more_counseling, #signin_see_more_counseling_button, #sign_out_see_more_counseling_button{
   position: absolute;
   left: 655px;
   text-decoration: none;
@@ -774,10 +666,15 @@
   text-align: center;
 }
 
+#signin_see_more_counseling_button, #sign_out_see_more_counseling_button{
+  position: absolute;
+  top: 500px;
+}
+
 @media (max-width: 599px) {
   #signin_see_more_counseling_button{
     position: absolute;
-    top: 470px;
+    top: 520px;
     left: 205px;
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -790,36 +687,31 @@
   }
 }
 
-#see_more_counseling{
-  position: absolute;
-  top: 420px;
-}
-
-#signin_see_more_counseling_button{
-  top: 500px;
-}
-
 @media (max-width: 599px) {
-  #signin_see_more_counseling{
+  #sign_out_see_more_counseling_button{
     position: absolute;
-    top: 900px;
-    left: 110px;
+    top: 500px;
+    left: 220px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     border-radius: 100px;
-    width: 300px;
-    height: 50px;
+    width: 100px;
     padding: 15px;
     background: #fe7c98;
     text-align: center;
-    font-size: 28px;
+    z-index: 1;
   }
 }
 
-@media screen and (min-width: 769px) {
-  #signin_see_more_counseling{
+@media (max-width: 599px) {
+  .counselings, .border,.counseling_name, .counseling_day, .host_influencer, .counseling_image{
     display: none;
   }
+}
+
+#see_more_counseling{
+  position: absolute;
+  top: 420px;
 }
 
 #service_explanation_cap_bottom{
@@ -832,7 +724,7 @@
 @media (max-width: 599px) {
   #service_explanation_cap_bottom{
     position: absolute;
-    top: 2300px;
+    top: 1900px;
     left: 200px;
     color: rgb(111, 110, 110);
     font-size: 38px;
@@ -851,10 +743,10 @@
 @media (max-width: 599px) {
   #howtouse{
     position: absolute;
-    top: 1800px;
+    top: 1900px;
     background-color: #ffffff;
     width: 100%;
-    height: 1600px;
+    height: 1000px;
   }
 }
 
@@ -868,7 +760,7 @@
 @media (max-width: 599px) {
   .service_explanation_bottom_image{
     position: absolute;
-    top: 2450px;
+    top: 2050px;
     left: 120px;
     width: 300px;
     height: 300px;
@@ -886,7 +778,7 @@
 @media (max-width: 599px) {
   #service_explanation_text_bottom{
     position: absolute;
-    top: 2800px;
+    top: 2400px;
     left: 50px;
     color: rgb(111, 110, 110);
     font-size: 25px;
@@ -911,7 +803,7 @@
 @media (max-width: 599px) {
   .new_user_registration_explanation_bottom{
     position: absolute;
-    top: 3060px;
+    top: 2660px;
     left: 70px;
     text-decoration: none;
     color: rgb(255, 255, 255);
