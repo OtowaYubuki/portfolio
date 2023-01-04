@@ -534,6 +534,24 @@
   }
 }
 
+@media (max-width: 599px) {
+  .table_counseling_people{
+    position: absolute;
+    top: 240px;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 599px) {
+  .table_counseling_link{
+    position: absolute;
+    top: 260px;
+    width: 100px;
+    text-align: center;
+  }
+}
+
 .host_influencer{
   position: absolute;
   top:280px;
