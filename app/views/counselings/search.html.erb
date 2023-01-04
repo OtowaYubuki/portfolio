@@ -30,6 +30,33 @@
         <% end %>
       </tr>
     </table>
+    <table class="table_counselings">
+      <tr>
+        <% @results.each do |counseling| %>
+          <th><div class="table_border"><%= image_tag '25307560_s.jpg', size:'100x50', class:"table_counseling_image" %></div></th>
+        <% end %>  
+      </tr>
+      <tr>
+        <% @results.each do |counseling| %>
+          <td><div class="table_counseling_name"><%= counseling.name %></div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @results.each do |counseling| %>
+          <td><div class="table_counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @results.each do |counseling| %>
+          <td><div class="table_counseling_people">募集人数：<%= counseling.people %>名</div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @results.each do |counseling| %>
+          <td><div class="table_counseling_link"><%= link_to "詳細", counseling_path(counseling) %></div></td>
+        <% end %>
+      </tr>
+    </table>
   <% end %>
 </div>
 <div id="back_to_counselings_link">

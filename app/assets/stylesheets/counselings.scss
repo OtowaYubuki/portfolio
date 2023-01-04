@@ -246,8 +246,16 @@
 }
 
 #results{
-position: absolute;
-top:50px;
+  position: absolute;
+  top:50px;
+}
+
+@media (max-width: 599px) {
+  #results{
+    position: absolute;
+    top:50px;
+    width: 200px;
+  }
 }
 
 .sort_links{
