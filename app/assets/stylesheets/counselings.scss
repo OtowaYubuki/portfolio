@@ -3,6 +3,24 @@
   bottom: 23px;
 }
 
+@media (max-width: 599px) {
+  #index_counseling{
+    position: absolute;
+    top: 80px;
+    left: 100px;
+  }
+}
+
+@media (max-width: 599px) {
+  #top_search_forcounselig{
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    width: 250px;
+    color: rgb(111, 110, 110);
+  }
+}
+
 #counseling_search_window{
   position: absolute;
   top:130px;
@@ -237,6 +255,15 @@ top:50px;
   top:180px;
   right: 200px;
   padding-bottom: 30px;
+}
+
+@media (max-width: 599px) {
+  .sort_links{
+    position: absolute;
+    top:180px;
+    right: 130px;
+    padding-bottom: 30px;
+  }
 }
 
 .link{

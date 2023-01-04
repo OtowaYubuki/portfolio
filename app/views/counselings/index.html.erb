@@ -3,8 +3,8 @@
   <%= sort_link(@q, :day, "開催日が近い順", hide_indicator: true) %>
   <%= sort_link(@q, :day, "開催日が遠い順", default_order: :desc, hide_indicator: true) %></th>
 </div>
+<h2 id="index_searchforcounselig">カウンセリングを探す</h2>
 <div id="index_counseling">
-  <h2 id="top_searchforcounselig">カウンセリングを探す</h2>
   <table class="counselings">
     <tr>
       <% @counselings.each do |counseling| %>
@@ -29,6 +29,23 @@
     <tr>
       <% @counselings.each do |counseling| %>
         <td><div class="counselings_link"><%= link_to "詳細", counseling_path(counseling) %></div></td>
+      <% end %>
+    </tr>
+  </table>
+  <table class="table_counselings">
+    <tr>
+      <% @counselings.first(5).each do |counseling| %>
+        <th><div class="table_border"><%= image_tag '25307560_s.jpg', size:'100x50', class:"table_counseling_image" %></div></th>
+      <% end %>  
+    </tr>
+    <tr>
+      <% @counselings.first(5).each do |counseling| %>
+        <td><div class="table_counseling_name"><%= counseling.name %></div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @counselings.first(5).each do |counseling| %>
+        <td><div class="table_counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
       <% end %>
     </tr>
   </table>
