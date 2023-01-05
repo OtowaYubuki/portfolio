@@ -8,19 +8,19 @@
       <% end %>
     </tr>
     <tr>
-    <% @reviews.each do |review| %>
-      <td>
-        <div class="star-rating_reviews">
-        <div class="star-rating-front">
-        <% if review.score? %>
-          <% for i in 1..review.score do %>
-            ★
+      <% @reviews.each do |review| %>
+        <td>
+          <div class="star-rating_reviews">
+          <div class="star-rating-front">
+          <% if review.score? %>
+            <% for i in 1..review.score do %>
+              ★
+            <% end %>
           <% end %>
-        <% end %>
-        </div>
-        </div>
-      </td>
-    <% end %>
+          </div>
+          </div>
+        </td>
+      <% end %>
     </tr>
     <tr>
       <% @reviews.each do |review| %>
