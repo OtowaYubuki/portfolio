@@ -46,9 +46,9 @@
     </tr>
   </table>
 </div>
-<div id="top_search_influencer_background"></div>
+<div id="top_search_for_influencer_background"></div>
+<h2 class="top_searchforinfluencer">インフルエンサーを探す</h2>
 <div id="signin_toppage_bottom">
-  <h2 class="top_searchforinfluencer">インフルエンサーを探す</h2>
   <table class="influencers">
     <tr>
       <% @influencers.last(5).each do |influencer| %>
@@ -66,6 +66,28 @@
             <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
             <span class="star-rating-back">★★★★★</span>
             </span>
+            （<%= influencer.reviews.count %>）
+        </div></td>
+      <% end %>
+    </tr>
+  </table>
+  <table class="table_influencers">
+    <tr>
+      <% @influencers.last(5).each do |influencer| %>
+        <th><div class="table_border2"><%= image_tag influencer.influencer_image, size:'60x50', class: "influencer_image" %></div></th>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.last(5).each do |influencer| %>
+        <td><div class="table_influencer_name"><%= influencer.name %></div></td>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.last(5).each do |influencer| %>
+        <td><div class="table_star"><span class="star-rating">
+            <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+            </span></br>
             （<%= influencer.reviews.count %>）
         </div></td>
       <% end %>

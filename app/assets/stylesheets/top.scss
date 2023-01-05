@@ -383,12 +383,18 @@
 }
 
 @media (max-width: 599px) {
-  .border6{
+  .table_influencers{
+    position: absolute;
+    left: 0px;
+  }
+}
+
+@media (max-width: 599px) {
+  .table_border2{
     border: 1px solid #858484;
-    width: 150px;
-    height: 280px;
+	  width: 80px;
+	  height: 240px;
     background-color: #ffffff;
-    margin-top: 120px;
     border-radius: 5%;
   }
 }
@@ -572,7 +578,8 @@
 }
 
 @media screen and (min-width: 769px) {
-  .table_counselings, .table_border, .table_counseling_name, .table_counseling_day, .table_host_influencer, .table_counseling_image{
+  .table_counselings, .table_border, .table_counseling_name, .table_counseling_day, .table_host_influencer, .table_counseling_image,
+   .table_influencers, .table_border2, .table_influencer_name, .table_star{
     display: none;
   }
 }
@@ -593,23 +600,19 @@
 }
 
 @media (max-width: 599px) {
-  .name{
+  .table_influencer_name{
     position: absolute;
-    top:290px;
-    width: 130px;
+    top: 100px;
+    width: 70px;
     text-align: center;
-    margin-left: 10px;
     font-size: 13px;
+    color: rgb(111, 110, 110);
+    margin-left: 5px;
   }
 }
 
-#top_searchforinfluencer_background{
-  background-color: #ffedf0;
-  width: 100%;
-}
-
 @media (max-width: 599px) {
-  #top_search_influencer_background{
+  #top_search_for_influencer_background{
     background-color: #ffedf0;
     width: 499px;
     position: relative;
@@ -618,7 +621,7 @@
   }
 }
 
-#top_search_influencer_background{
+#top_search_for_influencer_background{
   background-color: #ffedf0;
   width: 100%;
   position: relative;
@@ -632,15 +635,26 @@
   left: 210px;
 }
 
+@media (max-width: 599px) {
+  #signin_toppage_bottom{
+    position: absolute;
+    top: 980px;
+    left: 10px;
+  }
+}
+
 .top_searchforinfluencer{
   color: rgb(111, 110, 110);
+  position: absolute;
+  top: 870px;
+  left: 210px;
 }
 
 @media (max-width: 599px) {
   .top_searchforinfluencer{
     position: absolute;
-    top:10px;
-    left: 10px;
+    top: 880px;
+    left: 95px;
     color: rgb(111, 110, 110);
     font-size: 25px;
     width: 280px;
@@ -680,11 +694,11 @@
 }
 
 @media (max-width: 599px) {
-  .star{
+  .table_star{
     position: absolute;
-    top:340px;
-    width: 130px;
+    top: 210px;
     text-align: center;
+    font-size: 8px;
   }
 }
 
@@ -747,7 +761,8 @@
 }
 
 @media (max-width: 599px) {
-  .counselings, .border,.counseling_name, .counseling_day, .host_influencer, .counseling_image{
+  .counselings, .border, .counseling_name, .counseling_day, .host_influencer, .counseling_image,
+   .influencers, .border6, .name, .star{
     display: none;
   }
 }
