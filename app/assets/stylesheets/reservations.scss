@@ -4,6 +4,14 @@
   left: 300px;
 }
 
+@media (max-width: 599px) {
+  #reservation_confirm{
+    position: absolute;
+    top:180px;
+    left: 10px;
+  }
+}
+
 #reserve_name{
   position: absolute;
   top: 80px;
@@ -58,6 +66,21 @@
   left: 330px;
 }
 
+@media (max-width: 599px) {
+  #backto_show_counseling{
+    position: absolute;
+    top: 510px;
+    left: 30px;
+  }
+}
+
 #h2{
   color: rgb(255, 0, 0);
+}
+
+@media (max-width: 599px) {
+  .new_reserve{
+    position: absolute;
+    left: 10px;
+  }
 }
