@@ -4,6 +4,14 @@
   left: 300px;
 }
 
+@media (max-width: 599px) {
+  #score_new{
+    position: absolute;
+    top: 200px;
+    left: 10px;
+  }
+}
+
 .post_form{
   display: flex;
   flex-direction: row-reverse;
