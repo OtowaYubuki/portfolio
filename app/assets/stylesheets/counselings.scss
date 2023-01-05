@@ -69,8 +69,16 @@
 
 #counseling_show_influencer{
   position: absolute;
-  top:200px;
+  top: 200px;
   left: 850px;
+}
+
+@media (max-width: 599px) {
+  #counseling_show_influencer{
+    position: absolute;
+    top: 800px;
+    left: 50px;
+  }
 }
 
 #back_to_counselings_link{
@@ -123,6 +131,14 @@
   position: absolute;
   top: 120px;
   left: 280px;
+}
+
+@media (max-width: 599px) {
+  #counseling_detail{
+    position: absolute;
+    top: 120px;
+    left: 10px;
+  }
 }
 
 .new_reserve{
@@ -283,4 +299,12 @@
 #search_day{
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+@media (max-width: 599px) {
+  .table_show_influencers{
+    position: absolute;
+    left: 180px;
+    padding-bottom: 100px;
+  }
 }

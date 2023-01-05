@@ -48,6 +48,11 @@
         <td><div class="table_counseling_day"><%= l counseling.day, format: :long %>  <%= l counseling.starttime, format: :short %>〜</div></td>
       <% end %>
     </tr>
+    <tr>
+      <% @counselings.each do |counseling| %>
+        <td><div class="table_counseling_link"><%= link_to "詳細", counseling_path(counseling) %></div></td>
+      <% end %>
+    </tr>
   </table>
 </div>
 <div class="paginate">

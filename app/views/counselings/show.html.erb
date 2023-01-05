@@ -40,7 +40,6 @@
     </tr>
   </table>
 </div>
-
 <div id="counseling_show_influencer">
   <h2 class="index_searchforinfluencer">主催のインフルエンサー</h2>
   <table class="influencers">
@@ -62,5 +61,28 @@
       <td><div class="influencer_show_link"><%= link_to "詳細", influencer_path(@influencer) %></div></td>
     </tr>
   </table>
+
+
+  <table class="table_show_influencers">
+    <tr>
+      <th><div class="table_border2"><%= image_tag @counseling.influencer.influencer_image, size:'60x50', class: "influencer_image" %></div></th>
+    </tr>
+    <tr>
+      <td><div class="table_influencer_name"><%= @counseling.influencer.name %></div></td>
+    </tr>
+    <tr>
+      <td><div class="table_star"><span class="star-rating">
+          <span class="star-rating-front" style="width: <%= @counseling.influencer.avg_score * 20 %>%">★★★★★</span>
+          <span class="star-rating-back">★★★★★</span>
+          </span></br>
+          （<%= @counseling.influencer.reviews.count %>）
+      </div></td>
+    </tr>
+    <tr>
+      <td><div class="table_influencer_show_link"><%= link_to "詳細", influencer_path(@influencer) %></div></td>
+    </tr>
+  </table>
+
+
 </div>
 <%= link_to "カウンセリング一覧に戻る", counselings_path, id:"backto_counseling" %>
