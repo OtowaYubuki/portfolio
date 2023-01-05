@@ -86,6 +86,14 @@
   left: 250px;
 }
 
+@media (max-width: 599px) {
+  .influencers_show{
+    position: relative;
+    top: 20px;
+    left: 130px;
+  }
+}
+
 .show_searchforinfluencer{
   color: rgb(111, 110, 110);
   margin-left: 210px;
@@ -182,6 +190,15 @@
   color: rgb(111, 110, 110);
 }
 
+@media (max-width: 599px) {
+  .influencer_counselig{
+    margin-top: 740px;
+    margin-left: 180px;
+    color: rgb(111, 110, 110);
+    width: 300px;
+  }
+}
+
 .influencer_counselings{
   position: absolute;
   left: 750px;
@@ -190,6 +207,29 @@
   color: rgb(111, 110, 110);
   width: 200px;
   text-align: center;
+}
+
+@media (max-width: 599px) {
+  .influencer_counselings{
+    position: absolute;
+    left: 10px;
+    top: 930px;
+    font-size: 13px;
+    color: rgb(111, 110, 110);
+    width: 200px;
+    text-align: center;
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 599px) {
+  .counseling_name{
+    position: absolute;
+    top: 560px;
+    width: 100px;
+    text-align: center;
+    z-index: 1;
+  }
 }
 
 .border8{
