@@ -49,17 +49,21 @@
 }
 
 @media (max-width: 599px) {
-  .user_image{
-    display: none;
-  }
-}
-
-@media (max-width: 599px) {
   .show_user_image{
     border-radius: 50%;
     position: absolute;
     top: 220px;
     left: 70px;
+  }
+}
+
+.show_user_images{
+  border-radius: 50%;
+}
+
+@media (max-width: 599px) {
+  .show_user_images, .user_images{
+    display: none;
   }
 }
 
@@ -128,19 +132,6 @@
   .button{
     position: absolute;
     top: 130px;
-    left: 90px;
-    color: #ffff;
-    background-color: #fb5d80;
-    width: 145px;
-    height: 40px;
-    border: none;
-  }
-}
-
-@media (max-width: 599px) {
-  .edit_button{
-    position: absolute;
-    top: 280px;
     left: 90px;
     color: #ffff;
     background-color: #fb5d80;
@@ -246,7 +237,7 @@
     width: 345px;
     height: 40px;
     position: absolute;
-    top: 600px;
+    top: 580px;
     left: 130px;
   }
 }
