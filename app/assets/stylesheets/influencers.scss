@@ -4,6 +4,14 @@
   left: 210px;
 }
 
+@media (max-width: 599px) {
+  #influencer_index{
+    position: absolute;
+    top: 300px;
+    left: 120px;
+  }
+}
+
 .index_searchforinfluencer{
   margin-left: 120px;
   color: rgb(111, 110, 110);
@@ -23,6 +31,16 @@
   width: 130px;
   text-align: center;
   margin-left: 10px;
+}
+
+@media (max-width: 599px) {
+  .table_influencer_link{
+    position: absolute;
+    top: 225px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 13px;
+  }
 }
 
 #influencer_search_link{

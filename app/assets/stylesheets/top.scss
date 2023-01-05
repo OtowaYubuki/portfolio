@@ -579,7 +579,7 @@
 
 @media screen and (min-width: 769px) {
   .table_counselings, .table_border, .table_counseling_name, .table_counseling_day, .table_host_influencer, .table_counseling_image,
-   .table_influencers, .table_border2, .table_influencer_name, .table_star{
+   .table_influencers, .follow_influencers, .table_border2, .table_influencer_name, .table_star{
     display: none;
   }
 }
@@ -696,7 +696,7 @@
 @media (max-width: 599px) {
   .table_star{
     position: absolute;
-    top: 210px;
+    top: 190px;
     text-align: center;
     font-size: 8px;
   }

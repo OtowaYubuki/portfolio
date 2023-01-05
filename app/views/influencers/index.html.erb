@@ -31,6 +31,33 @@
       <% end %>    
     </tr>
   </table>
+  <table class="table_influencers">
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <th><div class="table_border2"><%= image_tag influencer.influencer_image, size:'60x50', class: "influencer_image" %></div></th>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="table_influencer_name"><%= influencer.name %></div></td>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="table_star"><span class="star-rating">
+            <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+            </span></br>
+            （<%= influencer.reviews.count %>）
+        </div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="table_influencer_link"><%= link_to "詳細", influencer_path(influencer) %></div></td>
+      <% end %>    
+    </tr>
+  </table>
 </div>
 <div class="paginate">
   <%= paginate @influencers %>
