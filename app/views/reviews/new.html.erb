@@ -1,5 +1,6 @@
 <div id="score_new">
   <h2>総合評価</h2>
+  <p id="score_attention">※星評価は必須です</p>
     <div class="post_form">
       <%= form_with model: [@influencer, @review], url: confirm_influencer_reviews_path(@influencer, @reservation), local: true do |f| %>
         <%= f.radio_button :score, 5 ,id: 'star1'%>
