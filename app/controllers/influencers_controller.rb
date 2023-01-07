@@ -18,6 +18,7 @@ class InfluencersController < ApplicationController
   end
 
   private
+
   def set_q
     @q = Influencer.ransack(params[:q])
   end

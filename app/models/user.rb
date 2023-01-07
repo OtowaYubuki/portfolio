@@ -15,21 +15,21 @@ class User < ApplicationRecord
   has_many :influencers, through: :reviews
 
   def already_favorited?(counseling)
-    self.favorites.exists?(counseling_id: counseling.id)
+    favorites.exists?(counseling_id: counseling.id)
   end
 
   def already_reserved?(counseling)
-    self.reservations.exists?(counseling_id: counseling.id)
+    reservations.exists?(counseling_id: counseling.id)
   end
 
   def already_followed?(influencer)
-    self.relationships.exists?(influencer_id: influencer.id)
+    relationships.exists?(influencer_id: influencer.id)
   end
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)
 
-    if params[:password].blank? && params[:password_confirmation].blank? 
+    if params[:password].blank? && params[:password_confirmation].blank?
       params.delete(:password)
       params.delete(:password_confirmation)
     end

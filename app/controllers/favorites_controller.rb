@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
     @user = User.find(params[:user_id])
     @counselings = @user.counselings.page(params[:page]).per(5)
   end
-  
+
   def create
     @favorite = current_user.favorites.create(counseling_id: params[:counseling_id])
     @favorite.save

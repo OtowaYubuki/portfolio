@@ -4,7 +4,7 @@ class ReservationsController < ApplicationController
     @reservations = @user.reservations
     @reservation_counselings = @user.reservation_counselings.page(params[:page]).per(5)
   end
-  
+
   def new
     @counseling = Counseling.find(params[:counseling_id])
     @reservation = Reservation.new
@@ -37,6 +37,7 @@ class ReservationsController < ApplicationController
   end
 
   private
+
   def reservation_params
     params.require(:reservation).permit(:question, :user_id)
   end

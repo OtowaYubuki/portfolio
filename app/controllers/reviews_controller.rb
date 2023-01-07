@@ -27,6 +27,7 @@ class ReviewsController < ApplicationController
   end
 
   private
+
   def review_params
     params.require(:review).permit(:comment, :score, :influencer_id)
   end

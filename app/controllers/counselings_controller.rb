@@ -18,6 +18,7 @@ class CounselingsController < ApplicationController
   end
 
   private
+
   def set_q
     @q = Counseling.ransack(params[:q])
   end

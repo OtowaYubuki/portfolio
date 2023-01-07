@@ -6,10 +6,10 @@ class Influencer < ApplicationRecord
   has_many :users, through: :reviews
 
   def avg_score
-    unless self.reviews.empty?
-      reviews.average(:score).round(1).to_f
-    else
+    if reviews.empty?
       0.0
+    else
+      reviews.average(:score).round(1).to_f
     end
   end
 end
