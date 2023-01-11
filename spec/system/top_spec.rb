@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'TOPページが正しく挙動するか', type: :system do
-  let(:influencer){ create :influencer }
-  let(:counseling){ create :counseling }
   let!(:user) { create :user }
 
   before do
