@@ -4,12 +4,11 @@ FactoryBot.define do
     content { Faker::Lorem.characters(number: 10) }
     people { 3 }
     created_at { DateTime.now }
-    influencer_id { 1 }
     starttime { Time.now }
     day { Date.today }
     influencer
-    after(:build) do |counseling|
-      counseling.images.attach(io: File.open('app/assets/images/25307560_s.jpg'), filename: '25307560_s.jpg', content_type: 'image/jpg')
+    after(:build) do |influencer|
+      influencer.images.attach(io: File.open('app/assets/images/22614794.png'), filename: '22614794.png', content_type: 'image/png')
     end
   end
 end
