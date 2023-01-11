@@ -66,5 +66,56 @@ RSpec.describe 'TOPページが正しく挙動するか', type: :system do
       expect(current_path).to eq root_path
       expect(page).to have_content('新規登録')
     end
+
+    it 'ハンバーガーメニューのHOMEをクリックしたときログイン後のTOPページへアクセスすること' do
+      sign_in user
+      visit root_path
+      click_link 'HOME'
+      expect(current_path).to eq root_path
+      expect(page).to have_content('カウンセリング一覧へ')
+    end
+
+    it 'ハンバーガーメニューのプロフィールを編集するをクリックしたときユーザーのプロフィール編集ページへアクセスすること' do
+      sign_in user
+      visit root_path
+      click_link 'プロフィールを編集する'
+      expect(current_path).to eq user_path(user.id)
+      expect(page).to have_content(user.name)
+    end
+
+    it 'ハンバーガーメニューのカウンセリングを探すをクリックしたときカウンセリング一覧ページへアクセスすること' do
+      sign_in user
+      visit root_path
+      click_link 'カウンセリングを探す'
+      expect(current_path).to eq counselings_path
+    end
+
+    it 'ハンバーガーメニューのインフルエンサーを探すをクリックしたときインフルエンサー一覧ページへアクセスすること' do
+      sign_in user
+      visit root_path
+      click_link 'インフルエンサーを探す'
+      expect(current_path).to eq influencers_path
+    end
+
+    it 'ハンバーガーメニューの予約一覧をクリックしたときユーザーの予約一覧ページへアクセスすること' do
+      sign_in user
+      visit root_path
+      click_link '予約一覧'
+      expect(current_path).to eq user_reservations_path(user.id)
+    end
+
+    it 'ハンバーガーメニューのお気に入り一覧をクリックしたときユーザーのお気に入り一覧ページへアクセスすること' do
+      sign_in user
+      visit root_path
+      click_link 'お気に入り一覧'
+      expect(current_path).to eq user_favorites_path(user.id)
+    end
+
+    it 'ハンバーガーメニューのフォロー中のインフルエンサーをクリックしたときユーザーがフォロー中のインフルエンサー一覧ページへアクセスすること' do
+      sign_in user
+      visit root_path
+      click_link 'フォロー中のインフルエンサー'
+      expect(current_path).to eq user_relationships_path(user.id)
+    end
   end
 end
