@@ -22,7 +22,7 @@
       <% end %>
     </tr>
   </table>
-  <%= link_to "もっと見る", counselings_path, id:"signin_see_more_counseling_button" %>
+  <%= link_to "カウンセリング一覧へ", counselings_path, id:"signin_see_more_counseling_button" %>
   <table class="table_counselings">
     <tr>
       <% @counselings.first(5).each do |counseling| %>
@@ -94,4 +94,4 @@
     </tr>
   </table>
 </div>
-<%= link_to "もっと見る", influencers_path, id:"signin_see_more_influencer" %>
+<%= link_to "インフルエンサー一覧へ", influencers_path, id:"signin_see_more_influencer" %>

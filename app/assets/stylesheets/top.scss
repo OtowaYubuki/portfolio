@@ -664,11 +664,11 @@
 #signin_see_more_influencer{
   position: absolute;
   top:1330px;
-  left: 650px;
+  left: 620px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   border-radius: 100px;
-  width: 100px;
+  width: 180px;
   padding: 15px;
   background: #fe7c98;
   text-align: center;
@@ -678,11 +678,11 @@
   #signin_see_more_influencer{
     position: absolute;
     top: 1300px;
-    left: 220px;
+    left: 180px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     border-radius: 100px;
-    width: 100px;
+    width: 180px;
     padding: 15px;
     background: #fe7c98;
     text-align: center;
@@ -711,13 +711,25 @@
   margin-top: 30px;
 }
 
-#see_more_counseling, #signin_see_more_counseling_button, #sign_out_see_more_counseling_button{
+#see_more_counseling, #sign_out_see_more_counseling_button{
   position: absolute;
   left: 655px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   border-radius: 100px;
   width: 100px;
+  padding: 15px;
+  background: #fe7c98;
+  text-align: center;
+}
+
+#signin_see_more_counseling_button{
+  position: absolute;
+  left: 630px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 100px;
+  width: 180px;
   padding: 15px;
   background: #fe7c98;
   text-align: center;
@@ -732,11 +744,11 @@
   #signin_see_more_counseling_button{
     position: absolute;
     top: 520px;
-    left: 205px;
+    left: 175px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     border-radius: 100px;
-    width: 100px;
+    width: 180px;
     padding: 15px;
     background: #fe7c98;
     text-align: center;
