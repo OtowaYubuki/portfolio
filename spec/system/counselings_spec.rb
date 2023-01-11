@@ -1,27 +1,27 @@
-# require 'rails_helper'
+require 'rails_helper'
 
-# RSpec.describe 'カウンセリングページが正しく挙動するか', type: :system do
-#   let!(:user) { create :user }
-#   let!(:counseling) { create :counseling }
+RSpec.describe 'カウンセリングページが正しく挙動するか', type: :system do
+  let!(:user) { create :user }
+  let!(:counseling) { create :counseling }
 
-#   before do
-#     sign_in user
-#     visit counselings_path
-#   end
+  before do
+    sign_in user
+    visit counselings_path
+  end
 
-#   it '詳細へをクリックしたときカウンセリング詳細ページにアクセスすること' do
-#     click_link '詳細へ'
-#     expect(current_path).to eq counseling_path(counseling.id)
-#   end
+  it '詳細をクリックしたときカウンセリング詳細ページにアクセスすること' do
+    click_link '詳細'
+    expect(current_path).to eq counseling_path(counseling.id)
+  end
 
-#   it 'カウンセリング詳細ページにカウンセリング情報が表示されること' do
-#     visit counseling_path(counseling.id)
-#     expect(page).to have_content('開催日')
-#   end
+  it 'カウンセリング詳細ページにカウンセリング情報が表示されること' do
+    visit counseling_path(counseling.id)
+    expect(page).to have_content('開催日')
+  end
 
-#   it 'カウンセリング一覧に戻るをクリックしたときカウンセリング一覧ページに遷移すること' do
-#     visit counseling_path(counseling.id)
-#     click_link 'カウンセリング一覧に戻る'
-#     expect(current_path).to eq counselings_path
-#   end
-# end
+  it 'カウンセリング一覧に戻るをクリックしたときカウンセリング一覧ページに遷移すること' do
+    visit counseling_path(counseling.id)
+    click_link 'カウンセリング一覧に戻る'
+    expect(current_path).to eq counselings_path
+  end
+end

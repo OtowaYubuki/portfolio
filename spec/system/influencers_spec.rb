@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'ユーザーページが正しく挙動するか', type: :system do
+RSpec.describe 'インフルエンサーページが正しく挙動するか', type: :system do
   let!(:user) { create :user }
   let!(:influencer) { create :influencer }
 
@@ -9,8 +9,8 @@ RSpec.describe 'ユーザーページが正しく挙動するか', type: :system
     visit influencers_path
   end
 
-  it '詳細を見るをクリックしたときインフルエンサー詳細ページにアクセスすること' do
-    click_link '詳細を見る'
+  it '詳細へをクリックしたときインフルエンサー詳細ページにアクセスすること' do
+    click_link '詳細へ'
     expect(current_path).to eq influencer_path(influencer.id)
   end
 

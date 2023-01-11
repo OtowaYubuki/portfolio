@@ -28,7 +28,7 @@
     </tr>
     <tr>
       <% @counselings.each do |counseling| %>
-        <td><div class="counselings_link"><%= link_to "詳細へ", counseling_path(counseling) %></div></td>
+        <td><div class="counselings_link"><%= link_to "詳細", counseling_path(counseling) %></div></td>
       <% end %>
     </tr>
   </table>
@@ -50,7 +50,7 @@
     </tr>
     <tr>
       <% @counselings.each do |counseling| %>
-        <td><div class="table_counseling_link"><%= link_to "詳細へ", counseling_path(counseling) %></div></td>
+        <td><div class="table_counseling_link"><%= link_to "詳細を確認", counseling_path(counseling) %></div></td>
       <% end %>
     </tr>
   </table>
