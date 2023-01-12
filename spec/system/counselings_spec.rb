@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'カウンセリングページが正しく挙動するか', type: :system do
+RSpec.describe 'レビューページが正しく挙動するか', type: :system do
   let!(:user) { create :user }
   let!(:counseling) { create :counseling }
   let(:reservation) { create :reservation }
