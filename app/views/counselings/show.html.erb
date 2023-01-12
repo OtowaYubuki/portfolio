@@ -23,7 +23,7 @@
                 <p><div class="full_people">※募集人数に達したため予約は締め切りました</p></div>
               <% else %>
                 <p><div class="detail_counseling_people">残り<%= @people %>/<%= @counseling.people %>枠</p></div>
-                  <%= link_to "+予約する", new_counseling_reservation_path(@counseling), id:"create_reserve" %>
+                  <%= link_to '+予約する', new_counseling_reservation_path(@counseling), id:"create_reserve" %>
               <% end %>
             <% end %>
         <% end %>
