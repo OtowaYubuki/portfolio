@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'ユーザーページが正しく挙動するか', type: :system do
+RSpec.describe User, type: :system do
   let!(:user) { create :user }
 
   context 'ユーザー新規登録' do
