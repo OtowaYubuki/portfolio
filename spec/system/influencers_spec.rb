@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'インフルエンサーページが正しく挙動するか', type: :system do
+RSpec.describe Influencer, type: :system do
   let!(:user) { create :user }
   let!(:influencer) { create :influencer }
 

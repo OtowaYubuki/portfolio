@@ -12,6 +12,9 @@ class ReviewsController < ApplicationController
   def confirm
     @influencer = Influencer.find(params[:influencer_id])
     @review = Review.new(review_params)
+    if @review.score.blank?
+      redirect_to new_influencer_review_path(@influencer.id), notice: "星評価は必須です"
+    end
   end
 
   def create

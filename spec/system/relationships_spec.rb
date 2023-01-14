@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'フォロー一覧ページが正しく挙動するか', type: :system do
+RSpec.describe Relationship, type: :system do
   let!(:user) { create :user }
   let!(:influencer) { create :influencer }
   let!(:relationship) { create :relationship }
