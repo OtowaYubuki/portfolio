@@ -28,5 +28,12 @@ RSpec.describe User, type: :model do
       user.valid?
       expect(user.errors[:password]).to include('を入力してください')
     end
+
+    it '登録済みのメールアドレスは無効であること' do
+      user1 = FactoryBot.create(:user)
+      user.email = user1.email
+      user.valid?
+      expect(user.errors.full_messages).to include('メールアドレスはすでに存在します')
+    end
   end
 end
