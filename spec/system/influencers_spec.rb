@@ -36,4 +36,17 @@ RSpec.describe Influencer, type: :system do
       expect(current_path).to eq influencers_path
     end
   end
+
+  context '検索フォーム' do
+    before do
+      sign_in user
+      visit influencers_path
+    end
+
+    it 'インフルエンサーのフリーワード検索が正しくできること' do
+      fill_in 'キーワード', with: influencer.name
+      click_button '検索'
+      expect(page).to have_content(influencer.name)
+    end
+  end
 end
