@@ -15,4 +15,14 @@ RSpec.describe Review, type: :model do
       expect(review).not_to be_valid
     end
   end
+
+  context 'アソシエーションのテスト' do
+    it 'Userモデルとの関係がN:1となっていること' do
+      expect(Review.reflect_on_association(:user).macro).to eq :belongs_to
+    end
+
+    it 'Influencerモデルとの関係がN:1となっていること' do
+      expect(Review.reflect_on_association(:influencer).macro).to eq :belongs_to
+    end
+  end
 end
