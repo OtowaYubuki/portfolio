@@ -40,4 +40,3 @@ RSpec.describe Favorite, type: :system do
     end
   end
 end
-

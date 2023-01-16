@@ -52,12 +52,12 @@ RSpec.describe 'トップページ', type: :system do
     end
 
     it 'カウンセリング一覧へをクリックしたときカウンセリング一覧ページにアクセスすること' do
-      click_link ('カウンセリング一覧へ')
+      click_link 'カウンセリング一覧へ'
       expect(current_path).to eq counselings_path
     end
 
     it 'インフルエンサー一覧へをクリックしたときインフルエンサー一覧ページにアクセスすること' do
-      click_link 'インフルエンサーを探す'
+      click_link 'インフルエンサー一覧へ'
       expect(current_path).to eq influencers_path
     end
 

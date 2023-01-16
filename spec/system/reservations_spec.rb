@@ -48,16 +48,18 @@ RSpec.describe Reservation, type: :system do
       sign_in user
       visit new_counseling_reservation_path(counseling.id)
       click_button '確認画面へ'
-      expect(current_path).to eq confirm_counseling_reservations_path(counseling.id)
-      click_button '予約を確定する'
     end
 
     it '予約一覧ページに予約したカウンセリング情報が正しく表示されること' do
+      expect(current_path).to eq confirm_counseling_reservations_path(counseling.id)
+      click_button '予約を確定する'
       expect(current_path).to eq user_reservations_path(user.id)
       expect(page).to have_content(counseling.name)
     end
 
     it '予約一覧ページに予約したカウンセリング件数が正しく表示されること' do
+      expect(current_path).to eq confirm_counseling_reservations_path(counseling.id)
+      click_button '予約を確定する'
       expect(current_path).to eq user_reservations_path(user.id)
       expect(page).to have_content('1件')
     end

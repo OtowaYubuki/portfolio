@@ -24,4 +24,3 @@ RSpec.describe Reservation, type: :model do
     end
   end
 end
-

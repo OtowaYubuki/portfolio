@@ -10,4 +10,3 @@ RSpec.describe Counseling, type: :model do
     end
   end
 end
-

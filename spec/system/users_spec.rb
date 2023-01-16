@@ -7,7 +7,7 @@ RSpec.describe User, type: :system do
     before do
       visit new_user_registration_path
     end
-    
+
     it '新規登録に成功すること' do
       fill_in 'ユーザー名', with: 'テスト'
       fill_in 'メールアドレス', with: 'test@example.com'
@@ -31,7 +31,7 @@ RSpec.describe User, type: :system do
     before do
       visit new_user_session_path
     end
-    
+
     it 'ログインに成功すること' do
       fill_in 'メールアドレス', with: user.email
       fill_in 'パスワード(6文字以上)', with: user.password
@@ -51,7 +51,7 @@ RSpec.describe User, type: :system do
     before do
       visit new_user_session_path
     end
-    
+
     it 'ゲストログイン（閲覧用）をクリックしたとき、ゲストユーザーとしてログインに成功すること' do
       click_link 'ゲストログイン（閲覧用）'
       expect(page).to have_content('ゲスト')
