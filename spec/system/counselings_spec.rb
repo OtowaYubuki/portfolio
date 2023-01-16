@@ -49,4 +49,17 @@ RSpec.describe Counseling, type: :system do
       end
     end
   end
+
+  context '検索フォーム' do
+    before do
+      sign_in user
+      visit counselings_path
+    end
+
+    it 'カウンセリングのフリーワード検索が正しくできること' do
+      fill_in 'キーワードから探す', with: counseling.name
+      click_button '検索'
+      expect(page).to have_content(counseling.name)
+    end
+  end
 end
