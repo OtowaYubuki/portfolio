@@ -1,24 +1,52 @@
-# README
+# meseling
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+meseling(ミーセリング)は、インフルエンサーが主催する美容系カウンセリングに参加できるオンラインサービスです。レスポンシブ対応しているのでスマホからもご確認いただけます。
 
-Things you may want to cover:
 
-* Ruby version
+# URL
+※ヘロクのURL※
 
-* System dependencies
+画面右上のログインボタンから、ゲストユーザーとして、メールアドレスとパスワードを入力せずにログインできます。
 
-* Configuration
 
-* Database creation
+# Description(概要)
 
-* Database initialization
+meselingには、流行りのメイクのやり方やパーソナルカラー診断、コンプレックス解消法などの美容系カウンセリングがたくさん登録されています。ユーザーは自分の興味のあるカウンセリングに自由に参加でき、インフルエンサーに事前に質問を送ることも可能です。
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+# 使い方
 
-* Deployment instructions
+1. アカウントを新規登録(ゲストユーザーのまま続行する場合はログインページで選択)
+2. カウンセリング一覧ページから参加したいカウンセリングを探す
+3. 予約ボタンを押して予約を確定(質問フォームから事前に聞きたいことを入力可能です)
+4. 登録したメールアドレスにzoom URLが記載されたメールが届くため、カウンセリング開始日時に入室してください
 
-* ...
+
+# 使用技術
+
+* Ruby 2.7.6
+* Ruby on Rails 6.1.4
+* Sqlite3 1.4
+* Rspec-rails
+* Rubocop-airbnb
+
+
+# 機能一覧
+
+* ユーザー登録、ログイン機能(devise) 
+* 画像登録機能(Active Storage)
+* 検索機能、並べ替え機能(ransack)
+* いいね機能
+* フォロー機能
+* 予約機能
+* レビュー投稿機能
+* ページネーション機能(kaminari)
+* メール機能(Action Mailer)
+
+
+# テスト  
+
+* Rubocop-airbnb
+* Rspec-rails
+    * 単体テスト(model)
+    * 統合テスト(system)
