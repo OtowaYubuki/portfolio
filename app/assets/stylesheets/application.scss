@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+/* body*/
+
+body{
+  margin: 0;
+  font-family: "Helvetica Neue",
+  Arial,
+  "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+}
+
+@media (max-width: 599px) {
+    body{
+    margin: 0;
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+    width: 100%
+  }
+}
+
+.Notification{
+  position: absolute;
+  top:100px;
+}
+
+.notice{
+  background-color: #38AEF0;
+  color: #fff;
+  text-align: center;
+}
+
+.alert {
+  background-color: #F35500;
+  color: #fff;
+  text-align: center;
+}
+
+.pagination{
+  width: fit-content;
+  margin: 25px auto;
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+
+.first a,
+.prev a,
+.page a,
+.next a,
+.last a{
+  color: #fe7c98;
+  text-decoration: none;
+  padding: 5px;
+  border: 1px solid rgb(111, 110, 110);;
+}
+
+.first a:hover,
+.prev a:hover,
+.page a:hover,
+.next a:hover,
+.last a:hover{
+  border: 1px solid #ffffff;;
+  background-color: #fe7c98;
+  color: #ffffff;
+}
+
+span.current{
+  color: #777777;
+}

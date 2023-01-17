@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+  <%= render "shared/top_signin" %>
+<% else %>
+  <%= render "shared/top_signout" %>
+<% end %>

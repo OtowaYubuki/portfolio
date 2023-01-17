@@ -1,0 +1,86 @@
+#reservation_confirm{
+  position: absolute;
+  top:180px;
+  left: 300px;
+}
+
+@media (max-width: 599px) {
+  #reservation_confirm{
+    position: absolute;
+    top:180px;
+    left: 10px;
+  }
+}
+
+#reserve_name{
+  position: absolute;
+  top: 80px;
+  font-weight: bold;
+  font-size: 20px;
+  width: 1000px;
+  text-align: left;
+}
+
+#confirm_reserve_name{
+  font-weight: bold;
+  font-size: 20px;
+  width: 1000px;
+  text-align: left;
+}
+
+#reserve_day{
+  position: absolute;
+  top: 100px;
+  left: 22px;
+  font-size: 18px;
+  width: 650px;
+  text-align: left;
+  padding-top: 20px;
+}
+
+#reserve_time{
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  font-size: 18px;
+  width: 650px;
+  text-align: left;
+  padding-top: 20px;
+}
+
+#question{
+  position: absolute;
+  top: 180px;
+  left: 30px;
+}
+
+#goto_confirm{
+  position: absolute;
+  top: 300px;
+  left: 300px;
+}
+
+#backto_show_counseling{
+  position: absolute;
+  top: 450px;
+  left: 330px;
+}
+
+@media (max-width: 599px) {
+  #backto_show_counseling{
+    position: absolute;
+    top: 510px;
+    left: 30px;
+  }
+}
+
+#h2{
+  color: rgb(255, 0, 0);
+}
+
+@media (max-width: 599px) {
+  .new_reserve{
+    position: absolute;
+    left: 10px;
+  }
+}

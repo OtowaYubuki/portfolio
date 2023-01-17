@@ -1,0 +1,18 @@
+<%= form_with model: [@counseling, @reservation], url: confirm_counseling_reservations_path(@counseling, @reservation), local: true do |f| %>
+  <table class="new_reserve">
+    <tr id="reserve_name">
+      <td><%= @counseling.name %></td>
+    </tr>
+    <tr id="reserve_day">
+      <td><%= l @counseling.day, format: :long %></td>
+    </tr>
+    <tr id="reserve_time">
+      <td><%= l @counseling.starttime, format: :short %>〜</td>
+    </tr>
+    <tr id="question">
+      <td><%= f.text_area :question, autofocus: true, :placeholder =>"カウンセリング時に聞きたいことがあれば事前に入力してください", size: "80x5" %></td>
+    </tr>
+      <td id="goto_confirm"><%= f.submit '確認画面へ' %></td>
+  </table>
+<% end %>
+<%= link_to "カウンセリング詳細に戻る", counseling_path(@counseling), id:"backto_counseling" %>

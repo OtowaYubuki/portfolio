@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <%= render 'layouts/notification' %>
+    <% if user_signed_in? %>
+      <%= render "shared/signin_header" %>
+    <% else %>
+      <%= render "shared/header" %>
+    <% end %>
     <%= yield %>
+    <%= render "shared/footer" %>
   </body>
 </html>

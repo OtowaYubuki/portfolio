@@ -1,0 +1,60 @@
+<h2 class="favorite_counselig">フォロー中のインフルエンサー</h2>
+<% if @follow_influencers.blank? %>
+  <p id="not_favorites">フォロー中のインフルエンサーはまだいません</p>
+<% else %>
+  <h3 id="favorites">フォロー：<%= @follow_influencers.count %>件</h3>
+  <div id="influencer_index">
+    <table class="influencers">
+      <tr>
+        <% @follow_influencers.each do |influencer| %>
+          <th><div class="border6"><%= image_tag influencer.influencer_image, size:'100x90', class: "influencer_image" %></div></th>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @follow_influencers.each do |influencer| %>
+          <td><div class="name"><%= influencer.name %></div></td>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @follow_influencers.each do |influencer| %>
+          <td><div class="star"><span class="star-rating">
+              <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+              </span>
+              （<%= influencer.reviews.count %>）
+          </div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @follow_influencers.each do |influencer| %>
+          <td><div class="influencer_show_link"><%= link_to "詳細", influencer_path(influencer) %></div></td>
+        <% end %>    
+      </tr>
+    </table>
+    <table class="table_influencers">
+      <tr>
+        <% @follow_influencers.last(5).each do |influencer| %>
+          <th><div class="table_border2"><%= image_tag influencer.influencer_image, size:'60x50', class: "influencer_image" %></div></th>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @follow_influencers.last(5).each do |influencer| %>
+          <td><div class="table_influencer_name"><%= influencer.name %></div></td>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @follow_influencers.last(5).each do |influencer| %>
+          <td><div class="table_star"><span class="star-rating">
+              <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+              </span></br>
+              （<%= influencer.reviews.count %>）
+          </div></td>
+        <% end %>
+      </tr>
+    </table>
+  </div>
+<% end %>
+<div class="paginate">
+  <%= paginate @follow_influencers %>
+</div>

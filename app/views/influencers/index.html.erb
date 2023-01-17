@@ -1,0 +1,65 @@
+<div class="sort_links">
+  <%= sort_link(@q, :reviews_comment, "レビュー件数が多い順", default_order: :desc, hide_indicator: true) %>
+  <%= sort_link(@q, :created_at, "登録日が新しい順", default_order: :desc, hide_indicator: true) %>
+</div>
+<div id="influencer_index">
+  <h2 class="index_searchforinfluencer">インフルエンサーを探す</h2>
+  <table class="influencers">
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <th><div class="border6"><%= image_tag influencer.influencer_image, size:'100x90', class: "influencer_image" %></div></th>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="name"><%= influencer.name %></div></td>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="star"><span class="star-rating">
+            <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+            </span>
+            （<%= influencer.reviews.count %>）
+        </div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="influencer_show_link"><%= link_to "詳細へ", influencer_path(influencer) %></div></td>
+      <% end %>    
+    </tr>
+  </table>
+  <table class="table_influencers">
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <th><div class="table_border2"><%= image_tag influencer.influencer_image, size:'60x50', class: "influencer_image" %></div></th>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="table_influencer_name"><%= influencer.name %></div></td>
+      <% end %>    
+    </tr>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="table_star"><span class="star-rating">
+            <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+            </span></br>
+            （<%= influencer.reviews.count %>）
+        </div></td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @influencers.each do |influencer| %>
+        <td><div class="table_influencer_link"><%= link_to "詳細を見る", influencer_path(influencer) %></div></td>
+      <% end %>    
+    </tr>
+  </table>
+</div>
+<div class="paginate">
+  <%= paginate @influencers %>
+</div>
+<%= render "shared/search_influencer" %>

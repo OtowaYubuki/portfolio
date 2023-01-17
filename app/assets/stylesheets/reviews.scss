@@ -1,0 +1,121 @@
+#score_new{
+  position: absolute;
+  top: 200px;
+  left: 300px;
+}
+
+@media (max-width: 599px) {
+  #score_new{
+    position: absolute;
+    top: 200px;
+    left: 10px;
+  }
+}
+
+.post_form{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.post_form input[type='radio']{
+  display: none;
+}
+
+.post_form label{
+  position: relative;
+  padding: 10px 10px 0;
+  color: gray;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.post_form label .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9px;
+  color: gray;
+}
+
+.post_form label:hover,
+.post_form label:hover ~ label,
+.post_form input[type='radio']:checked ~ label{
+  color: #ffcc00;
+}
+
+.star-rating {
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 1em;
+  font-size: 25px;
+}
+
+.star-rating-front {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #ffcc33;
+}
+
+.star-rating-back {
+  display: inline-block;
+  color: #ccc;
+}
+
+#influenser_reviews{
+  position: absolute;
+  top:150px;
+  left:250px;
+}
+
+@media (max-width: 599px) {
+  #influenser_reviews{
+    position: absolute;
+    top: 150px;
+    left: 30px;
+  }
+}
+
+#submit_review{
+  margin-left: 20px;
+}
+
+.star-rating_reviews{
+  position: relative;
+  display: inline-block;
+  width: 10em;
+  height: 1em;
+  font-size: 25px;
+}
+
+.review_user_name{
+  font-size: 13px;
+}
+
+.review_comment{
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.border4{
+  border-bottom: 1px solid #858484;
+  width: 2000px;
+}
+
+.backto_influencer_show_link{
+  position: absolute;
+  top: 800px;
+  left: 50px;
+  padding-bottom: 50px;
+}
+
+#score_attention{
+  color: #ff0000;
+}

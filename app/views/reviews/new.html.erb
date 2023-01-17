@@ -1,0 +1,20 @@
+<div id="score_new">
+  <h2>総合評価</h2>
+  <p id="score_attention">※星評価は必須です</p>
+    <div class="post_form">
+      <%= form_with model: [@influencer, @review], url: confirm_influencer_reviews_path(@influencer, @reservation), local: true do |f| %>
+        <%= f.radio_button :score, 5 ,id: 'star1'%>
+        <label for="star1"><span class="text">最高</span>★</label>
+        <%= f.radio_button :score, 4 ,id: 'star2'%>
+        <label for="star2"><span class="text">良い</span>★</label>
+        <%= f.radio_button :score, 3 ,id: 'star3'%>
+        <label for="star3"><span class="text">普通</span>★</label>
+        <%= f.radio_button :score, 2 ,id: 'star4'%>
+        <label for="star4"><span class="text">悪い</span>★</label>
+        <%= f.radio_button :score, 1 ,id: 'star5'%>
+        <label for="star5"><span class="text">最悪</span>★</label>
+        <%= f.text_area :comment, :placeholder =>"コメントを入力してください", size:"50x3" %>
+        <%= f.submit 'レビューを送信する', id:"submit_review" %>
+      <% end %>
+    </div>
+</div>

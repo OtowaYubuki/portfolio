@@ -1,0 +1,23 @@
+<div id="reservation_confirm">
+  <h3>以下の内容でレビューを送信します</h3>
+  <div>
+    <h2>評価：
+      <span class="star-rating">
+        <span class="star-rating-front" style="width: <%= @review.score * 20 %>%">★★★★★</span>
+        <span class="star-rating-back">★★★★★</span>
+      </span> 
+    </h2>
+  </div>
+  <tr id="counseling_show_title">
+    <td><%= @review.comment %></td>
+  </tr>
+  <%= form_with model: [@influencer, @review], local: true do |f| %>
+    <tr id="counseling_show_content">
+      <td><%= f.hidden_field :score %></td>
+    </tr>
+    <tr id="counseling_show_content">
+      <td><%= f.hidden_field :comment %></td>
+    </tr>
+    <td><%= f.submit '送信する' %></td>
+  <% end %>
+</div>

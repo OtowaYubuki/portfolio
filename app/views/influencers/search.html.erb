@@ -1,0 +1,67 @@
+<% if @results.blank? %>
+  <p id="not_favorites">検索結果がありません。もう一度検索してください</p>
+<% else %>
+  <h3 id="favorites">検索結果：<%= @result.count %>件</h3>
+  <div id="influencer_index">
+    <table class="influencers">
+      <tr>
+        <% @results.each do |influencer| %>
+          <th><div class="border6"><%= image_tag influencer.influencer_image, size:'100x90', class: "influencer_image" %></div></th>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @results.each do |influencer| %>
+          <td><div class="name"><%= influencer.name %></div></td>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @results.each do |influencer| %>
+          <td><div class="star"><span class="star-rating">
+              <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+              </span>
+              （<%= influencer.reviews.count %>）
+          </div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @results.each do |influencer| %>
+          <td><div class="influencer_show_link"><%= link_to "詳細", influencer_path(influencer) %></div></td>
+        <% end %>    
+      </tr>
+    </table>
+    <table class="table_influencers">
+      <tr>
+        <% @results.each do |influencer| %>
+          <th><div class="table_border2"><%= image_tag influencer.influencer_image, size:'60x50', class: "influencer_image" %></div></th>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @results.each do |influencer| %>
+          <td><div class="table_influencer_name"><%= influencer.name %></div></td>
+        <% end %>    
+      </tr>
+      <tr>
+        <% @results.each do |influencer| %>
+          <td><div class="table_star"><span class="star-rating">
+              <span class="star-rating-front" style="width: <%= influencer.avg_score * 20 %>%">★★★★★</span>
+              <span class="star-rating-back">★★★★★</span>
+              </span></br>
+              （<%= influencer.reviews.count %>）
+          </div></td>
+        <% end %>
+      </tr>
+      <tr>
+        <% @results.each do |influencer| %>
+          <td><div class="table_influencer_link"><%= link_to "詳細", influencer_path(influencer) %></div></td>
+        <% end %>    
+      </tr>
+    </table>
+  </div>
+<% end %>
+<div class="paginate">
+  <%= paginate @results %>
+</div>
+<div id="back_to_counselings_link">
+  <%= link_to "インフルエンサ一覧へ戻る", influencers_path, class:"link" %>
+</div>

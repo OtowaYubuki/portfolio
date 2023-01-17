@@ -1,3 +1,34 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'top#index'
+  devise_for :users, controllers: { registrations: 'users/registrations', passwords: 'users/passwords' }
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#guest_sign_in'
+  end
+  resources :users, :only => [:show, :edit, :destroy] do
+    resources :favorites, only: [:index]
+    resources :reservations, only: [:index]
+    resources :relationships, only: [:index]
+  end
+  resources :influencers, :only => [:index, :show] do
+    resource :relationships, only: [:create, :destroy]
+    collection do
+      get 'search'
+    end
+    resources :reviews, only: [:index, :new, :create] do
+      collection do
+        post :confirm
+      end
+    end
+  end
+  resources :counselings, :only => [:index, :show] do
+    collection do
+      get 'search'
+    end
+    resource :favorites, only: [:create, :destroy]
+    resources :reservations, only: [:new, :create, :destroy] do
+      collection do
+        post :confirm
+      end
+    end
+  end
 end

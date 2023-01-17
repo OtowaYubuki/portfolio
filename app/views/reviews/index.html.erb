@@ -1,0 +1,32 @@
+<% if @reviews.blank? %>
+  <p id="not_favorites">レビューはありません</p>
+<% else %>
+  <table id="influenser_reviews">
+    <tr>
+      <% @reviews.each do |review| %>
+        <td class="review_user_name">by <%= review.user.name %>さん</td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @reviews.each do |review| %>
+        <td>
+          <div class="star-rating_reviews">
+          <div class="star-rating-front">
+          <% if review.score? %>
+            <% for i in 1..review.score do %>
+              ★
+            <% end %>
+          <% end %>
+          </div>
+          </div>
+        </td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @reviews.each do |review| %>
+        <td class="review_comment"><%= review.comment %></td>
+      <% end %>
+    </tr>
+  </table>
+<% end %>
+<div class="backto_influencer_show_link"><%= link_to "インフルエンサー詳細へ戻る", influencer_path(@influencer) %></div>

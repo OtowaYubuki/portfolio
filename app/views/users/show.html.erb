@@ -1,0 +1,13 @@
+<div id="current_user">
+  <h2 class="profile_cap">プロフィール編集</h1>
+  <% if @user.image.attached? %>
+    <%= image_tag @user.image, size:'100x100', class:"show_user_image" %>
+  <% else %>
+    <%= image_tag '22614794.png', size: '100x100', class:"user_image" %>
+  <% end %>
+  <div id="user_profile">
+    <p><%= @user.name %></p>
+    <p><%= @user.email %></p>
+  </div>
+  <%= link_to "プロフィールを編集", edit_user_registration_path, id:"edit_button" %>
+</div>

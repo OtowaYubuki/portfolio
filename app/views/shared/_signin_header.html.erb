@@ -1,0 +1,32 @@
+<header class="header">
+  <%= link_to "meselling", root_path, class:"header_logo" %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか?" }, class:"logout" %>
+  <div class="hamburger-menu">
+    <input type="checkbox" id="menu-btn-check">
+    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+    <div class="menu-content">
+      <ul>
+        <li>
+          <%= link_to "HOME", root_path, class:"link" %>
+        </li>
+        <li>
+          <%= link_to "プロフィールを編集する", user_path(current_user.id), class:"link" %>
+        </li>
+        <li>
+          <%= link_to "カウンセリングを探す", counselings_path, class:"link" %>
+        </li>
+        <li>
+          <%= link_to "インフルエンサーを探す", influencers_path, class:"link" %>
+        </li>
+        <li>
+          <%= link_to "予約一覧", user_reservations_path(current_user.id), class:"link" %>
+        </li>
+        <li>
+          <%= link_to "お気に入り一覧", user_favorites_path(current_user.id), class:"link" %>
+        </li>
+        <li>
+          <%= link_to "フォロー中のインフルエンサー", user_relationships_path(current_user.id), class:"link" %>
+        </li>
+      </ul>
+    </div>
+</header>
