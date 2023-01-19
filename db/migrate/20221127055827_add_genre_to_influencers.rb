@@ -1,5 +1,5 @@
 class AddGenreToInfluencers < ActiveRecord::Migration[6.1]
-  def change
+  def create
     add_column :influencers, :genre, :string
   end
 end
