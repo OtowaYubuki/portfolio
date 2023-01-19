@@ -4,7 +4,7 @@ meseling(ミーセリング)は、インフルエンサーが主催する美容�
 
 
 # URL
-※ヘロクのURL※
+https://portfolio-yubukiotowa.herokuapp.com/
 
 画面右上のログインボタンから、ゲストユーザーとして、メールアドレスとパスワードを入力せずにログインできます。
 
