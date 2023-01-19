@@ -40,8 +40,19 @@ ActiveRecord::Schema.define(version: 2022_12_05_121525) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-# Could not dump table "counselings" because of following StandardError
-#   Unknown type '' for column 'date'
+  create_table "counselings", force: :cascade do |t|
+    t.string "name"
+    t.text "content"
+    t.datetime "date"
+    t.integer "people"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "influencer_id"
+    t.datetime "startday"
+    t.datetime "opentime"
+    t.time "starttime"
+    t.date "day"
+  end
 
   create_table "favorites", force: :cascade do |t|
     t.integer "user_id"
@@ -53,11 +64,11 @@ ActiveRecord::Schema.define(version: 2022_12_05_121525) do
   create_table "influencers", force: :cascade do |t|
     t.string "name"
     t.text "profile"
+    t.string "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "influencer_image"
-    t.string "genre"
     t.string "tag"
+    t.string "influencer_image"
   end
 
   create_table "relationships", force: :cascade do |t|
